@@ -21,14 +21,14 @@ function khaown_customize_register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
 			array(
-				'selector'        => '.site-title a',
+				'selector'        => '.khaown-site-title a',
 				'render_callback' => 'khaown_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
-				'selector'        => '.site-description',
+				'selector'        => '.khaown-site-description',
 				'render_callback' => 'khaown_customize_partial_blogdescription',
 			)
 		);
@@ -553,7 +553,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('display_header_or_not', array(
-		'default'			=> __( '0', 'khaown'),
+		'default'			=> __( false, 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -574,7 +574,7 @@ function khaown_customize_register( $wp_customize ) {
 	// Top header Site Title color
 	$header_topcolors[] = array(
 		'slug'=>'top_header_site_tile_color', 
-		'default' => '#be9ae2',
+		'default' => '#000000',
 		'label' => 'Top Header Site Title Color'
 	);
 	// Top header Site Desc color
@@ -673,9 +673,18 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 
 
+
+	
+
+
 	
 }
 add_action( 'customize_register', 'khaown_customize_register' );
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/front-page-customizer.php';
 
 /**
  * Render the site title for the selective refresh partial.

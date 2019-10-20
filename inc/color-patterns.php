@@ -202,6 +202,13 @@ function khaown_custom_colors_css() {
 			line-height: inherit;
 		}
 
+		section.restaurant-schedule {
+			background-color: " . get_theme_mod("schedule_bg_color", "#7774B3") . ";
+		}
+		section.restaurant-schedule strong, section.restaurant-schedule span, section.restaurant-schedule h3 {
+			color: " . get_theme_mod("schedule_text_color", "#292929") . ";
+		}
+
 		
 
 		@media all and (max-width: 426px) {
