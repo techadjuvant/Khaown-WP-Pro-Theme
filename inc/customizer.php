@@ -645,7 +645,7 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('site_title_margin_bottom', array(
-		'default'			=> __( '42', 'khaown'),
+		'default'			=> __( '40', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
