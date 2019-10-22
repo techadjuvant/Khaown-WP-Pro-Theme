@@ -682,9 +682,14 @@ function khaown_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'khaown_customize_register' );
 
 /**
- * Customizer additions.
+ *  Front Page Customizer additions.
  */
 require get_template_directory() . '/inc/front-page-customizer.php';
+
+/**
+ *  Reservation Page Customizer additions.
+ */
+require get_template_directory() . '/inc/reservation-customizer.php';
 
 /**
  * Render the site title for the selective refresh partial.

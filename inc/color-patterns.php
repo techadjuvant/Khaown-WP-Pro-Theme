@@ -93,6 +93,7 @@ function khaown_custom_colors_css() {
 			}
 			a, a:visited, .widget a {
 				font-family: " . get_theme_mod("font_family", "Rajdhani") . ";
+				color: " . get_theme_mod("link_color", "#545454") . ";
 			}
 			h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, button, select, textarea, .blog-posts .row p, span, button, .btn {
 				font-family: " . get_theme_mod("font_family", "Rajdhani") . ";
@@ -125,7 +126,7 @@ function khaown_custom_colors_css() {
 			word-spacing: " . get_theme_mod("paragraph_word_spacing", "0") . "px;
 		}
 
-		a:hover, a:visited, a:active, .widget a:hover, .post-navigation .nav-links a:hover, .entry .entry-meta a:hover, .entry .entry-footer a:hover {
+		a:focus, a:hover, a:hover, a:visited, a:active, .widget a:hover, .post-navigation .nav-links a:hover, .entry .entry-meta a:hover, .entry .entry-footer a:hover {
 			color: " . get_theme_mod("hover_link_color", "#a0a0a0") . ";
 		}
 
@@ -224,6 +225,29 @@ function khaown_custom_colors_css() {
 			}
 
 		}
+
+		/*
+		 * Pro version
+		 */
+
+		.rsv-header-bg {
+			background-color: " . get_theme_mod("rsv_header_bg_color", "#F0DFF6") . ";
+		}
+		.rsv-header-bg h2 {
+			font-size: " . get_theme_mod("rsv_font_size", "40") . "px;
+			color: " . get_theme_mod("rsv_header_text_color", "#7a7a7a") . ";
+		}
+		.rsv-middle-body {
+			background-color: " . get_theme_mod("rsv_middle_body_bg_color", "#ffffff") . ";
+			color: " . get_theme_mod("rsv_middle_body_text_color", "#7a7a7a") . ";
+		}
+		.rsv-form-container {
+			background-color: " . get_theme_mod("rsv_form_bg_color", "#F0DFF6") . ";
+		}
+		.rsv-form-container h3, .rsv-form-container h4, .rsv-form-container p {
+			color: " . get_theme_mod("rsv_form_text_color", "#7a7a7a") . ";
+		}
+
 		
 		";
 

@@ -714,7 +714,9 @@ header.khaown-entry-header {
 .sticky {
   background-color: #eee0;
 }
-
+.bootstrap-datetimepicker-widget.dropdown-menu table td, .bootstrap-datetimepicker-widget.dropdown-menu table th, .bootstrap-datetimepicker-widget.dropdown-menu table tr {
+  border: 0;
+}
 
 
 @media all and (max-width: 991px) { 

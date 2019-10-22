@@ -58,14 +58,13 @@
                 <h5 class="large uppercase mb8 mb-xs-12">&rightarrow; <a href="<?php echo get_theme_mod( 'location_google_map_link'); ?>" target="_blank"><u>Google Map</u></a> this joint</h5>      
                 <hr> 
                 <ul>
-                    <?php // echo $emotahar['em_details_address']; ?><br>
-                        <?php echo wp_kses_post(get_theme_mod( 'location_address', '')); ?>
-                    </ul>
-                    <p>
-                        <a target="_blank" href="<?php// echo $emotahar['em_twitter_account']; ?>"><i class="ti-facebook icon-sm"></i></a> 
-                        <a target="_blank" href="<?php //echo $emotahar['em_facebook_account']; ?>"><i class="ti-twitter-alt icon-sm"></i></a>
-                        <a target="_blank" href="<?php// echo $emotahar['em_instagram_account']; ?>"><i class="ti-instagram icon-sm"></i></a>
-                    </p>
+                    <?php echo wp_kses_post(get_theme_mod( 'location_address', '')); ?>
+                </ul>
+                <p>
+                    <a target="_blank" href="<?php// echo $emotahar['em_twitter_account']; ?>"><i class="ti-facebook icon-sm"></i></a> 
+                    <a target="_blank" href="<?php //echo $emotahar['em_facebook_account']; ?>"><i class="ti-twitter-alt icon-sm"></i></a>
+                    <a target="_blank" href="<?php// echo $emotahar['em_instagram_account']; ?>"><i class="ti-instagram icon-sm"></i></a>
+                </p>
             </div>
         </section>
     <?php }; ?>
