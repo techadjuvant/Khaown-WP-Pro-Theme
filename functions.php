@@ -402,6 +402,7 @@ tgmpa( $plugins, $config );
 
 
 
+
 /**
  * SVG Icons class.
  */
