@@ -1,108 +1,45 @@
 /*
-Theme Name: KhaownPro
-Theme URI: http://www.e-motahar.com/khaowa-daowa.com/
+Theme Name: KhaownWP
 Author: Motahar Hossain
 Author URI: http://e-motahar.com
 Description: Khaown theme is a fully customizable, fast loading, responsive, seo optimised and stunning default designed for blog, portfolio, e-commerce, non-profit, restaurant and a wide range of websites. Everything is customizable. You can change the font-family, font-size, color, background-color and everything. It has the default stunnig design and you can customize everything. It's responsive for mobile and other devices. And the code seo friendly and brwoser compatible.
 Requires at least: WordPress 4.9.6
-Version: 1.1
+Version: 1.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: khaownPro
-Tags: flexible-header, custom-logo, featured-images, accessibility-ready, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: KhaownWP
+Tags: blog, custom-logo, custom-colors, custom-menu, featured-images, one-column, two-columns, left-sidebar, right-sidebar, theme-options, translation-ready
 
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Variables
-# Normalize
-# Typography
-	## Headings
-	## Copy
-# Elements
-	## Lists
-	## Tables
-# Forms
-	## Buttons
-	## Fields
-# Navigation
-	## Links
-	## Menus
-	## Next & Previous
-# Accessibility
-# Alignments
-# Clearings
-# Layout
-# Widgets
-# Content
-	## Archives
-	## Posts and pages
-	## Comments
-# Blocks
-# Media
-	## Captions
-	## Galleries
-# Theme
-	## Theme
-
+# Bootstrap
+# theme styles
+# themify-icons
+# Custom
 --------------------------------------------------------------*/
-@import "sass/variables-site/variables-site";
-@import "sass/mixins/mixins-master";
 
-/* Normalize */
+/*--------------------------------------------------------------
+## Bootstrap
+--------------------------------------------------------------*/
+@import "sass/bootstrap/bootstrap";
 
-@import "sass/normalize";
+/*--------------------------------------------------------------
+## khaown theme
+--------------------------------------------------------------*/
+@import "sass/khaown/theme-khaown";
 
-/* Typography */
+/*--------------------------------------------------------------
+## themify-icons
+--------------------------------------------------------------*/
+@import "sass/icons/themify-icons";
 
-@import "sass/typography/typography";
+/*--------------------------------------------------------------
+## Custom
+--------------------------------------------------------------*/
+@import "sass/custom/custom";
 
-/* Elements */
 
-@import "sass/elements/elements";
-
-/* Forms */
-
-@import "sass/forms/forms";
-
-/* Navigation */
-
-@import "sass/navigation/navigation";
-
-/* Accessibility */
-
-@import "sass/modules/accessibility";
-
-/* Alignments */
-
-@import "sass/modules/alignments";
-
-/* Clearings */
-
-@import "sass/modules/clearings";
-
-/* Layout */
-
-@import "sass/layout/layout";
-
-/* Content */
-
-@import "sass/site/site";
-
-/* Widgets */
-
-@import "sass/site/secondary/widgets";
-
-/* Blocks */
-
-@import "sass/blocks/blocks";
-
-/* Media */
-
-@import "sass/media/media";
-
-/* theme */
-
-@import "sass/theme/theme";
+ 

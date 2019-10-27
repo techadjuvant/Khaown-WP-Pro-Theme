@@ -68,6 +68,11 @@ function khaown_custom_colors_css() {
 	$lightness_selection = absint( $lightness_selection ) . "%";
 
 	$font_Choice = get_theme_mod("default_or_customfont", "default_font");
+
+	$flat_or_deep_design = get_theme_mod("flat_or_deep_design", "flat_design");
+
+	$border_design = get_theme_mod("border_design", "border_none");
+
 	if( $font_Choice === "default_font") : 
 		
 		$theme_css = " 
@@ -79,7 +84,7 @@ function khaown_custom_colors_css() {
 			a, a:visited, .widget a {
 				font-family: 'Varela Round', sans-serif;
 			}
-			h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, button, select, textarea, .blog-posts .row p, span, button, .btn {
+			h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, button, select, textarea, .blog-posts .row p, span, button, .btn, div {
 				font-family: 'Varela Round', sans-serif;
 			} 
 	";
@@ -93,12 +98,64 @@ function khaown_custom_colors_css() {
 			}
 			a, a:visited, .widget a {
 				font-family: " . get_theme_mod("font_family", "Rajdhani") . ";
-				color: " . get_theme_mod("link_color", "#545454") . ";
 			}
-			h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, button, select, textarea, .blog-posts .row p, span, button, .btn {
+			h1, h2, h3, h4, h5, h6, p, ul, ol, pre, table, blockquote, input, button, select, textarea, .blog-posts .row p, span, button, .btn, div {
 				font-family: " . get_theme_mod("font_family", "Rajdhani") . ";
 			}
+			
 		"; 
+	endif;
+
+	if( $flat_or_deep_design === "flat_design") : 
+		
+		$theme_css .= " 
+	
+		.blog-posts .row .bg-color-blog-posts {
+			background: " . get_theme_mod("sidebar_background_color", "#f8f8f8") . ";
+			border-radius: 0px;
+			box-shadow: 0;
+		}
+	";
+	endif;
+
+	if( $flat_or_deep_design === "deep_design") : 
+		
+		$theme_css .= " 
+	
+		.blog-posts .row .bg-color-blog-posts {
+			background: #ffffff;
+			border-radius: 5px;
+			transition: all .4s;
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+		}
+		.blog-posts .row .bg-color-blog-posts:hover {
+			box-shadow: 0 3px 3px 1px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+			transition: all .4s;
+		}
+		header nav, header .menu > li ul {
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+		}
+	";
+	endif;
+
+	if( $border_design === "has_border") : 
+		
+		$theme_css .= " 
+		.feature.bordered {
+			padding: 32px;
+			border: 1px solid #ccc;
+		}
+	";
+	endif;
+
+	if( $border_design === "border_none") : 
+		
+		$theme_css .= " 
+		.feature.bordered {
+			padding: 32px;
+			border: 0;
+		}
+	";
 	endif;
 
 	$theme_css .= "
@@ -125,8 +182,11 @@ function khaown_custom_colors_css() {
 			letter-spacing: " . get_theme_mod("paragraph_letter_spacing", "0") . "px;
 			word-spacing: " . get_theme_mod("paragraph_word_spacing", "0") . "px;
 		}
+		svg.svg-icon {
+			fill: " . get_theme_mod("hover_link_color", "#a0a0a0") . ";
+		}
 
-		a:focus, a:hover, a:hover, a:visited, a:active, .widget a:hover, .post-navigation .nav-links a:hover, .entry .entry-meta a:hover, .entry .entry-footer a:hover {
+		a:hover, a:visited, a:active, .widget a:hover, .post-navigation .nav-links a:hover, .entry .entry-meta a:hover, .entry .entry-footer a:hover {
 			color: " . get_theme_mod("hover_link_color", "#a0a0a0") . ";
 		}
 
@@ -150,6 +210,12 @@ function khaown_custom_colors_css() {
 			line-height: " . get_theme_mod("heading_h2_line_height", "32") . "px;
 		}
 
+		.blog-posts .row .bg-color-blog-posts {
+			border-radius: " . get_theme_mod("border_radius", "0") . "px;
+			background: " . get_theme_mod("sidebar_background_color", "#f8f8f8") . ";
+		}
+
+
 
 		.bg-menu-4 {
 			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
@@ -158,13 +224,12 @@ function khaown_custom_colors_css() {
 			color: " . get_theme_mod("top_header_site_tile_color", "#000000") . ";
 			font-size: " . get_theme_mod("site_title_font_size", "32") . "px;
 			font-weight: " . get_theme_mod("site_title_font_weight", "500") . ";
-			margin-bottom: " . get_theme_mod("site_title_margin_bottom", "40") . "px;
 		  }
 		.page-title h1.khaown-site-title {
 			font-size: " . get_theme_mod("site_title_font_size", "32") . "px;
 			font-weight: " . get_theme_mod("site_title_font_weight", "500") . ";
-			margin-bottom: " . get_theme_mod("site_title_margin_bottom", "40") . "px;
-			color: " . get_theme_mod("top_header_site_tile_color", "") . ";
+			margin-bottom: " . get_theme_mod("site_title_margin_bottom", "5") . "px;
+			color: " . get_theme_mod("top_header_site_tile_color", "#000000") . ";
 		}
 		p.khaown-site-description {
 			color: " . get_theme_mod("top_header_site_desc_color", "#5f5f5f") . ";
@@ -185,9 +250,7 @@ function khaown_custom_colors_css() {
 
 
 
-		.blog-posts .row .bg-color-blog-posts {
-			background: " . get_theme_mod("sidebar_background_color", "#f8f8f8") . ";
-		}
+		
 		.blog-posts article:nth-child(3n-1) .bg-color-blog-posts {
 			background: " . get_theme_mod("veriant_posts_background_color", "#333347") . " !important;
 		}
@@ -203,6 +266,13 @@ function khaown_custom_colors_css() {
 		.site-branding {
 			margin: 0;
 			line-height: inherit;
+		}
+		.social-accounts a {
+			color: " . get_theme_mod("social_media_icon_color", "#a0a0a0") . ";
+			font-size: " . get_theme_mod("social_icon_font_size", "14") . "px;
+		}
+		.social-accounts a:hover {
+			color: " . get_theme_mod("social_media_icon_hover_color", "#0073aa") . ";
 		}
 
 		section.restaurant-schedule {
@@ -225,29 +295,6 @@ function khaown_custom_colors_css() {
 			}
 
 		}
-
-		/*
-		 * Pro version
-		 */
-
-		.rsv-header-bg {
-			background-color: " . get_theme_mod("rsv_header_bg_color", "#F0DFF6") . ";
-		}
-		.rsv-header-bg h2 {
-			font-size: " . get_theme_mod("rsv_font_size", "40") . "px;
-			color: " . get_theme_mod("rsv_header_text_color", "#7a7a7a") . ";
-		}
-		.rsv-middle-body {
-			background-color: " . get_theme_mod("rsv_middle_body_bg_color", "#ffffff") . ";
-			color: " . get_theme_mod("rsv_middle_body_text_color", "#7a7a7a") . ";
-		}
-		.rsv-form-container {
-			background-color: " . get_theme_mod("rsv_form_bg_color", "#F0DFF6") . ";
-		}
-		.rsv-form-container h3, .rsv-form-container h4, .rsv-form-container p {
-			color: " . get_theme_mod("rsv_form_text_color", "#7a7a7a") . ";
-		}
-
 		
 		";
 

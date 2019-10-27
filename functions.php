@@ -188,9 +188,9 @@ function khaown_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer', 'khaown' ),
+			'name'          => __( 'Sidebar', 'khaown' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'khaown' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar.', 'khaown' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -231,8 +231,6 @@ function khaown_scripts() {
 	wp_enqueue_script( 'moment-with-locales', get_theme_file_uri( '/js/moment-with-locales.js' ), array(), '1.1', true );
 	wp_enqueue_script( 'bootstrap-datetimepicker', get_theme_file_uri( '/js/bootstrap-datetimepicker.js' ), array(), '1.1', true );
 	wp_enqueue_script( 'reservationScript', get_theme_file_uri( '/js/reservationScript.js' ), array(), '1.1', true );
-
-	
 
 	if ( has_nav_menu( 'menu-1' ) ) {
 		wp_enqueue_script( 'khaown-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '1.1', true );
@@ -355,6 +353,53 @@ class CSS_Menu_Maker_Walker extends Walker {
 		$output .= "</li>\n";  
 	}
 }
+
+
+/**
+ * TGMPA class.
+ */
+ require get_template_directory() . '/classes/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'khaown_require_plugins' );
+
+function khaown_require_plugins() {
+ 
+$plugins = array( 
+	/* The array to install plugins */
+
+		// This plugin code is based in the root of the GitHub repository
+		array(
+			'name'      => 'Adminbar Link Comments to Pending',
+			'slug'      => 'adminbar-link-comments-to-pending',
+			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
+		),
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+		array(
+			'name'      => 'BuddyPress',
+			'slug'      => 'buddypress',
+			'required'  => false,
+		),
+ );
+$config = array( 
+	/* The array to configure TGM Plugin Activation */
+
+	'id'           => 'khaown-tgmpa', // your unique TGMPA ID
+    'default_path' => get_stylesheet_directory() . '/lib/plugins/', // default absolute path
+    'menu'         => 'khaown-install-required-plugins', // menu slug
+    'has_notices'  => true, // Show admin notices
+    'dismissable'  => false, // the notices are NOT dismissable
+    'dismiss_msg'  => 'Please install these plugins to get access to all the features of the theme.', // this message will be output at top of nag
+    'is_automatic' => true, // automatically activate plugins after installation
+    'message'      => '<!--Hey there.-->', // message to output right before the plugins table
+    'strings'      => array() // The array of message strings that TGM Plugin Activation uses
+ 
+);
+
+tgmpa( $plugins, $config );
+
+}
+
 
 
 /**

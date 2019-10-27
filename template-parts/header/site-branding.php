@@ -13,7 +13,7 @@
 	<?php } else { ?>
 		<?php $blog_info = get_bloginfo( 'name' ); ?>
 		<?php if ( ! empty( $blog_info ) ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title khaown-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	<?php endif; ?>
 	<?php } ?>
 </div>
