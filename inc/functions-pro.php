@@ -4,11 +4,13 @@
 add_action('wp_ajax_load_menus_by_ajax', 'load_menus_by_ajax');
 add_action('wp_ajax_nopriv_load_menus_by_ajax', 'load_menus_by_ajax');
 
+
 function load_menus_by_ajax() {
 
   check_ajax_referer('load_more_menus', 'security');
 
   $paged = $_POST['page'];
+  $menu_per_page = $_POST['menu_per_page'];
 
   $args = array(
 
@@ -16,7 +18,7 @@ function load_menus_by_ajax() {
 
       'post_status' => 'publish',
 
-      'posts_per_page' => 2,
+      'posts_per_page' => $menu_per_page,
 
       'paged' => $paged,
 

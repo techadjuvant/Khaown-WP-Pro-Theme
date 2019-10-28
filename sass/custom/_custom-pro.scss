@@ -1,4 +1,5 @@
-.blog-posts {
+.menu-items {
+    background-color: #fff;
     .food-menu {
         .bg-color-blog-posts {
             border: 1px solid #ccc;
@@ -43,6 +44,29 @@
         color: #d2d2d2;
     }
 
+}
+
+.food-menu-header {
+    background-color: #F0DFF6;
+
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 3px;
+        color: #292929;
+    }
+}
+.loadmoremenus-wrapper { 
+    .btn {
+        background-color: red;
+        padding-top: 5px;
+        color: white;
+        border: 2px solid #333347;
+    } 
+    .btn:hover {
+        background: #333347;
+        color: #fff;
+    }
 }
 
 

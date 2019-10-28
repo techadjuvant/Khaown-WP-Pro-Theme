@@ -1034,6 +1034,11 @@ require get_template_directory() . '/inc/front-page-customizer.php';
 require get_template_directory() . '/inc/reservation-customizer.php';
 
 /**
+ *  Food Menu Page Customizer additions.
+ */
+require get_template_directory() . '/inc/menu-customizer.php';
+
+/**
  * Render the site title for the selective refresh partial.
  *
  * @return void

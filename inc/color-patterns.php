@@ -295,6 +295,36 @@ function khaown_custom_colors_css() {
 			}
 
 		}
+
+		/* Pro features */
+		.food-menu-header {
+			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#F0DFF6") . ";
+		}
+		.food-menu-header h1 {
+			font-size: " . get_theme_mod("khaown_food_menu_header_font_size", "40") . "px;
+			color: " . get_theme_mod("khaown_food_menu_header_text_color", "#292929") . ";
+		}
+		.menu-items {
+			background-color: " . get_theme_mod("khaown_food_menu_body_bg_color", "#fff") . ";
+		}
+		.menu-items .food-menu .bg-color-blog-posts {
+			border: 1px solid " . get_theme_mod("khaown_food_menu_item_border_color", "#ccc") . ";
+			background: " . get_theme_mod("khaown_food_menu_item_bg_color", "#f8f8f8") . ";
+		}
+		.blog-posts .food-menu:nth-child(3n-1) .bg-color-blog-posts {
+			background: " . get_theme_mod("khaown_food_menu_varient_bg_color", "#333347") . " !important;
+		}
+		.loadmoremenus-wrapper .btn {
+			background-color: " . get_theme_mod("khaown_food_menu_load_more_button_color", "#333347") . ";
+			color: " . get_theme_mod("khaown_food_menu_load_more_button_text_color", "#d2d2d2") . ";
+			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_border_color", "#333347") . ";
+		}
+
+		.loadmoremenus-wrapper .btn:hover {
+			background: " . get_theme_mod("khaown_food_menu_load_more_button_hover_color", "#f8f8f8") . ";
+			color: " . get_theme_mod("khaown_food_menu_load_more_button_hover_text_color", "#333347") . ";
+			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_hover_border_color", "#333347") . ";
+		}
 		
 		";
 
