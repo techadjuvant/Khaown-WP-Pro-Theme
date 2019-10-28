@@ -301,10 +301,10 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Review setting setup
 	$wp_customize->add_setting('hide_review_section', array(
-		'default'			=> __( false, 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> __( 'false', 'khaown'),
+		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
-        'priority' 		 => 41
+        'priority' 		 	=> 41
 	) );
 	
 	// Display Review Control setup
@@ -313,14 +313,32 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'Hide Review Section', 'khaown' ),
             'section'    => 'review_section',
-            'type'    => 'checkbox',
+            'type'    	 => 'checkbox',
             'settings'   => 'hide_review_section',
+        )
+	);
+	// Display Review setting setup
+	$wp_customize->add_setting('khaown_show_max_reviews', array(
+		'default'			=> __( '3', 'khaown'),
+		'sanitize_callback' => 'esc_attr',
+        'type' 				=> 'theme_mod',
+        'priority' 		 	=> 41
+	) );
+	
+	// Display Review Control setup
+	$wp_customize->add_control(
+        'khaown_show_max_reviews', 
+        array(
+            'label'      => __( 'Shaw Max Number of Review', 'khaown' ),
+            'section'    => 'review_section',
+            'type'    	 => 'number',
+            'settings'   => 'khaown_show_max_reviews',
         )
     );
     $review_bg_image[] = array(
 		'slug'        => 'upload_media_review_bg_image', 
         'label'       => __( 'Review Background Image', 'khaown' ),
-        'section' => 'review_section',
+        'section' 	  => 'review_section',
 	);
 
 	foreach( $review_bg_image as $bg_image ) {
@@ -343,48 +361,38 @@ function khaown_front_page_customize_register( $wp_customize ) {
 				'settings' => $bg_image['slug'])
 			)
 		);
-    }
-
-    $customer_reviews[] = array(
-		'slug'        => 'upload_customer_reviews_1', 
-        'label'       => __( 'Customer Review 1', 'khaown' ),
-        'section' => 'review_section',
-        
-    );
-    $customer_reviews[] = array(
-		'slug'        => 'upload_customer_reviews_2', 
-        'label'       => __( 'Customer Review 1', 'khaown' ),
-        'section' => 'review_section',
-        
-    );
-    $customer_reviews[] = array(
-		'slug'        => 'upload_customer_reviews_3', 
-        'label'       => __( 'Customer Review 3', 'khaown' ),
-        'section' => 'review_section',
-        
+	}
+	
+	// Schedule bg color
+	$khaown_review_bg_colors[] = array(
+		'slug'=> 'khaown_review_bg_color', 
+		'default' => '#f0dff6',
+		'label' => 'Review Section Background Color'
 	);
 
-	foreach( $customer_reviews as $review ) {
+	foreach( $khaown_review_bg_colors as $review_bg_color ) {
 	
 		// SETTINGS
 		$wp_customize->add_setting(
-			$review['slug'], array(
-                'default'			=> __( '“In a city filled with music makers and dreamers of dreams, you helped fashion an empire’s glory out of a fabulous story”', 'khaown'),
+			$review_bg_color['slug'], array(
+				'default' => $review_bg_color['default'],
 				'type' => 'theme_mod',
 				'sanitize_callback'  => 'esc_attr'
 			)
 		);
 		// CONTROLS
 		$wp_customize->add_control(
-				$review['slug'], 
-				array(
-                'label' => $review['label'], 
-                'type'    => 'textarea',
-				'section' => $review['section'], 
-                'settings' => $review['slug']),
-                
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				$review_bg_color['slug'], 
+				array('label' => $review_bg_color['label'], 
+				'section' => 'review_section',
+				'settings' => $review_bg_color['slug'])
+			)
 		);
     }
+
+    
 
 
     /**********************************

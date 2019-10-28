@@ -275,12 +275,7 @@ function khaown_custom_colors_css() {
 			color: " . get_theme_mod("social_media_icon_hover_color", "#0073aa") . ";
 		}
 
-		section.restaurant-schedule {
-			background-color: " . get_theme_mod("schedule_bg_color", "#7774B3") . ";
-		}
-		section.restaurant-schedule strong, section.restaurant-schedule span, section.restaurant-schedule h3 {
-			color: " . get_theme_mod("schedule_text_color", "#292929") . ";
-		}
+		
 
 		
 
@@ -297,6 +292,17 @@ function khaown_custom_colors_css() {
 		}
 
 		/* Pro features */
+
+		section.restaurant-schedule {
+			background-color: " . get_theme_mod("schedule_bg_color", "#7774B3") . ";
+		}
+		section.restaurant-schedule strong, section.restaurant-schedule span, section.restaurant-schedule h3 {
+			color: " . get_theme_mod("schedule_text_color", "#292929") . ";
+		}
+		.customer-review-section {
+			background-color: " . get_theme_mod("khaown_review_bg_color", "#f0dff6") . "!important;
+		}
+
 		.food-menu-header {
 			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#F0DFF6") . ";
 		}

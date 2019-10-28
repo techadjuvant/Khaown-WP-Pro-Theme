@@ -14061,6 +14061,29 @@ table td, table th {
 /*--------------------------------------------------------------
 ## Custom-Pro
 --------------------------------------------------------------*/
+.customer-review-section {
+  background-color: #f0dff6 !important; }
+  .customer-review-section h3 p, .customer-review-section h3 {
+    font-size: 24px;
+    line-height: 32px; }
+  .customer-review-section .flex-control-nav li {
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+    width: 15px; }
+  .customer-review-section .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    text-align: center; }
+  .customer-review-section .flex-control-nav li a {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-indent: -9999px;
+    display: block; }
+
 .menu-items {
   background-color: #fff; }
   .menu-items .food-menu .bg-color-blog-posts {

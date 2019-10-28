@@ -1,3 +1,36 @@
+.customer-review-section {
+    background-color: #f0dff6 !important;
+
+    h3 p, h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .flex-control-nav li {
+        overflow: hidden;
+        display: inline-block;
+        margin: 5px;
+        width: 15px;
+    }
+
+    .flex-control-nav {
+        width: 100%;
+        position: absolute;
+        bottom: -40px;
+        text-align: center;
+    }
+
+    .flex-control-nav li a {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        text-indent: -9999px;
+        display: block;
+    }
+}
+
+
 .menu-items {
     background-color: #fff;
     .food-menu {

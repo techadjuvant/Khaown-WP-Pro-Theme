@@ -69,14 +69,13 @@
         </section>
     <?php }; ?>
     <?php 
-        $hide_products = get_theme_mod( 'hide_products_section');
+        $hide_products = get_theme_mod( 'hide_products_section', true);
         if(!$hide_products) { 
     ?>
             <div class="lightbox-grid third-thumbs">
                 <ul class="em-products">
                     <h1>Motahar's Products</h1>
                     <?php
-                    	// $products_per_page = $emotahar['em_product_counts'];
 						$products_per_page = 6;
                         $em_food_itmes = array(
                             'post_type' => 'product',
@@ -152,54 +151,49 @@
             </section>
        <?php }; ?>
 
-       <?php 
-            $hide_reviews = get_theme_mod( 'hide_review_section', false);
-            if(!$hide_reviews) { 
-        ?>
-           <section class="image-bg overlay parallax">
-               <div class="background-image-holder">
-                   <img alt="image" class="background-image" src="<?php echo get_theme_mod( 'upload_media_review_bg_image'); ?>" />
-               </div>
+
+        <?php
+            $reviews_on_homepage =  get_theme_mod( 'khaown_show_max_reviews', 3);
+            $khaown_customer_review = array(
+                'post_type' => 'customer_review',
+                'post_status' => 'publish',
+                'posts_per_page' => $reviews_on_homepage
+            );
+            $khaown_customer_review_posts = new WP_Query( $khaown_customer_review );
+            if ( $khaown_customer_review_posts->have_posts() ) : ?> 
+
+                <?php 
+                    $hide_reviews = get_theme_mod( 'hide_review_section', false);
+                    if(!$hide_reviews) { 
+                ?>
+           <section class="customer-review-section image-bg overlay parallax">
+                <?php 
+                    $upload_media_review_bg_image = get_theme_mod( 'upload_media_review_bg_image');
+                    if($upload_media_review_bg_image) { 
+                ?>
+                    <div class="background-image-holder">
+                        <img alt="image" class="background-image" src="<?php echo $upload_media_review_bg_image; ?>" />
+                    </div>
+                <?php } ?>
                <div class="container">
                     <div class="row">
                         <div class="text-slider slider-paging-controls controls-outside relative">
                             <ul class="slides">
                                 <?php 
-                                    $hide_review_1 = get_theme_mod( 'upload_customer_reviews_1');
-                                    if($hide_review_1) { 
+                                    while ( $khaown_customer_review_posts->have_posts() ) : $khaown_customer_review_posts->the_post();
+                                    $display_reviewer_name = get_post_meta( get_the_ID(), 'display_reviewer_name', true );
                                 ?>
-                                    <li>
+                                <li>
                                     <div class="col-md-8 col-md-offset-2">
-                                            <div class="feature bordered text-center trans-dark">
-                                                <h3><?php echo get_theme_mod( 'upload_customer_reviews_1', ''); ?></h3>                                          
-                                            </div>
+                                        <div class="feature bordered text-center trans-dark">
+                                            <h3><?php the_content(); ?></h3>
+                                            <h6 class="uppercase"> <?php echo $display_reviewer_name; ?></h6>
                                         </div>
-                                    </li>
-                                <?php } ?>
-                                <?php 
-                                    $hide_review_2 = get_theme_mod( 'upload_customer_reviews_2');
-                                    if($hide_review_2) { 
-                                ?>
-                                    <li>
-                                    <div class="col-md-8 col-md-offset-2">
-                                            <div class="feature bordered text-center trans-dark">
-                                                <h3><?php echo get_theme_mod( 'upload_customer_reviews_2', ''); ?></h3>                                          
-                                            </div>
-                                        </div>
-                                    </li>
-                                <?php } ?>
-                                <?php 
-                                    $hide_review_3 = get_theme_mod( 'upload_customer_reviews_3');
-                                    if($hide_review_3) { 
-                                ?>
-                                    <li>
-                                    <div class="col-md-8 col-md-offset-2">
-                                            <div class="feature bordered text-center trans-dark">
-                                                <h3><?php echo get_theme_mod( 'upload_customer_reviews_3', ''); ?></h3>                                          
-                                            </div>
-                                        </div>
-                                    </li>
-                                <?php } ?>
+                                    </div>
+                                </li>
+                                <?php endwhile;  ?>
+                                
+                                
                             </ul>
                         </div>
                     </div>
@@ -207,7 +201,12 @@
                 </div>
                 <!--end of container-->
             </section>
-         <?php }; ?>
+                <?php }; ?>
+
+        <?php 
+            wp_reset_postdata();
+            endif; 
+        ?>
 
         <?php 
             $hide_schedule = get_theme_mod( 'hide_schedule_section', false);
