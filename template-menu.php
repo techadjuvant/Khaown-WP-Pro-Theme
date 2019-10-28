@@ -11,7 +11,7 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-							<h2 class="uppercase mb0 font-white">Menu<strong>Item</strong></h2>
+							<h1 class="mb0 font-white">Menu<strong>Item</strong></h1>
                         </div>
                     </div>
                     <!--end of row-->
@@ -51,7 +51,7 @@ get_header();
                     </div>
                 <?php if($em_post_menus->max_num_pages != 1) { ?>
                     <div id="loadingDiv" class="posts-laoding-gif hidden">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/loading.gif" alt="Loading"> 
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif" alt="Loading"> 
                     </div>
                     <div class="btn-wrapper loadmoremenus-wrapper text-center">
                         <div class="btn loadmore">Load More</div>
@@ -61,62 +61,13 @@ get_header();
                 </div>
                 <!--end of container-->
             </section>
+    
+    <?php
+    /**
+     * More Menu.
+     */
+        require get_template_directory() . '/inc/more-menu.php';
+
+    ?>
+            
   <?php get_footer(); ?>
-
-<script type="text/javascript">
-
-    var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
-
-    var page = 2;
-
-    jQuery(function($) {
-
-        $('body').on('click', '.loadmore', function() {
-
-            $( "#loadingDiv" ).removeClass( "hidden" );
-
-            var data = {
-
-                'action': 'load_menus_by_ajax',
-
-                'page': page,
-
-                'security': '<?php echo wp_create_nonce("load_more_menus"); ?>',
-
-                'max_page': <?php echo $em_post_menus->max_num_pages + 1; ?>
-
-            };
-
-            $.post(ajaxurl, data, function(response) {
-
-                if(response != '') {
-
-                    $('.menu-items .row').append(response);
-
-                    page++;
-
-                    $( "#loadingDiv" ).addClass( "hidden" );
-
-                } else {
-
-                    $('.loadmoremenus-wrapper').hide();
-
-                    $( "#loadingDiv" ).addClass( "hidden" );
-
-                };
-
-                if (page == data['max_page']) {
-
-                    $('.loadmoremenus-wrapper').hide();
-
-                    $( "#loadingDiv" ).addClass( "hidden" );
-
-                };
-
-            });
-
-        });
-
-    });
-
-</script>
