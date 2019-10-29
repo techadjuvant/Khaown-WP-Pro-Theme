@@ -1,6 +1,6 @@
 <?php 
 /*
-//  Template Name: Reservation Template
+//  Template Name: Reservation
 */
 get_header();
 ?>	
@@ -86,15 +86,13 @@ get_header();
                         </select>
                         <div class="form-group">
                             <div class="input-group date" id="datepicker">
-                                <span class="input-group-append input-group-addon">
-                                    <span class="input-group-text"><i class="ti-calendar"></i></span>
-                                </span>
-                                <input required name="reservation_date" id="today" class="form-control"  placeholder="Reservation Date"/>
+                                <span class="input-group-append input-group-addon"><span class="input-group-text"><i class="ti-calendar"></i></span></span>
+                                <input required id="today" name="reservation_date" class="form-control" placeholder="Date"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <div class="input-group time" id="startTimepicker">                                          
+                                <div class="input-group time" id="startTimepicker">                                      
                                     <span class="input-group-append input-group-addon">
                                         <span class="input-group-text"><i class="ti-timer"></i></span>
                                     </span>
@@ -106,20 +104,21 @@ get_header();
                                     <span class="input-group-append input-group-addon">
                                         <span class="input-group-text"><i class="ti-timer"></i></span>
                                     </span>
-                                    <input name="reservation_time_ends" class="form-control" placeholder="End Time"/>
+                                    <input required name="reservation_time_ends" class="form-control" placeholder="End Time"/>
                                 </div>
                             </div>
 
                         </div>
                         <textarea required name="message" id="message" class="form-control mb16" rows="5" data-error="NEW ERROR MESSAGE" placeholder="Message + Phone Number"></textarea>
-                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+                        <input id="formProcessUrl" class="hidden" type="text" value="<?php echo get_template_directory_uri(); ?>/form-process.php">
+                        <input id="email_address" name="email_address" type="text" class="hidden" value="<?php echo 'motahar1201123@gmail.com'; ?>">
+                        <button type="submit" id="rsv_form_submit_xxx" class="btn btn-success btn-lg pull-right ">Submit</button>
                         <div id="loadingDiv" class="hidden">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif" alt="Loading">
                         </div>
                         <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
                         <div id="msgNotSubmit" class="h3 text-center hidden">Message Not Submitted!</div>
-                        <input id="formProcessUrl" class="hidden" type="text" value="<?php echo get_template_directory_uri(); ?>/form-process.php">
-                        <input id="email_address" name="email_address" type="text" class="hidden" value="<?php echo 'motahar1201123@gmail.com'; ?>">
+                        
                     </form>
                 </div>
             </div>
@@ -133,73 +132,7 @@ get_header();
 
 <script>
 
-let today = new Date().toISOString().substr(0, 10);
 
-document.querySelector("#today").value = today;
-
-
-
-// document.querySelector("#today2").valueAsDate = new Date();
-
-
-
-if (/Mobi/.test(navigator.userAgent)) {
-
-    // if mobile device, use native pickers
-
-    $(".date input").attr("type", "date");
-
-    $(".time input").attr("type", "time");
-
-  } else {
-
-    // if desktop device, use DateTimePicker
-
-    $("#datepicker").datetimepicker({
-
-      useCurrent: false,
-
-      format: "LL",
-
-      icons: {
-
-        next: "fa fa-chevron-right",
-
-        previous: "fa fa-chevron-left"
-
-      }
-
-    });
-
-    $("#startTimepicker").datetimepicker({
-
-      format: "LT",
-
-      icons: {
-
-        up: "fa fa-chevron-up",
-
-        down: "fa fa-chevron-down"
-
-      }
-
-    });
-
-    $("#endTimepicker").datetimepicker({
-
-        format: "LT",
-
-        icons: {
-
-          up: "fa fa-chevron-up",
-
-          down: "fa fa-chevron-down"
-
-        }
-
-      });
-
-  }
 
 
 

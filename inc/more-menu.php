@@ -3,7 +3,6 @@
 var page = 2;
 var menu_per_page = <?php echo $khaown_food_menu_default_menu_count; ?>
 
-
 jQuery(function($) {
 
     $('body').on('click', '.loadmore', function() {

@@ -91,7 +91,7 @@
 }
 .loadmoremenus-wrapper { 
     .btn {
-        background-color: red;
+        background-color: #333347;
         padding-top: 5px;
         color: white;
         border: 2px solid #333347;
@@ -102,6 +102,43 @@
     }
 }
 
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    display: block;
+    margin: 2px 0;
+    padding: 4px;
+    width: 280px;
+}
+.bootstrap-datetimepicker-widget table  .btn {
+    border: 0;
+    padding: 0;
+    height: 0px;
+    min-width: 0;
+    line-height: 0px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    color: #545454;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+.bootstrap-datetimepicker-widget button[data-action] {
+    padding: 6px;
+    margin-bottom: 0px;
+    font-size: 24px;
+}
 
+.bootstrap-datetimepicker-widget .btn-primary {
+    color: #545454;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.rsv-form-container form button#form-submit {
+    width: 100% !important;
+}
 
 

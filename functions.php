@@ -240,9 +240,6 @@ function khaown_scripts() {
 	wp_enqueue_script( 'scripts', get_theme_file_uri( '/js/scripts.js' ), array(), '1.1', true );
 	wp_enqueue_script( 'moment-with-locales', get_theme_file_uri( '/js/moment-with-locales.js' ), array(), '1.1', true );
 	wp_enqueue_script( 'bootstrap-datetimepicker', get_theme_file_uri( '/js/bootstrap-datetimepicker.js' ), array(), '1.1', true );
-	wp_enqueue_script( 'reservationScript', get_theme_file_uri( '/js/reservationScript.js' ), array(), '1.1', true );
-	
-	
 
 
 	if ( has_nav_menu( 'menu-1' ) ) {
@@ -254,6 +251,11 @@ function khaown_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_page_template( 'reservation.php' ) ) {
+		// Will used in template-reservation.php
+		wp_enqueue_script( 'reservationScript', get_theme_file_uri( '/js/reservationScript.js' ), array(), '1.1', true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'khaown_scripts' );
