@@ -257,6 +257,11 @@ function khaown_scripts() {
 		// Will used in template-reservation.php
 		wp_enqueue_script( 'reservationScript', get_theme_file_uri( '/js/reservationScript.js' ), array(), '1.1', true );
 	}
+	if ( is_page_template( 'template-menu.php' ) ) {
+		// Will used in template-reservation.php
+		wp_enqueue_script( 'more-menu', get_theme_file_uri( '/js/more-foodMenu.js' ), array(), '1.1', true );
+	}
+	
 }
 add_action( 'wp_enqueue_scripts', 'khaown_scripts' );
 
@@ -422,6 +427,7 @@ tgmpa( $plugins, $config );
  * Pro Fucntions.
  */
 require get_template_directory() . '/inc/functions-pro.php';
+
 
 /**
  * SVG Icons class.

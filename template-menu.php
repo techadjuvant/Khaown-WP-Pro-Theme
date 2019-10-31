@@ -25,7 +25,7 @@ get_header(); ?>
 
 <?php
 
-    $khaown_food_menu_default_menu_count = get_theme_mod("khaown_food_menu_default_menu_count", 2);
+    $khaown_food_menu_default_menu_count = get_theme_mod("khaown_food_menu_default_menu_count", "2");
 
     $em_food_menu_posts = array(
         'post_type' => 'food_menu',
@@ -62,6 +62,9 @@ get_header(); ?>
         <div id="loadingDiv" class="posts-laoding-gif hidden">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif" alt="Loading"> 
         </div>
+        <input class="hidden" name="khaown_FoodMenu_perPage" id="khaown_FoodMenu_perPage" type="text" value="<?php echo $khaown_food_menu_default_menu_count; ?>">
+        <input class="hidden" name="khaown_FoodMenu_maxPage" id="khaown_FoodMenu_maxPage" type="text" value="<?php echo $em_post_menus->max_num_pages + 1; ?>">
+        <input class="hidden" name="khaown_FoodMenu_security" id="khaown_FoodMenu_security" type="text" value="<?php echo wp_create_nonce("load_more_menus"); ?>">
         <div class="btn-wrapper loadmoremenus-wrapper text-center">
             <div class="btn loadmore">Load More</div>
         </div>
@@ -71,11 +74,4 @@ get_header(); ?>
     <!--end of container-->
 </section>
     
-<?php
-/**
- * More Menu.
- */
-    require get_template_directory() . '/inc/more-menu.php';
-
-?>
-<?php get_footer(); ?>
+<?php get_footer(); 

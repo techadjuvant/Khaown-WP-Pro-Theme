@@ -1,7 +1,8 @@
-<script>
 
 var page = 2;
-var menu_per_page = <?php echo $khaown_food_menu_default_menu_count; ?>
+var menu_per_page = $("#khaown_FoodMenu_perPage").val();
+var maxPage = $("#khaown_FoodMenu_maxPage").val();
+var khaown_foodMenu_security = $("#khaown_FoodMenu_security").val();
 
 jQuery(function($) {
 
@@ -17,9 +18,9 @@ jQuery(function($) {
 
             'menu_per_page': menu_per_page,
 
-            'security': '<?php echo wp_create_nonce("load_more_menus"); ?>',
+            'security': khaown_foodMenu_security,
 
-            'max_page': <?php echo $em_post_menus->max_num_pages + 1; ?>
+            'max_page': maxPage
 
         };
 
@@ -55,4 +56,4 @@ jQuery(function($) {
 
 });
 
-</script>
+
