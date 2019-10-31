@@ -154,7 +154,6 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
 				$rsv_body_color['slug'], 
 				array('label' => $rsv_body_color['label'], 
 				'section' => 'reservation_middle_body_section',
-				'priority' 		=>  20,
 				'settings' => $rsv_body_color['slug'])
 			)
 		);
@@ -235,19 +234,36 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
     ) );
     // Display Reservation Form setting setup
 	$wp_customize->add_setting('rsv_hide_form_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
 	// Display Reservation Form Control setup
-	$wp_customize->add_control(
-        'rsv_hide_form_section',
+	$wp_customize->add_control('rsv_hide_form_section',
         array(
             'label'      => __( 'Hide Reservation Form Section', 'khaown' ),
             'section'    => 'reservation_form_section',
             'type'    => 'checkbox',
             'settings'   => 'rsv_hide_form_section',
+        )
+	);
+
+	// Email of Reservation Form Control setup
+	$wp_customize->add_setting('rsv_receiver_email_of_reservation', array(
+		'default'			=> __( 'yourEmail@example.com', 'khaown'),
+		'sanitize_callback'  => 'esc_attr',
+		'type' 				=> 'theme_mod'
+	) );
+	
+	// Email of Reservation Form Control setup
+	$wp_customize->add_control(
+        'rsv_receiver_email_of_reservation',
+        array(
+            'label'      => __( 'Email Address of Receiver', 'khaown' ),
+            'section'    => 'reservation_form_section',
+            'type'    => 'text',
+            'settings'   => 'rsv_receiver_email_of_reservation',
         )
     );
     $rsv_form_colors[] = array(

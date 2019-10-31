@@ -24,7 +24,7 @@ get_header();
 
             <div class="row">
 
-                <div class="col-md-6 col-xs-12 ml16">
+                <div class="text-left">
 
                     <h2 class="uppercase mb0 font-white"><strong><?php echo get_theme_mod("rsv_header_title", 'Reservation'); ?></strong></h2>
 
@@ -150,7 +150,7 @@ get_header();
 
                         <input required id="reservation-input" class="reserver-phone" type="tel" name="phone" placeholder="Mobile Phone No. *" >
 
-                        <input type="email" name="email" id="email reservation-input" placeholder="Email Address - optional" />
+                        <input id="reservation-input" class="reserver-email" type="email" name="email" placeholder="Email Address - optional" />
                         
                         <select required id="reservation-input" class="reserver-table-size" name="table_size">
 
@@ -224,9 +224,9 @@ get_header();
 
                         <textarea name="message" id="message reservation-input" class="mb16" rows="5" placeholder="Message + Phone Number"></textarea>
 
-                        <input id="formProcessUrl" class="hidden" type="text" value="<?php echo get_template_directory_uri(); ?>/form-process.php">
+                        <input id="formProcessUrl" class="hidden" type="text" value="<?php echo get_template_directory_uri(); ?>/inc/form-process.php">
 
-                        <input id="email_address" name="email_address" type="text" class="hidden" value="<?php echo 'motahar1201123@gmail.com'; ?>">
+                        <input id="email_address" name="email_address" type="text" class="hidden" value="<?php echo get_theme_mod("rsv_receiver_email_of_reservation", "youremail@example.com"); ?>">
 
                         <button type="submit" id="rsv_form_submit" class="btn btn-success btn-lg pull-right ">Submit</button>
 

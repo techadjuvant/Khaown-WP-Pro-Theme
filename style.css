@@ -14462,7 +14462,7 @@ form textarea.form-control:focus {
   border-radius: 0;
   border: none; }
 
-form #reservation-input.reserver-name, form #reservation-input.reserver-phone, form #reservation-input.reserver-table-size {
+form #reservation-input.reserver-name, form #reservation-input.reserver-phone, form #reservation-input.reserver-email, form #reservation-input.reserver-table-size {
   margin-bottom: 20px; }
 
 input[type="submit"], button[type="submit"] {

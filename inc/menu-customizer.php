@@ -113,7 +113,7 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 	// Default Menu Load count 
 	$khaown_food_body_funcs[] = array(
 		'slug'      =>'khaown_food_menu_default_menu_count', 
-		'default'   => '6',
+		'default'   => '2',
         'label'     => 'Load Menu Item Count',
         'type'      => 'number'
 	);
@@ -189,7 +189,7 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 	Load More Button setup
     *********************************/
     $wp_customize->add_section( 'khaown_food_menu_load_more_button', array(
-		'title'          => __( 'Load More', 'khaown' ),
+		'title'          => __( 'Load More Button', 'khaown' ),
         'panel'          => 'food_menu_page_php',
         'priority' 		 => 41
 	) );

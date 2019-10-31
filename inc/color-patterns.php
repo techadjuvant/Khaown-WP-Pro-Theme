@@ -302,6 +302,24 @@ function khaown_custom_colors_css() {
 		.customer-review-section {
 			background-color: " . get_theme_mod("khaown_review_bg_color", "#f0dff6") . "!important;
 		}
+		.rsv-header-bg {
+			background-color: " . get_theme_mod("rsv_header_bg_color", "#F0DFF6") . ";
+		}
+		.rsv-header-bg h2 {
+			font-size: " . get_theme_mod("rsv_font_size", "40") . "px;
+			color: " . get_theme_mod("rsv_header_text_color", "#292929") . ";
+			margin-left: -15px;
+		}
+		.rsv-middle-body {
+			background-color: " . get_theme_mod("rsv_middle_body_bg_color", "#ffffff") . ";
+			color: " . get_theme_mod("rsv_middle_body_text_color", "#7a7a7a") . ";
+		}
+		.rsv-form-container {
+			background-color: " . get_theme_mod("rsv_form_bg_color", "#F0DFF6") . ";
+		}
+		.rsv-form-container h3, .rsv-form-container h4, .rsv-form-container p {
+			color: " . get_theme_mod("rsv_form_text_color", "#7a7a7a") . ";
+		}
 
 		.food-menu-header {
 			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#F0DFF6") . ";
