@@ -389,19 +389,21 @@ function khaown_require_plugins() {
 $plugins = array( 
 	/* The array to install plugins */
 
-		// This plugin code is based in the root of the GitHub repository
+		// This is an example of how to include a plugin bundled with a theme.
 		array(
-			'name'      => 'Adminbar Link Comments to Pending',
-			'slug'      => 'adminbar-link-comments-to-pending',
-			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
+			'name'               => 'Khaown Plugin', // The plugin name.
+			'slug'               => 'khaown-plugin', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory_uri() . '/lib/plugins/khaown-plugin.zip', // The plugin source.
+			'required'           => false // If false, the plugin is only 'recommended' instead of required.
 		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'BuddyPress',
-			'slug'      => 'buddypress',
-			'required'  => false,
-		),
+			'name'      => 'WooCommerce',
+			'slug'      => 'woocommerce',
+			'required'  => false
+		)
+		
  );
 $config = array( 
 	/* The array to configure TGM Plugin Activation */
@@ -421,6 +423,30 @@ $config = array(
 tgmpa( $plugins, $config );
 
 }
+
+/*
+// Checks any error during plugin activation
+*/
+	define('temp_file', ABSPATH.'/_temp_out.txt' );
+
+	add_action("activated_plugin", "activation_handler1");
+	function activation_handler1(){
+		$cont = ob_get_contents();
+		if(!empty($cont)) file_put_contents(temp_file, $cont );
+	}
+
+	add_action( "pre_current_active_plugins", "pre_output1" );
+	function pre_output1($action){
+		if(is_admin() && file_exists(temp_file))
+		{
+			$cont= file_get_contents(temp_file);
+			if(!empty($cont))
+			{
+				echo '<div class="error"> Error Message:' . $cont . '</div>';
+				@unlink(temp_file);
+			}
+		}
+	}
 
 
 /**
