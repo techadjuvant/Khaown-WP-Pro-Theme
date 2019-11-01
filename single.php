@@ -27,7 +27,7 @@ get_header();
 					</section>
 					
 				<?php endif; ?>
-
+				
 				<div id="single-content">
 					<div class="container">
 						<div class="row">

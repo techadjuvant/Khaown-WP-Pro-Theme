@@ -69,7 +69,7 @@
         </section>
     <?php }; ?>
     <?php 
-        $hide_products = get_theme_mod( 'hide_products_section', true);
+        $hide_products = get_theme_mod( 'hide_products_section', false);
         if(!$hide_products) { 
     ?>
             <div class="lightbox-grid third-thumbs">
