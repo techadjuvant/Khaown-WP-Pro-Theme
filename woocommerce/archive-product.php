@@ -1,7 +1,4 @@
 <?php 
-/*
-Template Name: Food Items Template
-*/
 get_header(); 
 
 $args = array(
