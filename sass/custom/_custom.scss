@@ -611,13 +611,7 @@ table td, table th {
   border: none;
 }
 
-@media all and (max-width: 991px) { 
-  .em-site-content .khaown-site-main {
-    margin-right: auto;
-    padding: 15px;
-  }
 
-}
 @media all and (max-width: 767px) {
   .search-container input.form-control {
     height: 40px;
@@ -641,10 +635,9 @@ table td, table th {
   }
   .post-navigation .nav-links {
     flex-direction: column;
-}
+  }
+
   
-
-
 }
 @media all and (max-width: 425px) {
   .em-products button.add-to-cart-btn {
@@ -653,6 +646,7 @@ table td, table th {
   .search-container .btn:last-child, .search-container .btn:last-of-type {
     margin-right: 10px;
   }
+  
 
 
 }

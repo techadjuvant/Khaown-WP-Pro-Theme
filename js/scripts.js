@@ -2538,12 +2538,7 @@ window.initializeMaps = function(){
 
                                                 });
 
-
-
                     }
-
-
-
                 }); 
 
         }
@@ -2554,40 +2549,18 @@ window.initializeMaps = function(){
 
 initializeMaps();
 
-
-
 // End of Maps
 
-
-
-
-
-
-
-
-
 // Prepare Signup Form - It is used to retrieve form details from an iframe Mail Chimp or Campaign Monitor form.
-
-
-
 function prepareSignup(iFrame){
 
     var form   = jQuery('<form />'),
 
         div    = jQuery('<div />'),
-
         action;
-
-
-
     jQuery(div).html(iFrame.attr('srcdoc'));
 
     action = jQuery(div).find('form').attr('action');
-
-
-
-
-
 
 
     // Alter action for a Mail Chimp-compatible ajax request url.
@@ -2615,9 +2588,6 @@ function prepareSignup(iFrame){
     }
 
 
-
-
-
     // Set action on the form
 
     form.attr('action', action);
@@ -2630,24 +2600,11 @@ function prepareSignup(iFrame){
 
         jQuery(this).clone().appendTo(form);
 
-
-
     });
-
-
 
     return form;
 
-        
-
-
-
 }
-
-
-
-
-
 
 
 /*\
@@ -2783,10 +2740,68 @@ var mr_cookies = {
 \*/
 
 
+/***********************************************
+*
+* Load more Woo Products with ajax
+* 
+*************************************************/
+
+
+var no_of_product_pages = 2;
+var khaown_product_per_page = $("#khaown_product_per_page").val();
+var khaown_product_maxPage = $("#khaown_product_maxPage").val();
+var khaown_product_security = $("#khaown_product_security").val();
+
+jQuery(function($) {
+    $('body').on('click', '.loadmoreproducts', function() {
+        $( "#loadingDiv" ).removeClass( "hidden" );
+        var data = {
+            'action': 'load_products_by_ajax',
+            'page': no_of_product_pages,
+            'security': khaown_product_security,
+            'max_page': khaown_product_maxPage
+        };
+
+        $.post(frontend_ajax_object.ajaxurl, data, function(product_response) {
+            if(product_response != '') {
+                $('.em-products').append(product_response);
+                no_of_product_pages++;
+                $('.background-image-holder').each(function() {
+                    var imgSrc = $(this).children('img').attr('src');
+                    $(this).css('background', 'url("' + imgSrc + '")');
+                    $(this).children('img').hide();
+                    $(this).css('background-position', 'initial');
+                });
+
+                setTimeout(function() {
+                    $('.background-image-holder').each(function() {
+                        $(this).addClass('fadeIn');
+                    });
+                }, 200);
+                $( "#loadingDiv" ).addClass( "hidden" );
+            };
+            if (no_of_product_pages == data['max_page']) {
+                $('.loadmoreproducts-wrapper').hide();
+                $( "#loadingDiv" ).addClass( "hidden" );
+            }
+        });
+
+    });
+
+});
 
 
 
 
+
+
+
+
+/***********************************************
+*
+* Pro Features
+* 
+*************************************************/
 
 
 

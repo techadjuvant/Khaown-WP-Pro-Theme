@@ -71,10 +71,10 @@
     <?php 
         $hide_products = get_theme_mod( 'hide_products_section', false);
         if(!$hide_products) { 
-    ?>
+    ?>  
+        <div class="khaown-woo-product-archive">
             <div class="lightbox-grid third-thumbs">
                 <ul class="em-products">
-                    <h1 title="Motahar">Motahar's Products</h1>
                     <?php
 						$products_per_page = 6;
                         $em_food_itmes = array(
@@ -102,6 +102,7 @@
                     ?>
                 </ul>
             </div>  
+        </div>
         <?php }; ?>
 
         <?php 

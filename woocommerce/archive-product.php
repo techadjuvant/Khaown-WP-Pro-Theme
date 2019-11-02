@@ -1,16 +1,19 @@
 <?php 
-get_header(); 
+    get_header(); 
 
-$args = array(
-    'post_type' => 'product',
-    'post_status' => 'publish',
-    'posts_per_page' => '9',
-    'paged' => $paged,
-);
-$em_products = new WP_Query( $args );
-$my_post_count = $em_products ->post_count;
+    $product_per_page = 3;
+
+    $args = array(
+        'post_type' => 'product',
+        'post_status' => 'publish',
+        'posts_per_page' => $product_per_page,
+        'paged' => $paged,
+    );
+    $em_products = new WP_Query( $args );
+    $my_post_count = $em_products ->post_count;
             if ( $em_products->have_posts() ) : 
         ?>
+        <div class="khaown-woo-product-archive">
             <div class="lightbox-grid third-thumbs">
                 <ul class="em-products">
                     <?php 
@@ -29,60 +32,22 @@ $my_post_count = $em_products ->post_count;
                         endwhile; 
                     ?>
                 </ul>
-            </div> 
+            </div>
+        </div>
+            
             <?php endif; ?>
         <?php if($em_products->max_num_pages != 1) { ?>
             <div id="loadingDiv" class="product-laoding-gif hidden">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/loading.gif" alt="Loading"> 
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif" alt="Loading"> 
             </div>
+            <input id="khaown_product_per_page" type="text" class="hidden" value="<?php $product_per_page; ?>">
+            <input class="hidden" id="khaown_product_maxPage" type="text" value="<?php echo $em_products->max_num_pages + 1; ?>">
+            <input class="hidden" id="khaown_product_security" type="text" value="<?php echo wp_create_nonce("load_more_products"); ?>">
+            
             <div class="btn-wrapper text-center loadmoreproducts-wrapper">
-                <div class="loadmoreproducts btn">Load More</div>
+                <div class="loadmoreproducts btn"> <span> Load More </span> </div>
             </div>
         <?php } ?>
 <?php get_footer(); ?>
 
-<script type="text/javascript">
-
-var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
-var page = 2;
-
-jQuery(function($) {
-    $('body').on('click', '.loadmoreproducts', function() {
-        $( "#loadingDiv" ).removeClass( "hidden" );
-        var data = {
-            'action': 'load_products_by_ajax',
-            'page': page,
-            'security': '<?php echo wp_create_nonce("load_more_products"); ?>',
-            'max_page': <?php echo $em_products->max_num_pages + 1; ?>
-        };
-
-        $.post(ajaxurl, data, function(product_response) {
-            if(product_response != '') {
-                $('.em-products').append(product_response);
-                page++;
-                $('.background-image-holder').each(function() {
-                    var imgSrc = $(this).children('img').attr('src');
-                    $(this).css('background', 'url("' + imgSrc + '")');
-                    $(this).children('img').hide();
-                    $(this).css('background-position', 'initial');
-                });
-
-                setTimeout(function() {
-                    $('.background-image-holder').each(function() {
-                        $(this).addClass('fadeIn');
-                    });
-                }, 200);
-                $( "#loadingDiv" ).addClass( "hidden" );
-            };
-            if (page == data['max_page']) {
-                $('.loadmoreproducts-wrapper').hide();
-                $( "#loadingDiv" ).addClass( "hidden" );
-            }
-        });
-
-    });
-
-});
-
-</script>
 

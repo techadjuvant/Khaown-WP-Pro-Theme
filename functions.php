@@ -441,7 +441,6 @@ function khaown_add_woocommerce_support() {
 
   add_theme_support( 'wc-product-gallery-zoom' );
 
-  // add_theme_support( 'wc-product-gallery-lightbox' );
   add_theme_support( 'wc-product-gallery-slider' );
 
 }
@@ -454,11 +453,45 @@ add_action( 'after_setup_theme', 'khaown_add_woocommerce_support' );
 
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
 
-// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-
-// add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+
+
+/// Load More products button
+
+add_action('wp_ajax_load_products_by_ajax', 'load_products_by_ajax');
+add_action('wp_ajax_nopriv_load_products_by_ajax', 'load_products_by_ajax');
+
+function load_products_by_ajax() {
+  check_ajax_referer('load_more_products', 'security');
+  $paged = $_POST['page'];
+  $args = array(
+      'post_type' => 'product',
+      'post_status' => 'publish',
+      'posts_per_page' => '1',
+      'paged' => $paged,
+  );
+  $em_products = new WP_Query( $args ); ?>
+    <?php 
+        if ( $em_products->have_posts() ) : 
+          while ( $em_products->have_posts() ) : $em_products->the_post();
+            $id = get_the_ID();
+    ?>
+        <li>
+            <a href="<?php the_permalink(); ?>" >
+                <div class="background-image-holder">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+            </a>
+            <button class="add-to-cart-btn"><?php echo do_shortcode('[add_to_cart id="' . $id .'"]'); ?></button>
+        </li>
+    <?php 
+          endwhile; 
+      endif;
+      wp_die();
+
+}
 
 
 

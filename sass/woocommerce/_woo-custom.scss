@@ -9,7 +9,40 @@
   font-style: normal
 }
 
+.khaown-woo-product-archive {
+  width: 90vw;
+  margin: 0 auto;
 
+  .third-thumbs li {
+    height: 30vw;
+    border: none;
+  }
+
+  button.add-to-cart-btn {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+  span.woocommerce-Price-amount.amount {
+    font-size: 18px;
+    padding-right: 5px;
+    color: #fff;
+
+    span.woocommerce-Price-currencySymbol {
+      color: #fff;
+      padding-right: 1px;
+    }
+
+  }
+
+}
 
 .woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
   display: flex;
@@ -26,23 +59,6 @@
   margin: 0 auto;
 }
 
-button.add-to-cart-btn {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  left: 25%;
-}
-button.add-to-cart-btn {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  left: 25%;
-  border: none;
-  background: rgba(0, 0, 0, 0.38);
-  color: #fff;
-  width: 200px;
-
-}
 p.product.woocommerce.add_to_cart_inline {
   cursor: auto;
 }
@@ -123,15 +139,25 @@ a:hover {
   text-decoration: none;
 }
 
-.loadmoreproducts.btn {
-  width: 200px;
-  border: none;
-  background: #000000f0;
-  color: #fff;
-  margin: 0;
-}
+  
 .loadmoreproducts-wrapper {
   padding: 30px;
+
+  .loadmoreproducts.btn {
+    width: 200px;
+    border: none;
+    background: #000000f0;
+    color: #fff;
+    margin: 0;
+    height: 40px;
+    padding: 8px 0;
+
+    span {
+      color: #ffffff;
+    }
+    
+  }
+
 }
 div#loadingDiv {
   margin: 20px 0;
@@ -363,4 +389,39 @@ a:visited {
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
   border: 1px solid #d7d7d7;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: left;
+  width: 200px !important;
+}
+
+
+
+
+
+@media all and (max-width: 991px) { 
+  .em-site-content .khaown-site-main {
+    margin-right: auto;
+    padding: 15px;
+  }
+  .third-thumbs li {
+    width: 50%;
+  }
+  .khaown-woo-product-archive .third-thumbs li {
+    height: 45vw;
+    border: none;
+  }
+
+}
+
+@media all and (max-width: 767px) {
+  .khaown-woo-product-archive .third-thumbs li {
+    width: 100%;
+  }
+  .khaown-woo-product-archive .third-thumbs li {
+    height: 90vw;
+    border: none;
+  }
+  
 }
