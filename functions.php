@@ -440,21 +440,24 @@ function khaown_add_woocommerce_support() {
   ) );
 
   add_theme_support( 'wc-product-gallery-zoom' );
-
   add_theme_support( 'wc-product-gallery-slider' );
 
 }
-
 add_action( 'after_setup_theme', 'khaown_add_woocommerce_support' );
 
- remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 
- add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 21);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 21);
 
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
 
-
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+add_filter( 'woocommerce_output_related_products_args', 'khaown_related_products_args', 20 );
+  function khaown_related_products_args( $args ) {
+	$args['posts_per_page'] = 4; // 4 related products
+	return $args;
+}
 
 
 

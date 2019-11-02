@@ -19,11 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 if ( $related_products ) : ?>
 	<section class="related products text-center">
-    <h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+        <div class="related-product-header">
+            <h2><?php esc_html_e( 'You may like', 'woocommerce' ); ?></h2>
+        </div>
         <div class="row">
             <?php woocommerce_product_loop_start(); ?>
                 <?php foreach ( $related_products as $related_product ) : ?>
-                    <div class="col-sm-3 ">
+                    <div class="col-md-3 col-xs-6 mb16">
                         <?php
                             $post_object = get_post( $related_product->get_id() );
                             setup_postdata( $GLOBALS['post'] =& $post_object );
