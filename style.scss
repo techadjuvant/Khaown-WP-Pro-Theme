@@ -31,6 +31,7 @@ Tags: blog, custom-logo, custom-colors, custom-menu, featured-images, one-column
 ## khaown theme
 --------------------------------------------------------------*/
 @import "sass/khaown/theme-khaown";
+@import "sass/khaown/flexslider";
 
 /*--------------------------------------------------------------
 ## themify-icons
@@ -41,6 +42,11 @@ Tags: blog, custom-logo, custom-colors, custom-menu, featured-images, one-column
 ## Custom
 --------------------------------------------------------------*/
 @import "sass/custom/custom";
+
+/*--------------------------------------------------------------
+## Custom-WooCommerce
+--------------------------------------------------------------*/
+@import "sass/woocommerce/woo-custom";
 
 /*--------------------------------------------------------------
 ## Custom-Pro

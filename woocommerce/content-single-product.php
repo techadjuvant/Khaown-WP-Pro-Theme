@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 global $product; ?>
 	<div class="container">
 		<div class="row mb-xs-24 mt24">
-			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+			<div class="col-xs-10 col-xs-offset-1">
 				<?php 
 					/**
 					 * Hook: woocommerce_before_single_product.
@@ -40,9 +40,9 @@ global $product; ?>
 	<div id="events">
 		<div class="container">
 			<div class="row mb-xs-24">
-				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-					<div class="row">
-						<div class="col-md-6">
+				<div class="col-xs-10 col-xs-offset-1">
+					<div class="row khaown-woo-single-product-header">
+						<div class="col-sm-6">
 							<?php
 							/**
 							 * Hook: woocommerce_before_single_product_summary.
@@ -53,8 +53,8 @@ global $product; ?>
 							do_action( 'woocommerce_before_single_product_summary' );
 							?>
 						</div>
-						<div class="col-md-6">
-							<div class="summary entry-summary mt-sm-16">
+						<div class="col-sm-6">
+							<div class="khaown-wc-product-summery summary entry-summary mt-sm-16">
 								<?php
 								/**
 								 * Hook: woocommerce_single_product_summary.
@@ -72,17 +72,22 @@ global $product; ?>
 								?>
 							</div>
 						</div>
+						
 					</div>
-						<?php
-						/**
-						 * Hook: woocommerce_after_single_product_summary.
-						 *
-						 * @hooked woocommerce_output_product_data_tabs - 10
-						 * @hooked woocommerce_upsell_display - 15
-						 * @hooked woocommerce_output_related_products - 20
-						 */
-						do_action( 'woocommerce_after_single_product_summary' );
-						?>
+					<div class="row">
+						<div class="col-xs-12 khaown-woo-desc-review">
+							<?php
+							/**
+							 * Hook: woocommerce_after_single_product_summary.
+							 *
+							 * @hooked woocommerce_output_product_data_tabs - 10
+							 * @hooked woocommerce_upsell_display - 15
+							 * @hooked woocommerce_output_related_products - 20
+							 */
+							do_action( 'woocommerce_after_single_product_summary' );
+							?>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!--end of row-->

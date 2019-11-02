@@ -521,7 +521,6 @@ h6 {
   font-size: 0.7111111111em; }
 
 a {
-  -webkit-transition: color 110ms ease-in-out;
   transition: color 110ms ease-in-out;
   color: #0073aa; }
   a:hover, a:active {
@@ -745,9 +744,7 @@ figcaption,
   .wp-block-pullquote blockquote {
     margin-top: calc(3 * 1rem);
     margin-bottom: calc(3.33 * 1rem);
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    hyphens: auto;
     word-break: break-word; }
   .wp-block-pullquote:not(.is-style-solid-color) .wp-block-pullquote__citation {
     color: #767676; }
@@ -963,8 +960,7 @@ ul.wp-block-archives,
   text-align: left;
   text-align: center;
   -webkit-margin-start: 0px;
-  -moz-margin-start: 0px;
-       margin-inline-start: 0px; }
+  margin-inline-start: 0px; }
 
 .wp-block-freeform {
   /* Add style for galleries in classic-editor block */ }

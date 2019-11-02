@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <main id="main-container  " >
+    <main id="main-container" class="khaown-woo-single-container" >
         <?php if(have_posts()) : ?>
             <?php while(have_posts()) : the_post(); ?>
         <!-- <section id="events">

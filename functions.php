@@ -425,7 +425,7 @@ tgmpa( $plugins, $config );
 }
 
 
-function mytheme_add_woocommerce_support() {
+function khaown_add_woocommerce_support() {
 	add_theme_support( 'woocommerce', array(
 		'thumbnail_image_width' => 150,
 		'single_image_width'    => 400,
@@ -446,7 +446,7 @@ function mytheme_add_woocommerce_support() {
 
 }
 
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+add_action( 'after_setup_theme', 'khaown_add_woocommerce_support' );
 
  remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 

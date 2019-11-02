@@ -74,7 +74,7 @@
     ?>
             <div class="lightbox-grid third-thumbs">
                 <ul class="em-products">
-                    <h1>Motahar's Products</h1>
+                    <h1 title="Motahar">Motahar's Products</h1>
                     <?php
 						$products_per_page = 6;
                         $em_food_itmes = array(
