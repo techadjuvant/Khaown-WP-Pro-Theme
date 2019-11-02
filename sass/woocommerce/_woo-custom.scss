@@ -44,6 +44,15 @@
 
 }
 
+.front-page-container .khaown-woo-product-archive {
+  width: 100vw;
+  margin: 0 auto;
+}
+.front-page-container .khaown-woo-product-archive .third-thumbs li {
+  height: 33.3333vw;
+  border: none;
+}
+
 section.related.products.text-center .related-product-header {
   text-align: left;
   padding-bottom: 0px;
@@ -429,11 +438,14 @@ a:visited {
     margin-right: auto;
     padding: 15px;
   }
-  .third-thumbs li {
-    width: 50%;
-  }
   .khaown-woo-product-archive .third-thumbs li {
+    width: 50%;
     height: 45vw;
+    border: none;
+  }
+  .front-page-container .khaown-woo-product-archive .third-thumbs li {
+    width: 50%;
+    height: 50vw;
     border: none;
   }
 
@@ -442,9 +454,12 @@ a:visited {
 @media all and (max-width: 767px) {
   .khaown-woo-product-archive .third-thumbs li {
     width: 100%;
-  }
-  .khaown-woo-product-archive .third-thumbs li {
     height: 90vw;
+    border: none;
+  }
+  .front-page-container .khaown-woo-product-archive .third-thumbs li {
+    width: 100%;
+    height: 100vw;
     border: none;
   }
   
