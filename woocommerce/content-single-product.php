@@ -37,12 +37,12 @@ global $product; ?>
 	</div>
 	<!--end of container-->
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-	<div id="events">
+	<div id="khaown-product">
 		<div class="container">
 			<div class="row mb-xs-24">
-				<div class="col-xs-10 col-xs-offset-1">
+				<div class="col-xs-12">
 					<div class="row khaown-woo-single-product-header">
-						<div class="col-sm-6">
+						<div class="col-sm-5">
 							<?php
 							/**
 							 * Hook: woocommerce_before_single_product_summary.
@@ -53,7 +53,7 @@ global $product; ?>
 							do_action( 'woocommerce_before_single_product_summary' );
 							?>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-7">
 							<div class="khaown-wc-product-summery summary entry-summary mt-sm-16">
 								<?php
 								/**
@@ -70,6 +70,15 @@ global $product; ?>
 								 */
 								do_action( 'woocommerce_single_product_summary' );
 								?>
+								<div class="khaown-woo-product-cat-tag-wrapper">
+									<?php
+										// Display a html formatted list of the product categories for this product
+										echo '<ul class="khaown-woo-list"> Categories: ' . wc_get_product_category_list( get_the_id(), '</li><li>','<li>','</li>' ) . '</ul>';
+
+										// Display a html formatted list of the product categories for this product
+										echo '<ul class="khaown-woo-list"> Tags: ' . wc_get_product_tag_list( get_the_id(), '</li><li>','<li>','</li>' ) . '</ul>';
+									?>
+								</div>
 							</div>
 						</div>
 						

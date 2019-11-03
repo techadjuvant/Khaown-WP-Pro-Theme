@@ -8,7 +8,16 @@
   font-weight: 400;
   font-style: normal
 }
-
+.woocommerce section.khaown-woo-header-wrapper {
+  padding: 30px 5vw;
+  margin: 0 auto;
+  background-color: #F0DFF6;
+  margin-bottom: 45px;
+}
+.woocommerce .khaown-woo-header-wrapper nav.woocommerce-breadcrumb {
+  background-color: #F0DFF6;
+  float: right;
+}
 .khaown-woo-product-archive {
   width: 90vw;
   margin: 0 auto;
@@ -43,7 +52,16 @@
   }
 
 }
-
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span {
+  text-decoration: none;
+  padding: 0;
+  line-height: 1;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 1em;
+  min-width: 1em;
+  display: block;
+}
 .front-page-container .khaown-woo-product-archive {
   width: 100vw;
   margin: 0 auto;
@@ -66,6 +84,23 @@ section.related.products.text-center .related-product-header {
 .woocommerce ul.products li.product .star-rating {
   font-size: 14px;
   margin: 0 auto;
+}
+
+ul.khaown-woo-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+ul.khaown-woo-list li a {
+  padding-right: 5px;
+  font-size: 12px !important;
+  color: #666666a3;
+}
+.khaown-woo-product-cat-tag-wrapper {
+  margin-top: 30px;
+  border-top: 1px solid #ecececd9;
+  padding: 15px 0;
 }
 
 .woocommerce .related ul.products li.product, .woocommerce-page .related ul.products li.product {

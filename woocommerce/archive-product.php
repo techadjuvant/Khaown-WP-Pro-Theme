@@ -1,13 +1,48 @@
-<?php 
-    get_header(); 
+<?php
+get_header( 'shop' );
+?>
+<div class="khaown-woo-archive-wrapper">
+    <section class="khaown-woo-header-wrapper">
+        <div class="row">
+            <div class="col-xs-6">
+                <header class="woocommerce-products-header">
+                    <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+                        <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                    <?php endif; ?>
 
-    $product_per_page = 3;
+                    <?php
+                    /**
+                     * Hook: woocommerce_archive_description.
+                     *
+                     * @hooked woocommerce_taxonomy_archive_description - 10
+                     * @hooked woocommerce_product_archive_description - 10
+                     */
+                    do_action( 'woocommerce_archive_description' );
+                    ?>
+                </header>
+            </div>
+            <div class="col-xs-6">
+                <?php
+                    /**
+                     * Hook: woocommerce_before_main_content.
+                     *
+                     * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+                     * @hooked woocommerce_breadcrumb - 20
+                     * @hooked WC_Structured_Data::generate_website_data() - 30
+                     */
+                    do_action( 'woocommerce_before_main_content' ); ?>
+            </div>
+        </div>
+        
+    </section>
+<?php
+    $product_per_page = 1;
 
     $args = array(
         'post_type' => 'product',
         'post_status' => 'publish',
         'posts_per_page' => $product_per_page,
-        'paged' => $paged,
+        'paged' => 1,
     );
     $em_products = new WP_Query( $args );
     $my_post_count = $em_products ->post_count;
@@ -48,6 +83,5 @@
                 <div class="loadmoreproducts btn"> <span> Load More </span> </div>
             </div>
         <?php } ?>
+</div>
 <?php get_footer(); ?>
-
-

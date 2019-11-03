@@ -453,11 +453,25 @@ remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_pro
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'khaown_custom_loop_shop_per_page', 20 );
+
+function khaown_custom_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options -> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 1;
+  return $cols;
+}
+
 add_filter( 'woocommerce_output_related_products_args', 'khaown_related_products_args', 20 );
   function khaown_related_products_args( $args ) {
 	$args['posts_per_page'] = 4; // 4 related products
 	return $args;
 }
+
+
 
 
 
