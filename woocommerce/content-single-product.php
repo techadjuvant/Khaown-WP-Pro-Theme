@@ -16,9 +16,42 @@
  */
 defined( 'ABSPATH' ) || exit;
 global $product; ?>
+	<section class="khaown-woo-header-wrapper">
+        <div class="row">
+            <div class="col-xs-6">
+                <header class="woocommerce-products-header">
+                    <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+                        <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                    <?php endif; ?>
+
+                    <?php
+                    /**
+                     * Hook: woocommerce_archive_description.
+                     *
+                     * @hooked woocommerce_taxonomy_archive_description - 10
+                     * @hooked woocommerce_product_archive_description - 10
+                     */
+                    do_action( 'woocommerce_archive_description' );
+                    ?>
+                </header>
+            </div>
+            <div class="col-xs-6">
+                <?php
+                    /**
+                     * Hook: woocommerce_before_main_content.
+                     *
+                     * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+                     * @hooked woocommerce_breadcrumb - 20
+                     * @hooked WC_Structured_Data::generate_website_data() - 30
+                     */
+                    do_action( 'woocommerce_before_main_content' ); ?>
+            </div>
+        </div>
+	</section>
+	
 	<div class="container">
-		<div class="row mb-xs-24 mt24">
-			<div class="col-xs-10 col-xs-offset-1">
+		<div class="row mb-xs-24">
+			<div class="col-xs-12">
 				<?php 
 					/**
 					 * Hook: woocommerce_before_single_product.
