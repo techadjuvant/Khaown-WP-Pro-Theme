@@ -8,13 +8,13 @@
   font-weight: 400;
   font-style: normal
 }
-.woocommerce section.khaown-woo-header-wrapper {
+section.khaown-woo-header-wrapper {
   padding: 30px 5vw;
   margin: 0 auto;
   background-color: #F0DFF6;
   margin-bottom: 45px;
 }
-.woocommerce .khaown-woo-header-wrapper nav.woocommerce-breadcrumb {
+.khaown-woo-header-wrapper nav.woocommerce-breadcrumb {
   background-color: #F0DFF6;
   float: right;
 }
@@ -149,11 +149,32 @@ ul.khaown-woo-list li a {
   width: 100%;
   margin-left: 0;
 }
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+  width: 75px;
+  box-shadow: none;
+  max-width: 100px;
+}
+.woocommerce-cart-form td.product-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
 
-.woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
+.woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .update-cart-button {
   display: flex;
   float: none;
-  margin: 30px 0px;
+  margin: 5px 0px;
+}
+.woocommerce table.cart td.actions .coupon {
+  width: 330px;
+}
+.woocommerce table.cart td.actions .coupon .input-text {
+  width: 60%;
+}
+.woocommerce-page table.cart td.actions .update-cart-button {
+  width: 145px !important;
+  float: right;
 }
 
 .woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
@@ -162,7 +183,8 @@ ul.khaown-woo-list li a {
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
   float: none;
   width: 50%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-top: 30px;
 }
 
 p.product.woocommerce.add_to_cart_inline {
@@ -524,7 +546,7 @@ a:visited {
 
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   .khaown-woo-product-archive .third-thumbs li {
     width: 100%;
     height: 90vw;
@@ -534,6 +556,18 @@ a:visited {
     width: 100%;
     height: 100vw;
     border: none;
+  }
+  form.woocommerce-cart-form .row {
+    margin: 0;
+  }
+  .woocommerce table.cart td.actions .coupon {
+    width: 100%;
+  }
+  .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    float: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
   }
   
 }

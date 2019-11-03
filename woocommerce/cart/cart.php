@@ -16,8 +16,42 @@
  */
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_cart' ); ?>
+//do_action( 'woocommerce_before_cart' ); ?>
 
+<section class="khaown-woo-header-wrapper">
+	<div class="row">
+		<div class="col-xs-6">
+			<header class="woocommerce-products-header">
+					<h1 class="woocommerce-products-header__title page-title"><?php the_title(); ?></h1>
+			</header>
+		</div>
+		<div class="col-xs-6">
+			<?php
+				/**
+				 * Hook: woocommerce_before_main_content.
+				 *
+				 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+				 * @hooked woocommerce_breadcrumb - 20
+				 * @hooked WC_Structured_Data::generate_website_data() - 30
+				 */
+				do_action( 'woocommerce_before_main_content' ); ?>
+		</div>
+	</div>
+</section>
+
+<div id="single-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			<?php
+				/**
+				 * Hook: woocommerce_archive_description.
+				 *
+				 * @hooked woocommerce_taxonomy_archive_description - 10
+				 * @hooked woocommerce_product_archive_description - 10
+				 */
+				do_action( 'woocommerce_before_cart' );
+			?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -55,7 +89,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</td>
 						<td class="product-thumbnail">
 						<?php
-						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+						$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('khaown-cart-thumb'), $cart_item, $cart_item_key );
 						if ( ! $product_permalink ) {
 							echo $thumbnail; // PHPCS: XSS ok.
 						} else {
@@ -112,16 +146,20 @@ do_action( 'woocommerce_before_cart' ); ?>
 			?>
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 			<tr>
-				<td colspan="6" class="actions">
-					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-					<?php do_action( 'woocommerce_cart_actions' ); ?>
-					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+				<td colspan="6" class="actions row">
+					<div class="col-sm-6 col-xs-12">
+						<?php if ( wc_coupons_enabled() ) { ?>
+							<div class="coupon">
+								<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+								<?php do_action( 'woocommerce_cart_coupon' ); ?>
+							</div>
+						<?php } ?>
+					</div>
+					<div class="col-sm-6 col-xs-12">
+						<button type="submit" class="button update-cart-button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+						<?php do_action( 'woocommerce_cart_actions' ); ?>
+						<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+					</div>
 				</td>
 			</tr>
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
@@ -140,5 +178,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 		do_action( 'woocommerce_cart_collaterals' );
 	?>
 </div>
+
+			</div>
+		</div>
+		<!--end of row-->
+	</div>
+	<!--end of container-->
+</div><!-- .entry-content -->
 <?php do_action( 'woocommerce_after_cart' ); ?>
 

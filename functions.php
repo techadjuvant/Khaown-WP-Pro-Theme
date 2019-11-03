@@ -471,6 +471,9 @@ add_filter( 'woocommerce_output_related_products_args', 'khaown_related_products
 	return $args;
 }
 
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'khaown-cart-thumb', 100, 100 ); // 100 wide and 100 high
+}
 
 
 
