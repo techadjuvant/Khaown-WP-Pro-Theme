@@ -16,6 +16,8 @@
     padding-top: 100px;
     width: 60%;
     margin: 25px auto;
+    font-size: 40px;
+    font-weight: bold;
   }
  .skewed-content .skewed-text {
     width: 60%;
@@ -229,7 +231,7 @@
   form #reservation-input.reserver-name, form #reservation-input.reserver-phone, form #reservation-input.reserver-email, form #reservation-input.reserver-table-size {
     margin-bottom: 20px;
   }
-  input[type="submit"], button[type="submit"] {
+  .rsv-form-container input[type="submit"], .rsv-form-container button[type="submit"] {
     height: 40px;
     line-height: 40px;
     width: 100% !important;
@@ -251,7 +253,25 @@
     }
     .skewed-content {
         text-align: center;
+    }
+    .skewed-content .skewed-title {
+        font-size: 32px;
       }
+
+  
+    
+}
+
+@media all and (max-width: 426px) {
+    .skewed-content .skewed-title {
+        font-size: 24px;
+        width: 90%;
+    }
+    .skewed-content .skewed-text {
+        width: 90%;
+        margin: 25px auto;
+    }
+
   
     
 }

@@ -30,16 +30,17 @@ get_header();
 						<div class="col-sm-7 text-left">							
 							<?php if ( is_front_page() && is_home() ) : ?>
 								<h1 class="khaown-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+								<?php $description = get_bloginfo( 'description', 'display' );
+									if ( $description || is_customize_preview() ) : ?>
+										<p class="khaown-site-description">
+											<?php echo $description; ?>
+										</p>
+								<?php endif; ?>
 							<?php else : ?>
-								<p class="khaown-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+								<h1 class="khaown-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							<?php endif; ?>
 
-							<?php $description = get_bloginfo( 'description', 'display' );
-								if ( $description || is_customize_preview() ) : ?>
-									<p class="khaown-site-description">
-										<?php echo $description; ?>
-									</p>
-							<?php endif; ?>
+							
 						</div>
 						<div class="col-sm-5 col-xs-12 text-right">
 							<?php echo get_search_form(); ?>
