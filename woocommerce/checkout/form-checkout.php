@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		//If checkout registration is disabled and not logged in, the user cannot checkout.
 		if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
-			echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
+			echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'khaown' ) ) );
 			return;
 		}
 	?>
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="col-sm-6 col-xs-12">
 				<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 					<div class="khaown-your-order-review-wrapper">
-						<h4 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h4>
+						<h4 id="order_review_heading"><?php esc_html_e( 'Your order', 'khaown' ); ?></h4>
 						<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 						<div id="order_review" class="woocommerce-checkout-review-order">
 							<?php do_action( 'woocommerce_checkout_order_review' ); ?>

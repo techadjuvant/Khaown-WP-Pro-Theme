@@ -393,8 +393,7 @@ $plugins = array(
 		array(
 			'name'               => 'Khaown Plugin', // The plugin name.
 			'slug'               => 'khaown-plugin', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory_uri() . '/lib/plugins/khaown-plugin.zip', // The plugin source.
-			'required'           => false // If false, the plugin is only 'recommended' instead of required.
+			'source'    		 => 'https://github.com/techadjuvant/Khaown-pro-plugin/archive/master.zip',
 		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
@@ -404,7 +403,7 @@ $plugins = array(
 			'required'  => false
 		)
 		
- );
+ ); 
 $config = array( 
 	/* The array to configure TGM Plugin Activation */
 

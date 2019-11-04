@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
 	<section class="related products text-center">
         <div class="related-product-header">
-            <h2><?php esc_html_e( 'You may like', 'woocommerce' ); ?></h2>
+            <h2><?php esc_html_e( 'You may like', 'khaown' ); ?></h2>
         </div>
         <div class="row">
             <?php woocommerce_product_loop_start(); ?>

@@ -134,13 +134,13 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
      // Location Address setting setup
 	$wp_customize->add_setting('location_address', array(
-		'default'			=> __( 'Khaown <br>
-        DHANMONDI HOUSE 84, <br> 
-        ROAD 7/A  <br> 
-        SATMOSJID ROAD <br>
-        DHANMONDI R/A <br>
-        DHAKA 1205  <br>
-        PHONE: XXXXXX, XXXXXX <br>
+		'default'			=> __( 'Khaown
+        DHANMONDI HOUSE 84, 
+        ROAD 7/A  
+        SATMOSJID ROAD
+        DHANMONDI R/A
+        DHAKA 1205 
+        PHONE: XXXXXX, XXXXXX
 		EMAIL: khaown@khaown.com', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
