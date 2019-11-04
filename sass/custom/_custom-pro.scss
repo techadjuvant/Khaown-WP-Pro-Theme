@@ -1,3 +1,28 @@
+
+.skewed-bg {
+    background: #000000b5;
+    height: 3000px;
+    transform: skew(0deg, 55deg);
+    margin-top: 350px;
+  }
+ .skewed-content {
+    position: absolute;
+    text-align: center;
+    left: -70px;
+    bottom: 200px;
+    text-align: left;
+  }
+ .skewed-content .skewed-title {
+    padding-top: 100px;
+    width: 60%;
+    margin: 25px auto;
+  }
+ .skewed-content .skewed-text {
+    width: 60%;
+    margin: 25px auto;
+  }
+
+
 .customer-review-section {
     background-color: #f0dff6 !important;
 
@@ -210,3 +235,23 @@
     width: 100% !important;
   }
 
+
+@media all and (max-width: 1024px) {
+    .skewed-bg {
+        display: none;
+    }
+    .skewed-content .skewed-title {
+        padding-top: 30px;
+    }
+    .skewed-content {
+        left: 0;
+        bottom: 0px;
+        right: 0;
+        background: #000000b5;
+    }
+    .skewed-content {
+        text-align: center;
+      }
+  
+    
+}

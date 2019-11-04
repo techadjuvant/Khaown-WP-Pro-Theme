@@ -7599,7 +7599,7 @@ footer.bg-dark li,
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   background: #292929;
   background-size: cover !important;
   background-position: 50% 50% !important;
@@ -14563,7 +14563,13 @@ p.product.woocommerce.add_to_cart_inline {
   padding: 0 10px; }
 
 .add-to-cart-btn p.product.woocommerce.add_to_cart_inline a.added_to_cart.wc-forward {
-  color: #e6e6e6; }
+  margin: 0;
+  padding: 5px 20px;
+  border-radius: 0;
+  color: #fefefe;
+  background-color: #000000;
+  -webkit-transition: all .4s;
+  transition: all .4s; }
 
 .main-container.nav-margin-space {
   margin-top: 55px; }
@@ -14920,6 +14926,29 @@ a:visited {
 /*--------------------------------------------------------------
 ## Custom-Pro
 --------------------------------------------------------------*/
+.skewed-bg {
+  background: #000000b5;
+  height: 3000px;
+  -webkit-transform: skew(0deg, 55deg);
+          transform: skew(0deg, 55deg);
+  margin-top: 350px; }
+
+.skewed-content {
+  position: absolute;
+  text-align: center;
+  left: -70px;
+  bottom: 200px;
+  text-align: left; }
+
+.skewed-content .skewed-title {
+  padding-top: 100px;
+  width: 60%;
+  margin: 25px auto; }
+
+.skewed-content .skewed-text {
+  width: 60%;
+  margin: 25px auto; }
+
 .customer-review-section {
   background-color: #f0dff6 !important; }
   .customer-review-section h3 p, .customer-review-section h3 {
@@ -15092,5 +15121,21 @@ input[type="submit"], button[type="submit"] {
   height: 40px;
   line-height: 40px;
   width: 100% !important; }
+
+@media all and (max-width: 1024px) {
+  .skewed-bg {
+    display: none; }
+
+  .skewed-content .skewed-title {
+    padding-top: 30px; }
+
+  .skewed-content {
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    background: #000000b5; }
+
+  .skewed-content {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

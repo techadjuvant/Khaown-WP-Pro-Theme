@@ -36,7 +36,7 @@ get_header( 'shop' );
         
     </section>
 <?php
-    $product_per_page = 1;
+    $product_per_page = 9;
 
     $args = array(
         'post_type' => 'product',

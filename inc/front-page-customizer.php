@@ -45,6 +45,42 @@ function khaown_front_page_customize_register( $wp_customize ) {
 				'settings'   => 'upload_media_fullscreen_image',
 			) 
 		) 
+	);
+	
+	// Fullscreen Title
+	$wp_customize->add_setting('khaown_fullscreen_title', array(
+		'default'			=> __( "About Your Website", 'khaown'),
+		'sanitize_callback'  => 'esc_attr',
+		'type' 				=> 'theme_mod'
+	) );
+	
+	// Location Control setup
+	$wp_customize->add_control(
+        'khaown_fullscreen_title', 
+        array(
+            'label'      => __( 'About Your Website ( Title )', 'khaown' ),
+            'section'    => 'header_fullscreen_section',
+            'type'    => 'text',
+            'settings'   => 'khaown_fullscreen_title',
+        )
+	);
+	
+	// Fullscreen Description
+	$wp_customize->add_setting('khaown_fullscreen_desc', array(
+		'default'			=> __( 'Your business purpose. Small description will clear your visitor about your misson & they will be attracted with what your offer', 'khaown'),
+		'sanitize_callback'  => 'esc_attr',
+		'type' 				=> 'theme_mod'
+	) );
+	
+	// Location Control setup
+	$wp_customize->add_control(
+        'khaown_fullscreen_desc', 
+        array(
+            'label'      => __( 'Your business purpose. Small description will clear your visitor about your misson & they will be attracted with what your offer', 'khaown' ),
+            'section'    => 'header_fullscreen_section',
+            'type'    => 'textarea',
+            'settings'   => 'khaown_fullscreen_desc',
+        )
     );
 
 
@@ -89,7 +125,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
         'location_google_map_link', 
         array(
             'label'      => __( 'Google Map Location', 'khaown' ),
-            'description'	=> sprintf(__('Paste only the src link.', 'khaown') ),
+            'description'	=> sprintf(__('Paste only the src link from Google embed option, not the full iframe.', 'khaown') ),
             'section'    => 'location_section',
             'type'    => 'textarea',
             'settings'   => 'location_google_map_link',
@@ -212,8 +248,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // About Section Description setting setup
 	$wp_customize->add_setting('about_section_description', array(
-        'default'			=> __( 'Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon\'s playful interpretations on American comfort food.', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+        'default'			=> __( 'Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. <br><br> The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon\'s playful interpretations on American comfort food.', 'khaown'),
+		// 'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	

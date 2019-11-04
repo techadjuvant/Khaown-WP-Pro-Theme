@@ -5,24 +5,12 @@
         <div class="background-image-holder">
             <img alt="las vegas food photography chris wessling" class="background-image" src="<?php echo get_theme_mod("upload_media_fullscreen_image", ""); ?>" />
         </div>
-        <div class="align-bottom text-center">
-            <ul class="list-inline social-list mb24">
-                <li>
-                    <a target="_blank" href="<?php  ?>">
-                        <i class="ti-twitter-alt icon-sm"></i>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="<?php  ?>">
-                        <i class="ti-facebook icon-sm"></i>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="<?php  ?>">
-                        <i class="ti-instagram icon-sm"></i>
-                    </a>
-                </li>
-            </ul>
+        <div class="skewed-bg">
+            
+        </div>
+        <div class="skewed-content">
+            <h1 class="skewed-title ml16 mr16"><?php echo get_theme_mod("khaown_fullscreen_title", "About Your Website"); ?></h1>
+            <p class="skewed-text"><?php echo wp_kses_post(get_theme_mod("khaown_fullscreen_desc", "Your business purpose. Small description will clear your visitor about your misson & they will be attracted with what your offer")); ?></p>
         </div>
     </section>
     <?php 
@@ -50,9 +38,9 @@
                 <?php endif; ?>
                 <?php 
                     if ( $description || is_customize_preview() ) : ?>
-                        <h4 class="khaown-site-description">
+                        <p class="khaown-site-description">
                             <?php echo $description; ?>
-                        </h4>
+                        </p>
                 <?php endif; ?>
                 <hr>
                 <h5 class="large uppercase mb8 mb-xs-12">&rightarrow; <a href="<?php echo get_theme_mod( 'location_google_map_link'); ?>" target="_blank"><u>Google Map</u></a> this joint</h5>      
@@ -60,11 +48,6 @@
                 <ul>
                     <?php echo wp_kses_post(get_theme_mod( 'location_address', '')); ?>
                 </ul>
-                <p>
-                    <a target="_blank" href="<?php// echo $emotahar['em_twitter_account']; ?>"><i class="ti-facebook icon-sm"></i></a> 
-                    <a target="_blank" href="<?php //echo $emotahar['em_facebook_account']; ?>"><i class="ti-twitter-alt icon-sm"></i></a>
-                    <a target="_blank" href="<?php// echo $emotahar['em_instagram_account']; ?>"><i class="ti-instagram icon-sm"></i></a>
-                </p>
             </div>
         </section>
     <?php }; ?>
@@ -117,13 +100,9 @@
                             <h3 class="uppercase mb16"><?php  echo get_theme_mod( 'about_section_title', ''); ?></h3>
                             <h6 class="mb8 uppercase"><?php echo get_theme_mod( 'about_section_sub_title', ''); ?></h6><br>
                             <p class="lead">
-                                <?php echo get_theme_mod( 'about_section_description', ''); ?>
+                                <?php //echo wp_kses_post(get_theme_mod( 'about_section_description', '')); ?>
+                                <?php echo wp_kses_post(get_theme_mod( 'about_section_description', '')); ?>
                             </p>
-                            <h4>
-                                <a target="_blank" href="<?php // echo $emotahar['em_facebook_account']; ?>"><i class="ti-facebook"></i></a> 
-                                <a target="_blank" href="<?php // echo $emotahar['em_twitter_account']; ?>"><i class="ti-twitter-alt"></i></a> 
-                                <a target="_blank" href="<?php // echo $emotahar['em_instagram_account']; ?>"><i class="ti-instagram"></i></a>
-                            </h4>
                         </div>
                     </div>
                     <!--end of row-->
@@ -216,40 +195,43 @@
             <section class="restaurant-schedule">
                 <div class="container">
                     <div class="row">
+                        <div class="khaown-schedule-header text-center mb24 col-xs-12">
+                        <h3 class="em-widget-title"><?php echo get_theme_mod( 'schedule_title', 'Opening Hours'); ?></h3>
+                            <div class="em-widget-content">
+                                <span><?php echo get_theme_mod( 'schedule_sub_title', 'Yes, Get some tomatoes, and, if they were eaten with the great extravagance to season'); ?></span>
+                            </div>
+                        </div>
+                            
                         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 text-center">
-                            <div class="em-widget-column ">
+                            <div class="em-widget-column">
                                 <div id="widget_opening_hours-2" class="em-widget">
-                                    <h3 class="em-widget-title"><?php echo get_theme_mod( 'schedule_title', 'Opening Hours'); ?></h3>
-                                    <div class="em-widget-content">
-                                        <span><?php echo get_theme_mod( 'schedule_sub_title', 'Yes, Get some tomatoes, and, if they were eaten with the great extravagance to season'); ?></span>
-                                    </div>
                                     <div class="em-day" content="Sunday <?php echo get_theme_mod( 'schedule_sunday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
                                         <strong class="em-float-left">Sunday</strong> 
                                         <span class="em-float-right"><?php echo get_theme_mod( 'schedule_sunday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
                                     </div>
-                                    <div class="em-day" content="Monday <?php echo get_theme_mod( 'schedule_sunday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
+                                    <div class="em-day" content="Monday <?php echo get_theme_mod( 'schedule_monday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
                                         <strong class="em-float-left">Monday</strong> 
-                                        <span class="em-float-right"><?php echo get_theme_mod( 'schedule_sunday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
-                                    </div>
-                                    <div class="em-day" content="Tuesday <?php echo get_theme_mod( 'schedule_monday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
-                                        <strong class="em-float-left">Tuesday</strong> 
                                         <span class="em-float-right"><?php echo get_theme_mod( 'schedule_monday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
                                     </div>
-                                    <div class="em-day" content="Wednesday <?php echo get_theme_mod( 'schedule_Tuesday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
-                                        <strong class="em-float-left">Wednesday</strong> 
+                                    <div class="em-day" content="Tuesday <?php echo get_theme_mod( 'schedule_Tuesday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
+                                        <strong class="em-float-left">Tuesday</strong> 
                                         <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Tuesday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
                                     </div>
-                                    <div class="em-day" content="Thurday <?php echo get_theme_mod( 'schedule_Wednesday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
-                                        <strong class="em-float-left">Thurday</strong> 
+                                    <div class="em-day" content="Wednesday <?php echo get_theme_mod( 'schedule_Wednesday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
+                                        <strong class="em-float-left">Wednesday</strong> 
                                         <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Wednesday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
                                     </div>
-                                    <div class="em-day" content="Friday <?php echo get_theme_mod( 'schedule_Thursday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
-                                        <strong class="em-float-left">Friday</strong> 
+                                    <div class="em-day" content="Thurday <?php echo get_theme_mod( 'schedule_Thursday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
+                                        <strong class="em-float-left">Thurday</strong> 
                                         <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Thursday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
                                     </div>
-                                    <div class="em-day" content="Saturday <?php echo get_theme_mod( 'schedule_Friday_schedule', 'Clossed' ); ?>"> 
+                                    <div class="em-day" content="Friday <?php echo get_theme_mod( 'schedule_Friday_schedule', '8.00 AM - 10.00 PM' ); ?>"> 
+                                        <strong class="em-float-left">Friday</strong> 
+                                        <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Friday_schedule', '8.00 AM - 10.00 PM' ); ?></span>
+                                    </div>
+                                    <div class="em-day" content="Saturday <?php echo get_theme_mod( 'schedule_Saturday_schedule', 'Clossed' ); ?>"> 
                                         <strong class="em-float-left">Saturday</strong> 
-                                        <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Friday_schedule', 'Clossed' ); ?></span>
+                                        <span class="em-float-right"><?php echo get_theme_mod( 'schedule_Saturday_schedule', 'Clossed' ); ?></span>
                                     </div>
                                 </div>
                             </div>
