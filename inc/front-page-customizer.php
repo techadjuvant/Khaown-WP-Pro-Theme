@@ -97,7 +97,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Location setting setup
 	$wp_customize->add_setting('hide_location_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -141,8 +141,10 @@ function khaown_front_page_customize_register( $wp_customize ) {
         DHANMONDI R/A <br>
         DHAKA 1205  <br>
         PHONE: XXXXXX, XXXXXX <br>
-        EMAIL: khaown@khaown.com', 'khaown'),
+		EMAIL: khaown@khaown.com', 'khaown'),
+		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
+		
 	) );
 	
 	// Location Address Control setup
@@ -167,7 +169,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display products setting setup
 	$wp_customize->add_setting('hide_products_section', array(
-		'default'			=> __( true, 'khaown'),
+		'default'			=> __( 'true', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -194,7 +196,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display About setting setup
 	$wp_customize->add_setting('hide_about_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -249,7 +251,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
     // About Section Description setting setup
 	$wp_customize->add_setting('about_section_description', array(
         'default'			=> __( 'Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. <br><br> The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon\'s playful interpretations on American comfort food.', 'khaown'),
-		// 'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -275,7 +277,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display Parallux setting setup
 	$wp_customize->add_setting('hide_parallux_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -442,7 +444,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Schedule setting setup
 	$wp_customize->add_setting('hide_schedule_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
         'type' 				=> 'theme_mod',
         'priority' 		 => 41
@@ -592,7 +594,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Portrait of Yourself setting setup
 	$wp_customize->add_setting('hide_portrait_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
         'type' 				=> 'theme_mod',
         'priority' 		 => 41

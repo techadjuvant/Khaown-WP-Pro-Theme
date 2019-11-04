@@ -27,7 +27,7 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
     // Top header 
 	$rsv_headers[] = array(
 		'slug'      =>'hide_header_section', 
-		'default'   => false,
+		'default'   => 'false',
         'label'     => 'Hide Header Section',
         'type'      => 'checkbox'
     );
@@ -109,7 +109,7 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
     ) );
     // Display Middle Body setting setup
 	$wp_customize->add_setting('rsv_hide_middle_body_section', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -318,7 +318,7 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
     );
     // Display Reservation Form setting setup
 	$wp_customize->add_setting('rsv_hide_form_left_address', array(
-		'default'			=> __( false, 'khaown'),
+		'default'			=> __( 'false', 'khaown'),
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
