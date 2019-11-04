@@ -14824,7 +14824,7 @@ a:visited {
 .woocommerce-checkout div#customer_details {
   background: #f5f5f5;
   padding: 20px;
-  margin-top: 30px; }
+  margin-top: 15px; }
   .woocommerce-checkout div#customer_details input[type="text"], .woocommerce-checkout div#customer_details input[type="date"], .woocommerce-checkout div#customer_details input[type="password"], .woocommerce-checkout div#customer_details input[type="email"], .woocommerce-checkout div#customer_details input[type="url"], .woocommerce-checkout div#customer_details .woocommerce-input-wrapper input#billing_phone {
     background: #ffffff;
     border: none;
@@ -14852,7 +14852,7 @@ a:visited {
 .khaown-your-order-review-wrapper {
   background: #f5f5f5;
   padding: 20px;
-  margin-top: 30px; }
+  margin-top: 15px; }
   .khaown-your-order-review-wrapper table.shop_table {
     background: #fff; }
     .khaown-your-order-review-wrapper table.shop_table thead {
@@ -14874,6 +14874,12 @@ a:visited {
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
   float: left;
   width: 200px !important; }
+
+.woocommerce-order section.woocommerce-order-details {
+  padding: 30px 0; }
+
+.woocommerce-form-coupon-toggle .woocommerce-info a {
+  color: #bc00ff; }
 
 @media all and (max-width: 991px) {
   .em-site-content .khaown-site-main {

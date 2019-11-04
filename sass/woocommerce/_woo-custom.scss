@@ -458,7 +458,7 @@ a:visited {
 .woocommerce-checkout div#customer_details {
   background: #f5f5f5;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 15px;
 
   input[type="text"], input[type="date"], input[type="password"], input[type="email"], input[type="url"], .woocommerce-input-wrapper input#billing_phone {
     background: #ffffff;
@@ -492,7 +492,7 @@ a:visited {
 .khaown-your-order-review-wrapper {
   background: #f5f5f5;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 15px;
 
   table.shop_table {
     background: #fff;
@@ -523,10 +523,12 @@ a:visited {
   float: left;
   width: 200px !important;
 }
-
-
-
-
+.woocommerce-order section.woocommerce-order-details {
+  padding: 30px 0;
+}
+.woocommerce-form-coupon-toggle .woocommerce-info a {
+  color: #bc00ff;
+}
 
 @media all and (max-width: 991px) { 
   .em-site-content .khaown-site-main {

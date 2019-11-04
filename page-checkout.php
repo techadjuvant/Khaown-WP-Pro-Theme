@@ -16,7 +16,7 @@ get_header();
 		/* Start the Loop */
 		while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+				
 				<?php get_template_part( 'template-parts/content/content', 'woo'); ?>
 							
 			</article><!-- #post-<?php the_ID(); ?> -->
