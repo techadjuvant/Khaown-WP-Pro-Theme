@@ -14801,7 +14801,22 @@ a:visited {
   color: #fefefe;
   background-color: #000000;
   -webkit-transition: all .4s;
-  transition: all .4s; }
+  transition: all .4s;
+  height: 40px; }
+
+.woocommerce form .form-row .input-checkbox {
+  display: inline;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle; }
+
+#add_payment_method .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  display: block;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  padding: 10px; }
 
 #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
   margin: 0 15px 0 0;
@@ -14884,7 +14899,7 @@ a:visited {
 .woocommerce-order section.woocommerce-order-details {
   padding: 30px 0; }
 
-.woocommerce-form-coupon-toggle .woocommerce-info a {
+.woocommerce-info a {
   color: #bc00ff; }
 
 @media all and (max-width: 991px) {
