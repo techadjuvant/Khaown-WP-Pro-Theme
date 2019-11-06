@@ -31,7 +31,7 @@ get_header(); ?>
         'post_type' => 'food_menu',
         'post_status' => 'publish',
         'posts_per_page' =>  $khaown_food_menu_default_menu_count,
-        'paged' => 1
+        'paged' => $paged
         );
     $em_post_menus = new WP_Query( $em_food_menu_posts );
     $count_menus = $em_post_menus->post_count;

@@ -485,11 +485,11 @@ add_action('wp_ajax_nopriv_load_products_by_ajax', 'load_products_by_ajax');
 function load_products_by_ajax() {
   check_ajax_referer('load_more_products', 'security');
   $paged = $_POST['page'];
-  $khaown_product_per_page = $_POST['khaown_product_per_page'];
+//   $khaown_product_per_page = $_POST['khaown_product_per_page'];
   $args = array(
       'post_type' => 'product',
       'post_status' => 'publish',
-      'posts_per_page' => $khaown_product_per_page,
+      'posts_per_page' => 6,
       'paged' => $paged,
   );
   $em_products = new WP_Query( $args ); ?>
