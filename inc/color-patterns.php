@@ -403,17 +403,7 @@ function khaown_custom_colors_css() {
 		.blog-posts .food-menu:nth-child(3n-1) .bg-color-blog-posts {
 			background: " . get_theme_mod("khaown_food_menu_varient_bg_color", "#333347") . " !important;
 		}
-		.loadmoremenus-wrapper .btn {
-			background-color: " . get_theme_mod("khaown_food_menu_load_more_button_color", "#333347") . ";
-			color: " . get_theme_mod("khaown_food_menu_load_more_button_text_color", "#d2d2d2") . ";
-			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_border_color", "#333347") . ";
-		}
 
-		.loadmoremenus-wrapper .btn:hover {
-			background: " . get_theme_mod("khaown_food_menu_load_more_button_hover_color", "#f8f8f8") . ";
-			color: " . get_theme_mod("khaown_food_menu_load_more_button_hover_text_color", "#333347") . ";
-			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_hover_border_color", "#333347") . ";
-		}
 		
 		";
 
