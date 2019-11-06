@@ -45,13 +45,6 @@ function khaown_customize_register( $wp_customize ) {
 		'default' => '#ffffff',
 		'label' => 'Body Background Color'
 	);
-	// secondary color ( site description, sidebar headings, h3, h5, nav links on hover )
-	$bgcolors[] = array(
-		'slug'=>'button_bg_color', 
-		'default' => '#292929',
-		'label' => 'Button Background Color'
-	);
-
 	// link color
 	$bgcolors[] = array(
 		'slug'=>'text_color', 
@@ -734,6 +727,58 @@ function khaown_customize_register( $wp_customize ) {
 		'section'  	=> 	'nav_bar',
 		'priority' 	=>  20
 	) );
+
+	/**********************************
+		Button Section setup
+    *********************************/
+    $wp_customize->add_section( 'khaown_theme_button', array(
+		'title'          => __( 'Button', 'khaown' ),
+        'description'    => __( 'Your Button color, hover color, etc.', 'khaown' ),
+        'priority' 		 => 46
+    ) );
+
+    $khaown_btn_colors[] = array(
+		'slug'		=>'khaown_btn_bg_color', 
+		'default' 	=> 'black',
+		'label' 	=> 'Button Background Color'
+	);
+	$khaown_btn_colors[] = array(
+		'slug'		=>'khaown_btn_text_color', 
+		'default' 	=> 'white',
+		'label' 	=> 'Button Background Color'
+	);
+	$khaown_btn_colors[] = array(
+		'slug'		=>'khaown_btn_hover_bg_color', 
+		'default' 	=> '#010101',
+		'label' 	=> 'Button Background Color'
+	);
+	$khaown_btn_colors[] = array(
+		'slug'		=>'khaown_btn_hover_text_color', 
+		'default' 	=> '#f9f9f9',
+		'label' 	=> 'Button Background Color'
+	);
+	foreach( $khaown_btn_colors as $btn_colors ) {
+	
+		// SETTINGS
+		$wp_customize->add_setting(
+			$btn_colors['slug'], array(
+				'default' => $btn_colors['default'],
+				'sanitize_callback'  => 'esc_attr',
+				'type' => 'theme_mod'
+			)
+		);
+		// CONTROLS
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				$btn_colors['slug'], 
+				array('label' => $btn_colors['label'], 
+				'priority' 	=>  20,
+				'section'  	=> 'khaown_theme_button',
+				'settings' 	=> $btn_colors['slug'])
+			)
+		);
+	}
 
 	/**********************************
 		Header Top Section setup

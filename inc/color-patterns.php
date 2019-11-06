@@ -135,6 +135,30 @@ function khaown_custom_colors_css() {
 		header nav, header .menu > li ul {
 			box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
 		}
+		.woocommerce-cart-form, .woocommerce .cart_totals, 
+		.woocommerce-info, .woocommerce-form-coupon, 
+		form.checkout.woocommerce-checkout #customer_details, 
+		form.checkout.woocommerce-checkout .khaown-your-order-review-wrapper,
+		.woocommerce .woocommerce-NoticeGroup,
+		.woocommerce .woocommerce-order  {
+			transition: all .4s;
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+		}
+		.woocommerce-cart-form:hover, 
+		.woocommerce .cart_totals:hover, 
+		.woocommerce-info:hover, 
+		.woocommerce-form-coupon:hover, 
+		form.checkout.woocommerce-checkout #customer_details:hover, 
+		form.checkout.woocommerce-checkout .khaown-your-order-review-wrapper:hover,
+		.woocommerce .woocommerce-NoticeGroup:hover,
+		.woocommerce .woocommerce-order:hover {
+			box-shadow: 0 3px 3px 1px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+			transition: all .4s;
+		}
+		.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals, .woocommerce .woocommerce-order {
+			padding: 20px;
+		}
+
 	";
 	endif;
 
@@ -210,12 +234,57 @@ function khaown_custom_colors_css() {
 			line-height: " . get_theme_mod("heading_h2_line_height", "32") . "px;
 		}
 
+		button, .btn, input[type='submit'], button[type='submit'], input#submit .button, 
+		.em_comment input#submit,
+		.khaown-woo-single-container div.product form.cart .button,
+		.woocommerce #respond input#submit, 
+		.woocommerce a.button, 
+		.woocommerce button.button,
+		.woocommerce a.button.alt,
+		.woocommerce button.button.alt, 
+		.woocommerce input.button {
+			background-color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			color: " . get_theme_mod("khaown_btn_text_color", "white") . ";
+		}
+		input[type='submit'], button[type='submit'], .em_comment input#submit {
+			border: 0px solid " . get_theme_mod("khaown_btn_bg_color", "#292929") . ";
+			background: " . get_theme_mod("khaown_btn_bg_color", "") . ";
+		}
+		
+		.woocommerce-message::before, .woocommerce-info a {
+			color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+		}
+
+		.woocommerce-message, .woocommerce-info {
+			border-top-color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			
+		}
+		.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+			border-top: 2px solid " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+		}
+
+		button:hover, .btn:hover, input[type='submit']:hover, button[type='submit']:hover, input#submit .button:hover, 
+		.em_comment input#submit:hover,
+		.khaown-woo-single-container div.product form.cart .button:hover,
+		.woocommerce #respond input#submit:hover, 
+		.woocommerce a.button:hover, 
+		.woocommerce button.button:hover,
+		.woocommerce a.button.alt:hover,
+		.woocommerce button.button.alt:hover, 
+		.woocommerce input.button:hover {
+			background-color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
+			color: " . get_theme_mod("khaown_btn_hover_text_color", "#f9f9f9") . ";
+		}
+		.woocommerce-message::before, .woocommerce-info a:hover {
+			color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
+		}
+		
+
+
 		.blog-posts .row .bg-color-blog-posts {
 			border-radius: " . get_theme_mod("border_radius", "0") . "px;
 			background: " . get_theme_mod("sidebar_background_color", "#f8f8f8") . ";
 		}
-
-
 
 		.bg-menu-4 {
 			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
@@ -253,10 +322,6 @@ function khaown_custom_colors_css() {
 		
 		.blog-posts article:nth-child(3n-1) .bg-color-blog-posts {
 			background: " . get_theme_mod("veriant_posts_background_color", "#333347") . " !important;
-		}
-		input[type='submit'], button[type='submit'], .em_comment input#submit {
-			border: 0px solid " . get_theme_mod("button_bg_color", "#292929") . ";
-			background: " . get_theme_mod("button_bg_color", "") . ";
 		}
 
 		.blog-posts article:nth-child(3n-1) .row p, .blog-posts article:nth-child(3n-1) .row h1 {
