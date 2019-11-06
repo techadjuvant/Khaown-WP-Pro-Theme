@@ -36,13 +36,13 @@ get_header( 'shop' );
         
     </section>
 <?php
-    $product_per_page = 9;
+    $product_per_page = 1;
 
     $args = array(
         'post_type' => 'product',
         'post_status' => 'publish',
         'posts_per_page' => $product_per_page,
-        'paged' => 1,
+        'paged' => $paged,
     );
     $em_products = new WP_Query( $args );
     $my_post_count = $em_products ->post_count;
@@ -75,7 +75,7 @@ get_header( 'shop' );
             <div id="loadingDiv" class="product-laoding-gif hidden">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/loading.gif" alt="Loading"> 
             </div>
-            <input id="khaown_product_per_page" type="text" class="hidden" value="<?php $product_per_page; ?>">
+            <input id="khaown_product_per_page" type="text" class="hidden" value="<?php echo $product_per_page; ?>">
             <input class="hidden" id="khaown_product_maxPage" type="text" value="<?php echo $em_products->max_num_pages + 1; ?>">
             <input class="hidden" id="khaown_product_security" type="text" value="<?php echo wp_create_nonce("load_more_products"); ?>">
             

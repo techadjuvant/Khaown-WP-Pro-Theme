@@ -2758,6 +2758,7 @@ jQuery(function($) {
         var data = {
             'action': 'load_products_by_ajax',
             'page': no_of_product_pages,
+            'menu_per_page': khaown_product_per_page,
             'security': khaown_product_security,
             'max_page': khaown_product_maxPage
         };
