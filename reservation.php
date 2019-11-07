@@ -11,7 +11,7 @@ get_header();
     <section class="page-title page-title-4 rsv-header-bg">
         <div class="container">
             <div class="row">
-                <div class="text-left">
+                <div class="col-md-6 text-left">
                     <h2 class="uppercase mb0 font-white"><strong><?php echo get_theme_mod("rsv_header_title", 'Reservation'); ?></strong></h2>
                 </div>
             </div>

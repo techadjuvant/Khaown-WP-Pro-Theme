@@ -11,26 +11,29 @@
 
 ?>
 
-<section class="khaown-woo-header-wrapper">
-	<div class="row">
-		<div class="col-xs-6">
-			<header class="woocommerce-products-header">
-					<h1 class="woocommerce-products-header__title page-title"><?php the_title(); ?></h1>
-			</header>
-		</div>
-		<div class="col-xs-6">
-			<?php
-				/**
-				 * Hook: woocommerce_before_main_content.
-				 *
-				 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-				 * @hooked woocommerce_breadcrumb - 20
-				 * @hooked WC_Structured_Data::generate_website_data() - 30
-				 */
-				do_action( 'woocommerce_before_main_content' ); ?>
-		</div>
-	</div>
+<section class="page-title page-title-4 food-menu-header khaown-header-bg  mb32">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1 class="mb0 font-white"><strong> <?php the_title(); ?></strong></h1>
+            </div>
+			<div class="col-xs-6 text-right">
+				<?php
+					/**
+					 * Hook: woocommerce_before_main_content.
+					 *
+					 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+					 * @hooked woocommerce_breadcrumb - 20
+					 * @hooked WC_Structured_Data::generate_website_data() - 30
+					 */
+					do_action( 'woocommerce_before_main_content' ); ?>
+			</div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
 </section>
+
 <div id="single-content">
 	<div class="container">
 		<?php

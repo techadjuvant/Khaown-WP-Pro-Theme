@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <div class="front-page-container">
-    <section class="fullscreen image-bg overlay parallax">
+    <section class="fullscreen image-bg overlay parallax parallax-background-container">
         <!-- Image overlay opacity control is loacted on line 637 of the theme-gunmetal.css file - CW -->
-        <div class="background-image-holder">
+        <div class="background-image-holder section-bg parallax-object ">
             <img alt="las vegas food photography chris wessling" class="background-image" src="<?php echo get_theme_mod("upload_media_fullscreen_image", ""); ?>" />
         </div>
         <div class="skewed-bg">
@@ -18,8 +18,8 @@
         if(!$hide_location) { 
     ?>
         <section class="image-square left" id="location">
-            <div class="col-md-6 p0 image">
-                <div class="map-holder background-image-holder">
+            <div class="col-md-6 p0 image parallax-background-container">
+                <div class="map-holder background-image-holder section-bg parallax-object">
                     <iframe 
                     src="<?php echo get_theme_mod( 'location_google_map_link'); ?>" 
                     width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -114,20 +114,14 @@
             $hide_parallux = get_theme_mod( 'hide_parallux_section', false);
             if(!$hide_parallux) { 
         ?>
-           <section class="pt240 pb240 image-bg parallax">
-               <div class="background-image-holder">
-                   <img alt="jeff ragazzo photogrphy" class="background-image" src="<?php echo get_theme_mod( 'upload_media_parallux_image_1'); ?>" />
-               </div>
+            <section class="parallax-background-container">
+                <div class="section-bg parallax-object" style="background-image: url('<?php echo get_theme_mod( 'upload_media_parallux_image_1'); ?>');" data-breakpoint="768" data-speed="0.5"></div>
             </section>
-            <section class="pt240 pb240 image-bg parallax">
-               <div class="background-image-holder">
-                   <img alt="john e carson hotel las vegas" class="background-image" src="<?php echo get_theme_mod( 'upload_media_parallux_image_2'); ?>" />
-                </div>
-           </section>		
-			<section class="pt240 pb240 image-bg parallax">
-                <div class="background-image-holder">
-                    <img alt="thai eggplant credit chris wessling las vegas" class="background-image" src="<?php echo get_theme_mod( 'upload_media_parallux_image_3'); ?>" />
-                </div>
+            <section class="parallax-background-container">
+                <div class="section-bg parallax-object" style="background-image: url('<?php echo get_theme_mod( 'upload_media_parallux_image_2'); ?>');" data-breakpoint="768" data-speed="0.5"></div>
+            </section>
+            <section class="parallax-background-container">
+                <div class="section-bg parallax-object" style="background-image: url('<?php echo get_theme_mod( 'upload_media_parallux_image_3'); ?>');" data-breakpoint="768" data-speed="0.5"></div>
             </section>
        <?php }; ?>
 
@@ -146,14 +140,12 @@
                     $hide_reviews = get_theme_mod( 'hide_review_section', false);
                     if(!$hide_reviews) { 
                 ?>
-           <section class="customer-review-section image-bg overlay parallax">
+           <section class="customer-review-section image-bg parallax-background-container">
                 <?php 
                     $upload_media_review_bg_image = get_theme_mod( 'upload_media_review_bg_image');
                     if($upload_media_review_bg_image) { 
                 ?>
-                    <div class="background-image-holder">
-                        <img alt="image" class="background-image" src="<?php echo $upload_media_review_bg_image; ?>" />
-                    </div>
+                    <div class="section-bg parallax-object" style="background-image: url('<?php echo $upload_media_review_bg_image; ?>');" data-breakpoint="768" data-speed="0.5"></div>
                 <?php } ?>
                <div class="container">
                     <div class="row">
@@ -187,7 +179,7 @@
             wp_reset_postdata();
             endif; 
         ?>
-
+     
         <?php 
             $hide_schedule = get_theme_mod( 'hide_schedule_section', false);
             if(!$hide_schedule) { 
@@ -240,6 +232,7 @@
                 </div>
             </section>
         <?php }; ?>
+        
         <?php 
             $hide_portrait = get_theme_mod( 'hide_portrait_section', false);
             if(!$hide_portrait) { 

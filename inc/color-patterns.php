@@ -279,20 +279,35 @@ function khaown_custom_colors_css() {
 			color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
 		}
 		
-
+		.woocommerce .woocommerce-breadcrumb {
+			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
+		}
+		.khaown-woo-archive-wrapper .page-title .container {
+			width: 100vw;
+			padding: 0 5vw;
+		}
 
 		.blog-posts .row .bg-color-blog-posts {
 			border-radius: " . get_theme_mod("border_radius", "0") . "px;
 			background: " . get_theme_mod("sidebar_background_color", "#f8f8f8") . ";
 		}
 
-		.bg-menu-4 {
+		.bg-menu-4, .khaown-header-bg {
 			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
 		}
+		.food-menu-header {
+			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#be9ae2") . ";
+		}
+
+		.rsv-header-bg {
+			background-color: " . get_theme_mod("rsv_header_bg_color", "#be9ae2") . ";
+		}
+
 		.page-title h1.khaown-site-title a {
 			color: " . get_theme_mod("top_header_site_tile_color", "#000000") . ";
 			font-size: " . get_theme_mod("site_title_font_size", "32") . "px;
 			font-weight: " . get_theme_mod("site_title_font_weight", "500") . ";
+			line-height: 40px;
 		  }
 		.page-title h1.khaown-site-title {
 			font-size: " . get_theme_mod("site_title_font_size", "32") . "px;
@@ -367,13 +382,10 @@ function khaown_custom_colors_css() {
 		.customer-review-section {
 			background-color: " . get_theme_mod("khaown_review_bg_color", "#f0dff6") . "!important;
 		}
-		.rsv-header-bg {
-			background-color: " . get_theme_mod("rsv_header_bg_color", "#F0DFF6") . ";
-		}
+		
 		.rsv-header-bg h2 {
 			font-size: " . get_theme_mod("rsv_font_size", "40") . "px;
 			color: " . get_theme_mod("rsv_header_text_color", "#292929") . ";
-			margin-left: -15px;
 		}
 		.rsv-middle-body {
 			background-color: " . get_theme_mod("rsv_middle_body_bg_color", "#ffffff") . ";
@@ -386,9 +398,6 @@ function khaown_custom_colors_css() {
 			color: " . get_theme_mod("rsv_form_text_color", "#7a7a7a") . ";
 		}
 
-		.food-menu-header {
-			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#F0DFF6") . ";
-		}
 		.food-menu-header h1 {
 			font-size: " . get_theme_mod("khaown_food_menu_header_font_size", "40") . "px;
 			color: " . get_theme_mod("khaown_food_menu_header_text_color", "#292929") . ";
@@ -403,7 +412,36 @@ function khaown_custom_colors_css() {
 		.blog-posts .food-menu:nth-child(3n-1) .bg-color-blog-posts {
 			background: " . get_theme_mod("khaown_food_menu_varient_bg_color", "#333347") . " !important;
 		}
+		.loadmoremenus-wrapper .btn {
+			background-color: " . get_theme_mod("khaown_food_menu_load_more_button_color", "#333347") . ";
+			color: " . get_theme_mod("khaown_food_menu_load_more_button_text_color", "#d2d2d2") . ";
+			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_border_color", "#333347") . ";
+		}
 
+		.loadmoremenus-wrapper .btn:hover {
+			background: " . get_theme_mod("khaown_food_menu_load_more_button_hover_color", "#f8f8f8") . ";
+			color: " . get_theme_mod("khaown_food_menu_load_more_button_hover_text_color", "#333347") . ";
+			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_hover_border_color", "#333347") . ";
+		}
+
+		.parallax-background-container { 
+			height: 100vh;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+		}
+		
+		.section-bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
 		
 		";
 
@@ -453,6 +491,9 @@ function khaown_custom_colors_css() {
 		.editor-block-list__layout .editor-block-list__block .wp-block-cover a {
 			color: inherit;
 		}
+
+		
+
 		";
 
 	if ( function_exists( "register_block_type" ) && is_admin() ) {

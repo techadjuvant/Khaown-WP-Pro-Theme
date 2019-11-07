@@ -19,9 +19,9 @@ get_header();
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( has_post_thumbnail() ) : ?>
-					<section class="fullscreen image-bg overlay parallax">
+					<section class="fullscreen image-bg overlay parallax parallax-background-container">
 						<!-- Image overlay opacity control is loacted on line 637 of the theme-gunmetal.css file - CW -->
-						<div class="background-image-holder">
+						<div class="background-image-holder section-bg parallax-object">
 							<?php the_post_thumbnail(); ?>
 						</div>
 					</section>
