@@ -60,8 +60,7 @@ if ( ! function_exists( 'khaown_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => __( 'Primary', 'khaown' ),
-				'footer' => __( 'Footer Menu', 'khaown' ),
-				'social' => __( 'Social Links Menu', 'khaown' ),
+				'footer' => __( 'Footer Menu', 'khaown' )
 			)
 		);
 
