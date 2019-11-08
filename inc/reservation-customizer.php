@@ -45,6 +45,7 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
         'label'     => 'Header Font Size',
         'type'      => 'number'
 	);
+	
 	foreach( $rsv_headers as $rsv_header ) {
 	
 		// SETTINGS
@@ -64,40 +65,8 @@ function khaown_reservation_page_customize_register( $wp_customize ) {
                 'settings' => $rsv_header['slug'])
 		);
     }
-    // Top header text color
-	$rsv_header_colors[] = array(
-		'slug'=>'rsv_header_text_color', 
-		'default' => '#7a7a7a',
-		'label' => 'Header Text Color'
-    );
-    // Top header text color
-	$rsv_header_colors[] = array(
-		'slug'=>'rsv_header_bg_color', 
-		'default' => '#F0DFF6',
-		'label' => 'Header Background Color'
-	);
-	foreach( $rsv_header_colors as $rsv_header_color ) {
-	
-		// SETTINGS
-		$wp_customize->add_setting(
-			$rsv_header_color['slug'], array(
-				'default' => $rsv_header_color['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
-			)
-		);
-		// CONTROLS
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$rsv_header_color['slug'], 
-				array('label' => $rsv_header_color['label'], 
-				'section' => 'reservation_header_section',
-				'priority' 		=>  20,
-				'settings' => $rsv_header_color['slug'])
-			)
-		);
-    }
+
+
     
     /**********************************
 	Middle Body Section setup

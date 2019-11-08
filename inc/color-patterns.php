@@ -296,11 +296,11 @@ function khaown_custom_colors_css() {
 			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
 		}
 		.food-menu-header {
-			background-color: " . get_theme_mod("khaown_food_menu_header_bg_color", "#be9ae2") . ";
+			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
 		}
 
 		.rsv-header-bg {
-			background-color: " . get_theme_mod("rsv_header_bg_color", "#be9ae2") . ";
+			background-color: " . get_theme_mod("homepage_header_bg_color", "#be9ae2") . ";
 		}
 
 		.page-title h1.khaown-site-title a {
@@ -385,7 +385,6 @@ function khaown_custom_colors_css() {
 		
 		.rsv-header-bg h2 {
 			font-size: " . get_theme_mod("rsv_font_size", "40") . "px;
-			color: " . get_theme_mod("rsv_header_text_color", "#292929") . ";
 		}
 		.rsv-middle-body {
 			background-color: " . get_theme_mod("rsv_middle_body_bg_color", "#ffffff") . ";
