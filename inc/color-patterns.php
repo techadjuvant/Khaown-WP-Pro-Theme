@@ -399,7 +399,6 @@ function khaown_custom_colors_css() {
 
 		.food-menu-header h1 {
 			font-size: " . get_theme_mod("khaown_food_menu_header_font_size", "40") . "px;
-			color: " . get_theme_mod("khaown_food_menu_header_text_color", "#292929") . ";
 		}
 		.menu-items {
 			background-color: " . get_theme_mod("khaown_food_menu_body_bg_color", "#fff") . ";

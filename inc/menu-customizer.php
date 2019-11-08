@@ -65,41 +65,7 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 		);
 	}
 	
-	// Top header bg color
-	$rsv_header_colors[] = array(
-		'slug'=>'khaown_food_menu_header_bg_color', 
-		'default' => '#F0DFF6',
-		'label' => 'Header Background Color'
-	);
-    // Top header text color
-	$rsv_header_colors[] = array(
-		'slug'=>'khaown_food_menu_header_text_color', 
-		'default' => '#292929',
-		'label' => 'Header Text Color'
-    );
-    
-	foreach( $rsv_header_colors as $rsv_header_color ) {
-	
-		// SETTINGS
-		$wp_customize->add_setting(
-			$rsv_header_color['slug'], array(
-				'default' => $rsv_header_color['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
-			)
-		);
-		// CONTROLS
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$rsv_header_color['slug'], 
-				array('label' => $rsv_header_color['label'], 
-				'section' => 'food_menu_header_section',
-				'priority' 		=>  20,
-				'settings' => $rsv_header_color['slug'])
-			)
-		);
-    }
+
     
     /**********************************
 	Middle Body Section setup
