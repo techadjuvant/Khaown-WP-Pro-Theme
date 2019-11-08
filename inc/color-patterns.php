@@ -243,24 +243,26 @@ function khaown_custom_colors_css() {
 		.woocommerce a.button.alt,
 		.woocommerce button.button.alt, 
 		.woocommerce input.button {
-			background-color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			background-color: " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
 			color: " . get_theme_mod("khaown_btn_text_color", "white") . ";
+			transition: all 0.4s;
 		}
 		input[type='submit'], button[type='submit'], .em_comment input#submit {
 			border: 0px solid " . get_theme_mod("khaown_btn_bg_color", "#292929") . ";
 			background: " . get_theme_mod("khaown_btn_bg_color", "") . ";
+			transition: all 0.4s;
 		}
 		
 		.woocommerce-message::before, .woocommerce-info a {
-			color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			color: " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
 		}
 
 		.woocommerce-message, .woocommerce-info {
-			border-top-color: " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			border-top-color: " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
 			
 		}
 		.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-			border-top: 2px solid " . get_theme_mod("khaown_btn_bg_color", "black") . ";
+			border-top: 2px solid " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
 		}
 
 		button:hover, .btn:hover, input[type='submit']:hover, button[type='submit']:hover, input#submit .button:hover, 
@@ -274,9 +276,11 @@ function khaown_custom_colors_css() {
 		.woocommerce input.button:hover {
 			background-color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
 			color: " . get_theme_mod("khaown_btn_hover_text_color", "#f9f9f9") . ";
+			transition: all 0.4s;
 		}
 		.woocommerce-message::before, .woocommerce-info a:hover {
 			color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
+			transition: all 0.4s;
 		}
 		
 		.woocommerce .woocommerce-breadcrumb {
@@ -411,15 +415,15 @@ function khaown_custom_colors_css() {
 			background: " . get_theme_mod("khaown_food_menu_varient_bg_color", "#333347") . " !important;
 		}
 		.loadmoremenus-wrapper .btn {
-			background-color: " . get_theme_mod("khaown_food_menu_load_more_button_color", "#333347") . ";
-			color: " . get_theme_mod("khaown_food_menu_load_more_button_text_color", "#d2d2d2") . ";
-			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_border_color", "#333347") . ";
+			background-color: " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
+			color: " . get_theme_mod("khaown_btn_text_color", "white") . ";
+			border: 2px solid " . get_theme_mod("khaown_btn_bg_color", "#000000") . ";
 		}
 
 		.loadmoremenus-wrapper .btn:hover {
-			background: " . get_theme_mod("khaown_food_menu_load_more_button_hover_color", "#f8f8f8") . ";
-			color: " . get_theme_mod("khaown_food_menu_load_more_button_hover_text_color", "#333347") . ";
-			border: 2px solid " . get_theme_mod("khaown_food_menu_load_more_button_hover_border_color", "#333347") . ";
+			background-color: " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
+			color: " . get_theme_mod("khaown_btn_hover_text_color", "#f9f9f9") . ";
+			border: 2px solid " . get_theme_mod("khaown_btn_hover_bg_color", "#010101") . ";
 		}
 
 		.parallax-background-container { 

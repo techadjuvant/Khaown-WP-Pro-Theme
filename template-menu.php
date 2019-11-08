@@ -10,11 +10,11 @@ get_header(); ?>
     $khaown_food_menu_header_title = get_theme_mod("khaown_food_menu_header_title", "Food Menu");
     if(!$hide_food_menu_header) :
 ?>
-<section class="page-title page-title-4 food-menu-header">
+<section class="page-title page-title-4 bg-menu-4">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="mb0 font-white"><strong><?php echo $khaown_food_menu_header_title;  ?></strong></h1>
+                <h1 class="khaown-site-title"><strong><?php echo $khaown_food_menu_header_title;  ?></strong></h1>
             </div>
         </div>
         <!--end of row-->

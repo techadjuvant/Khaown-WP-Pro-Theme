@@ -18,8 +18,8 @@
         if(!$hide_location) { 
     ?>
         <section class="image-square left" id="location">
-            <div class="col-md-6 p0 image parallax-background-container">
-                <div class="map-holder background-image-holder section-bg parallax-object">
+            <div class="col-md-6 p0 image">
+                <div class="map-holder background-image-holder">
                     <iframe 
                     src="<?php echo get_theme_mod( 'location_google_map_link'); ?>" 
                     width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>

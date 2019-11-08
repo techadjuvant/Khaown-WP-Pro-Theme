@@ -739,23 +739,23 @@ function khaown_customize_register( $wp_customize ) {
 
     $khaown_btn_colors[] = array(
 		'slug'		=>'khaown_btn_bg_color', 
-		'default' 	=> 'black',
+		'default' 	=> '#000000',
 		'label' 	=> 'Button Background Color'
 	);
 	$khaown_btn_colors[] = array(
 		'slug'		=>'khaown_btn_text_color', 
-		'default' 	=> 'white',
-		'label' 	=> 'Button Background Color'
+		'default' 	=> '#ffffff',
+		'label' 	=> 'Button Text Color'
 	);
 	$khaown_btn_colors[] = array(
 		'slug'		=>'khaown_btn_hover_bg_color', 
 		'default' 	=> '#010101',
-		'label' 	=> 'Button Background Color'
+		'label' 	=> 'Button Hover Background Color'
 	);
 	$khaown_btn_colors[] = array(
 		'slug'		=>'khaown_btn_hover_text_color', 
 		'default' 	=> '#f9f9f9',
-		'label' 	=> 'Button Background Color'
+		'label' 	=> 'Button Hover Text Color'
 	);
 	foreach( $khaown_btn_colors as $btn_colors ) {
 	

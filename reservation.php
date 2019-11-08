@@ -8,11 +8,11 @@ get_header();
     $hide_rsv_header = get_theme_mod("hide_header_section", false);
     if(!$hide_rsv_header) :
 ?>
-    <section class="page-title page-title-4 rsv-header-bg">
+    <section class="page-title page-title-4 bg-menu-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-left">
-                    <h2 class="uppercase mb0 font-white"><strong><?php echo get_theme_mod("rsv_header_title", 'Reservation'); ?></strong></h2>
+                    <h1 class="khaown-site-title"><strong><?php echo get_theme_mod("rsv_header_title", 'Reservation'); ?></strong></h1>
                 </div>
             </div>
             <!--end of row-->
