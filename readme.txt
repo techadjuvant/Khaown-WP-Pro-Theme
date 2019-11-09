@@ -50,4 +50,4 @@ Change any color from your dashboard of the theme.
 Responsive with Bootstrap Framework
 Easy to customize and user friendly
 Documentation
-Fasted Customer Support​
+Faster Customer Support​
