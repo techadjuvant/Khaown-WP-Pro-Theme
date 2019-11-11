@@ -9,10 +9,10 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 	Food Menu page customizer setup
     *********************************/
     $wp_customize->add_panel('food_menu_page_php', array(
-        'theme_supports' => '',
-		'title'			=> __('Food Menu Page', 'khaown'),
-		'description'	=> sprintf(__('Setup your theme Food Menu page', 'khaown') ),
-		'priority' 		=> 81
+        'theme_supports' 	=> '',
+		'title'				=> __('Food Menu Page', 'khaown'),
+		'description'		=> sprintf(__('Setup your theme Food Menu page', 'khaown') ),
+		'priority' 			=> 81
     ) );
 
     /**********************************
@@ -27,7 +27,7 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
     // Top header 
 	$rsv_headers[] = array(
 		'slug'      =>'khaown_hide_food_menu_header_section', 
-		'default'   => 'false',
+		'default'   => 0,
         'label'     => 'Hide Header Section',
         'type'      => 'checkbox'
     );
@@ -50,18 +50,18 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$rsv_header['slug'], array(
-				'default' => $rsv_header['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $rsv_header['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
         $wp_customize->add_control($rsv_header['slug'], 
             array(
-                'label' => $rsv_header['label'], 
-                'section' => 'food_menu_header_section',
-                'type'    => $rsv_header['type'],
-                'settings' => $rsv_header['slug'])
+                'label' 		=> $rsv_header['label'], 
+                'section' 		=> 'food_menu_header_section',
+                'type'    		=> $rsv_header['type'],
+                'settings' 		=> $rsv_header['slug'])
 		);
 	}
 	
@@ -88,18 +88,18 @@ function khaown_food_menu_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$khaown_food_body['slug'], array(
-				'default' => $khaown_food_body['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $khaown_food_body['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
         $wp_customize->add_control($khaown_food_body['slug'], 
             array(
-                'label' => $khaown_food_body['label'], 
-                'section' => 'khaown_food_menu_body_section',
-                'type'    => $khaown_food_body['type'],
-                'settings' => $khaown_food_body['slug'])
+                'label' 		=> $khaown_food_body['label'], 
+                'section' 		=> 'khaown_food_menu_body_section',
+                'type'    		=> $khaown_food_body['type'],
+                'settings' 		=> $khaown_food_body['slug'])
 		);
 	}
 
