@@ -388,7 +388,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_font_weight setting setup
 	$wp_customize->add_setting('paragraph_font_weight', array(
-		'default'			=> '300'
+		'default'			=> '300',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -412,7 +412,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_line_height setting setup
 	$wp_customize->add_setting('paragraph_line_height', array(
-		'default'			=> '24'
+		'default'			=> '24',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -427,7 +427,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_letter_spacing setting setup
 	$wp_customize->add_setting('paragraph_letter_spacing', array(
-		'default'			=> '0'
+		'default'			=> '0',
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -442,7 +442,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_word_spacing setting setup
 	$wp_customize->add_setting('paragraph_word_spacing', array(
-		'default'			=> '0'
+		'default'			=> '0',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -474,7 +474,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_text_case', array(
-		'default'			=> 'uppercase'
+		'default'			=> 'uppercase',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -495,7 +495,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// SETTINGS
 	$wp_customize->add_setting('heading_text_color', array(
-		'default'			=> '#7a7a7a'
+		'default'			=> '#7a7a7a',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -513,7 +513,7 @@ function khaown_customize_register( $wp_customize ) {
 	);
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_letter_spacing', array(
-		'default'			=> '1'
+		'default'			=> '1',
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -528,7 +528,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('heading_wordspecing_spacing', array(
-		'default'			=> '0'
+		'default'			=> '0',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -677,7 +677,7 @@ function khaown_customize_register( $wp_customize ) {
 	}
 	// Heading setting setup
 	$wp_customize->add_setting('nav_bar_font_size', array(
-		'default'			=> '15'
+		'default'			=> '15',
 		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
