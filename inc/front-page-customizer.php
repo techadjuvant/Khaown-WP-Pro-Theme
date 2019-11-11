@@ -169,8 +169,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display products setting setup
 	$wp_customize->add_setting('hide_products_section', array(
-		'default'			=> __( 'true', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 1,
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -180,7 +180,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'Hide Products Section', 'khaown' ),
             'section'    => 'products_section',
-            'type'    => 'checkbox',
+            'type'    	 => 'checkbox',
             'settings'   => 'hide_products_section',
         )
     );
@@ -196,8 +196,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display About setting setup
 	$wp_customize->add_setting('hide_about_section', array(
-		'default'			=> __( 'false', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -214,8 +214,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // About Title setting setup
 	$wp_customize->add_setting('about_section_title', array(
-		'default'			=> __( 'URBAN NEIGHBORHOOD RESTAURANT', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'URBAN NEIGHBORHOOD RESTAURANT',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -225,15 +225,15 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'About Section Title', 'khaown' ),
             'section'    => 'about_section',
-            'type'    => 'textarea',
+            'type'    	 => 'textarea',
             'settings'   => 'about_section_title',
         )
     );
 
     // About Sub Title setting setup
 	$wp_customize->add_setting('about_section_sub_title', array(
-		'default'			=> __( 'DHANMONDI DHAKA', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'DHANMONDI DHAKA',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -243,15 +243,15 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'About Section Sub Title', 'khaown' ),
             'section'    => 'about_section',
-            'type'    => 'text',
+            'type'    	 => 'text',
             'settings'   => 'about_section_sub_title',
         )
     );
 
     // About Section Description setting setup
 	$wp_customize->add_setting('about_section_description', array(
-        'default'			=> __( 'Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. <br><br> The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon\'s playful interpretations on American comfort food.', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+        'default'			=> 'Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. <br><br> The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon\'s playful interpretations on American comfort food.',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -261,7 +261,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'About Section Sub Title', 'khaown' ),
             'section'    => 'about_section',
-            'type'    => 'textarea',
+            'type'    	 => 'textarea',
             'settings'   => 'about_section_description',
         )
     );
@@ -277,8 +277,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
     ) );
     // Display Parallux setting setup
 	$wp_customize->add_setting('hide_parallux_section', array(
-		'default'			=> __( 'false', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -288,15 +288,15 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'Hide Parallux Section', 'khaown' ),
             'section'    => 'parallux_section',
-            'type'    => 'checkbox',
+            'type'    	 => 'checkbox',
             'settings'   => 'hide_parallux_section',
         )
     );
 
 
     $parallux_image[] = array(
-		'slug'=> 'upload_media_parallux_image_1', 
-        'label'      => __( 'Parllux Image 1', 'khaown' ),
+		'slug'			=> 'upload_media_parallux_image_1', 
+        'label'      	=> __( 'Parllux Image 1', 'khaown' ),
     );
     $parallux_image[] = array(
 		'slug'        => 'upload_media_parallux_image_2', 
@@ -339,7 +339,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Review setting setup
 	$wp_customize->add_setting('hide_review_section', array(
-		'default'			=> __( 'false', 'khaown'),
+		'default'			=> 0,
 		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
         'priority' 		 	=> 41
@@ -357,7 +357,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
 	);
 	// Display Review setting setup
 	$wp_customize->add_setting('khaown_show_max_reviews', array(
-		'default'			=> __( '3', 'khaown'),
+		'default'			=> '3',
 		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
         'priority' 		 	=> 41
@@ -384,8 +384,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$bg_image['slug'], array(
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+				'type' 					=> 'theme_mod',
+				'sanitize_callback'  	=> 'esc_attr'
 			)
 		);
 		// CONTROLS
@@ -394,18 +394,18 @@ function khaown_front_page_customize_register( $wp_customize ) {
 				$wp_customize,
 				$bg_image['slug'], 
 				array(
-                'label' => $bg_image['label'], 
-				'section' => $bg_image['section'], 
-				'settings' => $bg_image['slug'])
+                'label' 		=> $bg_image['label'], 
+				'section' 		=> $bg_image['section'], 
+				'settings' 		=> $bg_image['slug'])
 			)
 		);
 	}
 	
 	// Schedule bg color
 	$khaown_review_bg_colors[] = array(
-		'slug'=> 'khaown_review_bg_color', 
-		'default' => '#f0dff6',
-		'label' => 'Review Section Background Color'
+		'slug'		=> 'khaown_review_bg_color', 
+		'default' 	=> '#f0dff6',
+		'label' 	=> 'Review Section Background Color'
 	);
 
 	foreach( $khaown_review_bg_colors as $review_bg_color ) {
@@ -413,8 +413,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$review_bg_color['slug'], array(
-				'default' => $review_bg_color['default'],
-				'type' => 'theme_mod',
+				'default' 			 => $review_bg_color['default'],
+				'type'				 => 'theme_mod',
 				'sanitize_callback'  => 'esc_attr'
 			)
 		);
@@ -423,9 +423,9 @@ function khaown_front_page_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$review_bg_color['slug'], 
-				array('label' => $review_bg_color['label'], 
-				'section' => 'review_section',
-				'settings' => $review_bg_color['slug'])
+				array('label' 		=> $review_bg_color['label'], 
+				'section' 			=> 'review_section',
+				'settings' 			=> $review_bg_color['slug'])
 			)
 		);
     }
@@ -444,8 +444,8 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Schedule setting setup
 	$wp_customize->add_setting('hide_schedule_section', array(
-		'default'			=> __( 'false', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
         'priority' 		 => 41
 	) );
@@ -456,22 +456,22 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'Hide Schedule Section', 'khaown' ),
             'section'    => 'schedule_section',
-            'type'    => 'checkbox',
+            'type'    	 => 'checkbox',
             'settings'   => 'hide_schedule_section',
         )
     );
 
     // Schedule bg color
 	$schedule_colors[] = array(
-		'slug'=> 'schedule_bg_color', 
-		'default' => '#7774B3',
-		'label' => 'Background Color'
+		'slug'		=> 'schedule_bg_color', 
+		'default' 	=> '#7774B3',
+		'label' 	=> 'Background Color'
     );
     // Schedule bg color
 	$schedule_colors[] = array(
-		'slug'=> 'schedule_text_color', 
-		'default' => '#292929',
-		'label' => 'Text Color'
+		'slug'		=> 'schedule_text_color', 
+		'default' 	=> '#292929',
+		'label' 	=> 'Text Color'
 	);
 
 	foreach( $schedule_colors as $sch_color ) {
@@ -479,9 +479,9 @@ function khaown_front_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$sch_color['slug'], array(
-				'default' => $sch_color['default'],
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+				'default' 				=> $sch_color['default'],
+				'type' 					=> 'theme_mod',
+				'sanitize_callback'  	=> 'esc_attr'
 			)
 		);
 		// CONTROLS
@@ -489,9 +489,9 @@ function khaown_front_page_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$sch_color['slug'], 
-				array('label' => $sch_color['label'], 
-				'section' => 'schedule_section',
-				'settings' => $sch_color['slug'])
+				array('label' 		=> $sch_color['label'], 
+				'section' 			=> 'schedule_section',
+				'settings' 			=> $sch_color['slug'])
 			)
 		);
     }
@@ -499,66 +499,66 @@ function khaown_front_page_customize_register( $wp_customize ) {
     
     // Schedule Title
 	$schedule_details[] = array(
-		'slug'=> 'schedule_title', 
-		'default' => 'Opening Hours',
-        'label' => 'Schedule Title',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_title', 
+		'default' 		=> 'Opening Hours',
+        'label' 		=> 'Schedule Title',
+        'input_type' 	=> 'text',
     );
     // Schedule Sub Title
 	$schedule_details[] = array(
-		'slug'=> 'schedule_sub_title', 
-		'default' => 'Get some tomatoes, and, if they were eaten with the great extravagance to season',
-        'label' => 'Schedule Sub Title',
-        'input_type' => 'textarea',
+		'slug'			=> 'schedule_sub_title', 
+		'default' 		=> 'Get some tomatoes, and, if they were eaten with the great extravagance to season',
+        'label' 		=> 'Schedule Sub Title',
+        'input_type' 	=> 'textarea',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_sunday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Sunday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_sunday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Sunday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_monday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Monday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_monday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Monday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_Tuesday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Tuesday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_Tuesday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Tuesday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_Wednesday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Wednesday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_Wednesday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Wednesday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_Thursday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Thursday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_Thursday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Thursday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_Friday_schedule', 
-		'default' => '8.00 AM - 10.00 PM',
-        'label' => 'Friday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_Friday_schedule', 
+		'default' 		=> '8.00 AM - 10.00 PM',
+        'label' 		=> 'Friday Schedule',
+        'input_type' 	=> 'text',
     );
     // Schedule Time
 	$schedule_details[] = array(
-		'slug'=> 'schedule_Saturday_schedule', 
-		'default' => 'Clossed',
-        'label' => 'Saturday Schedule',
-        'input_type' => 'text',
+		'slug'			=> 'schedule_Saturday_schedule', 
+		'default' 		=> 'Clossed',
+        'label' 		=> 'Saturday Schedule',
+        'input_type' 	=> 'text',
     );
     
 
@@ -567,18 +567,18 @@ function khaown_front_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$details['slug'], array(
-				'default' => $details['default'],
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+				'default' 			=> $details['default'],
+				'type' 				=> 'theme_mod',
+				'sanitize_callback' => 'esc_attr'
 			)
 		);
 		// CONTROLS
 		$wp_customize->add_control(
 			    $details['slug'], 
-                array('label' => $details['label'],
-                'section' => 'schedule_section',
-                'type' => $details['input_type'],
-				'settings' => $details['slug'])
+                array('label' 			=> $details['label'],
+                'section' 				=> 'schedule_section',
+                'type' 					=> $details['input_type'],
+				'settings' 				=> $details['slug'])
 		);
     }
 
@@ -594,10 +594,10 @@ function khaown_front_page_customize_register( $wp_customize ) {
 
     // Display Portrait of Yourself setting setup
 	$wp_customize->add_setting('hide_portrait_section', array(
-		'default'			=> __( 'false', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
-        'priority' 		 => 41
+        'priority' 		 	=> 41
 	) );
 	
 	// Display Portrait of Yourself Control setup
@@ -606,7 +606,7 @@ function khaown_front_page_customize_register( $wp_customize ) {
         array(
             'label'      => __( 'Hide Portrait Section', 'khaown' ),
             'section'    => 'portrait_section',
-            'type'    => 'checkbox',
+            'type'    	=> 'checkbox',
             'settings'   => 'hide_portrait_section',
         )
     );
@@ -624,9 +624,9 @@ function khaown_front_page_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$image['slug'], array(
-                'default' => $image['default'],
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+                'default' 				=> $image['default'],
+				'type' 					=> 'theme_mod',
+				'sanitize_callback'  	=> 'esc_attr'
 			)
 		);
 		// CONTROLS
@@ -634,19 +634,19 @@ function khaown_front_page_customize_register( $wp_customize ) {
 			new WP_Customize_Upload_Control( 
 				$wp_customize,
 				$image['slug'], 
-				array('label' => $image['label'], 
-				'section' => 'portrait_section',
-				'settings' => $image['slug'])
+				array('label' 			=> $image['label'], 
+				'section' 				=> 'portrait_section',
+				'settings' 				=> $image['slug'])
 			)
 		);
     }
 
     // Your thought on Portrait section setting setup
 	$wp_customize->add_setting('your_thought_on_protrait_section', array(
-		'default'			=> __( 'PLEASE KEEP CALM & CARRY ON', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'PLEASE KEEP CALM & CARRY ON',
+		'sanitize_callback' => 'esc_attr',
         'type' 				=> 'theme_mod',
-        'priority' 		 => 41
+        'priority' 		 	=> 41
 	) );
 	
 	// Your thought on Portrait section Control setup
