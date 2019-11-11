@@ -78,7 +78,7 @@
 		</div>
 	</div>
 	
-	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top"> <?php _e('Top', 'khaown'); ?> </a>
 </footer><!-- #colophon -->
 
 </div><!-- #page -->

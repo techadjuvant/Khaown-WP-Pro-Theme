@@ -66,7 +66,7 @@ get_header(); ?>
         <input class="hidden" name="khaown_FoodMenu_maxPage" id="khaown_FoodMenu_maxPage" type="text" value="<?php echo $em_post_menus->max_num_pages + 1; ?>">
         <input class="hidden" name="khaown_FoodMenu_security" id="khaown_FoodMenu_security" type="text" value="<?php echo wp_create_nonce("load_more_menus"); ?>">
         <div class="btn-wrapper loadmoremenus-wrapper text-center">
-            <div class="btn loadmore">Load More</div>
+            <div class="btn loadmore"> <?php _e('Load More', 'khaown'); ?></div>
         </div>
     <?php } ?>
         <!--end of row-->

@@ -136,7 +136,7 @@ get_header( 'shop' );
 
             <div class="btn-wrapper text-center loadmoreproducts-wrapper">
 
-                <div class="loadmoreproducts btn"> <span> Load More </span> </div>
+                <div class="loadmoreproducts btn"> <span><?php _e('Load More', 'khaown'); ?> </span> </div>
 
             </div>
 

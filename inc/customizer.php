@@ -41,29 +41,29 @@ function khaown_customize_register( $wp_customize ) {
 	// add the settings and controls for each color
 	// main color ( site title, h1, h2, h4. h6, widget headings, nav links, footer headings )
 	$bgcolors[] = array(
-		'slug'=>'bg_color_scheme_1', 
-		'default' => '#ffffff',
-		'label' => 'Body Background Color'
+		'slug'			=>'bg_color_scheme_1', 
+		'default' 		=> '#ffffff',
+		'label' 		=> __('Body Background Color', 'khaown')
 	);
 	// link color
 	$bgcolors[] = array(
-		'slug'=>'text_color', 
-		'default' => '#545454',
-		'label' => 'Text Color'
+		'slug'		=>'text_color', 
+		'default' 	=> '#545454',
+		'label' 	=> __('Text Color', 'khaown')
 	);
 
 	// link color
 	$bgcolors[] = array(
-		'slug'=>'link_color', 
-		'default' => '#545454',
-		'label' => 'Link Color'
+		'slug'		=>'link_color', 
+		'default' 	=> '#545454',
+		'label' 	=> __('Link Color', 'khaown')
 	);
 	
 	// link color ( hover, active )
 	$bgcolors[] = array(
-		'slug'=>'hover_link_color', 
-		'default' => '#a0a0a0',
-		'label' => 'Link Color (on hover)'
+		'slug'		=>'hover_link_color', 
+		'default' 	=> '#a0a0a0',
+		'label' 	=> __('Link Color (on hover)', 'khaown')
 	);
 
 	foreach( $bgcolors as $txtcolor ) {
@@ -71,9 +71,9 @@ function khaown_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$txtcolor['slug'], array(
-				'default' => $txtcolor['default'],
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+				'default' 				=> $txtcolor['default'],
+				'type' 					=> 'theme_mod',
+				'sanitize_callback'  	=> 'esc_attr'
 			)
 		);
 		// CONTROLS
@@ -81,9 +81,10 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$txtcolor['slug'], 
-				array('label' => $txtcolor['label'], 
-				'section' => 'colors',
-				'settings' => $txtcolor['slug'])
+				array(
+					'label' 		=> $txtcolor['label'], 
+					'section' 		=> 'colors',
+					'settings' 		=> $txtcolor['slug'])
 			)
 		);
 	}
@@ -101,7 +102,7 @@ function khaown_customize_register( $wp_customize ) {
 	// flat_or_deep_design setting setup
 	$wp_customize->add_setting('flat_or_deep_design', array(
 		'default'			=> __('flat_design', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -119,7 +120,7 @@ function khaown_customize_register( $wp_customize ) {
 	// Border setting setup
 	$wp_customize->add_setting('border_design', array(
 		'default'			=> __('border_none', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -128,7 +129,7 @@ function khaown_customize_register( $wp_customize ) {
 		'label'			=> __('Box Border', 'khaown'),
 		'type'			=> 'radio',
 		'choices'   => array(
-			'has_border' => __( 'Has Border', 'khaown' ),
+			'has_border'  => __( 'Has Border', 'khaown' ),
 			'border_none' => __( 'Border None', 'khaown' )
 		),
 		'section' 		=> 'layout_design',
@@ -152,23 +153,23 @@ function khaown_customize_register( $wp_customize ) {
 
 	// secondary color ( site description, sidebar headings, h3, h5, nav links on hover )
 	$index_bgcolors[] = array(
-		'slug'=>'sidebar_background_color', 
-		'default' => '#f8f8f8',
-		'label' => 'Posts Background Color'
+		'slug'			=>'sidebar_background_color', 
+		'default' 		=> '#f8f8f8',
+		'label' 		=> __( 'Posts Background Color' )
 	);
 
 	// secondary color ( site description, sidebar headings, h3, h5, nav links on hover )
 	$index_bgcolors[] = array(
-		'slug'=> 'veriant_posts_background_color', 
-		'default' => '#333347',
-		'label' => 'Veriant Posts Background Color'
+		'slug'			=> 'veriant_posts_background_color', 
+		'default' 		=> '#333347',
+		'label' 		=> __( 'Veriant Posts Background Color' )
 	);
 	
 	// secondary color ( site description, sidebar headings, h3, h5, nav links on hover )
 	$index_bgcolors[] = array(
-		'slug'=> 'veriant_posts_text_color', 
-		'default' => '#d2d2d2',
-		'label' => 'Veriant Posts Text Color'
+		'slug'			=> 'veriant_posts_text_color', 
+		'default' 		=> '#d2d2d2',
+		'label' 		=> __( 'Veriant Posts Text Color')
 	);
 
 	foreach( $index_bgcolors as $index_bg_color ) {
@@ -176,9 +177,9 @@ function khaown_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$index_bg_color['slug'], array(
-				'default' => $index_bg_color['default'],
-				'type' => 'theme_mod',
-				'sanitize_callback'  => 'esc_attr'
+				'default' 			=> $index_bg_color['default'],
+				'type' 				=> 'theme_mod',
+				'sanitize_callback' => 'esc_attr'
 			)
 		);
 		// CONTROLS
@@ -186,10 +187,10 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$index_bg_color['slug'], 
-				array('label' => $index_bg_color['label'], 
-				'section' => 'layout_design',
-				'priority' 		=>  20,
-				'settings' => $index_bg_color['slug'])
+				array('label' 		=> $index_bg_color['label'], 
+				'section' 			=> 'layout_design',
+				'priority' 			=>  20,
+				'settings' 			=> $index_bg_color['slug'])
 				
 			)
 		);
@@ -207,14 +208,14 @@ function khaown_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_section('blogpage_sidebar_layout', array(
 		'title'			=> __('Blog Page Sidebar', 'khaown'),
-		'panel'          => 'sidebar_layout_panel',
+		'panel'         => 'sidebar_layout_panel',
 		'priority' 		=> 41
 	) );
 
 	// Blog page sidebar setting setup
 	$wp_customize->add_setting('blog_page_sidebar_position', array(
 		'default'			=> __('right-sidebar', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -224,9 +225,9 @@ function khaown_customize_register( $wp_customize ) {
 		'section' 		=> 'blogpage_sidebar_layout',
 		'type'			=> 'select',
 		'choices'  => array(
-			'no-sidebar' => _x( 'No Sidebar', 'no-sidebar', 'khaown' ),
-			'left-sidebar' => _x( 'Left Sidebar', 'left-sidebar', 'khaown' ),
-			'right-sidebar' => _x( 'Right Sidebar', 'right-sidebar', 'khaown' ),
+			'no-sidebar' 		=> _x( 'No Sidebar', 'no-sidebar', 'khaown' ),
+			'left-sidebar' 		=> _x( 'Left Sidebar', 'left-sidebar', 'khaown' ),
+			'right-sidebar' 	=> _x( 'Right Sidebar', 'right-sidebar', 'khaown' ),
 		),
 		'priority' 		=>  20
 	) );
@@ -234,14 +235,14 @@ function khaown_customize_register( $wp_customize ) {
 	// Section search page sidebar
 	$wp_customize->add_section('search_page_sidebar_layout', array(
 		'title'			=> __('Search Page Sidebar', 'khaown'),
-		'panel'          => 'sidebar_layout_panel',
+		'panel'         => 'sidebar_layout_panel',
 		'priority' 		=> 41
 	) );
 
 	// Search page sidebar setting setup
 	$wp_customize->add_setting('search_page_sidebar_position', array(
 		'default'			=> __('no-sidebar', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -251,9 +252,9 @@ function khaown_customize_register( $wp_customize ) {
 		'section' 		=> 'search_page_sidebar_layout',
 		'type'			=> 'select',
 		'choices'  => array(
-			'no-sidebar' => _x( 'No Sidebar', 'no-sidebar', 'khaown' ),
-			'left-sidebar' => _x( 'Left Sidebar', 'left-sidebar', 'khaown' ),
-			'right-sidebar' => _x( 'Right Sidebar', 'right-sidebar', 'khaown' ),
+			'no-sidebar' 		=> _x( 'No Sidebar', 'no-sidebar', 'khaown' ),
+			'left-sidebar' 		=> _x( 'Left Sidebar', 'left-sidebar', 'khaown' ),
+			'right-sidebar' 	=> _x( 'Right Sidebar', 'right-sidebar', 'khaown' ),
 		),
 		'priority' 		=>  20
 	) );
@@ -261,14 +262,14 @@ function khaown_customize_register( $wp_customize ) {
 	// Section archive page sidebar
 	$wp_customize->add_section('archive_page_sidebar_layout', array(
 		'title'			=> __('Archive Page Sidebar', 'khaown'),
-		'panel'          => 'sidebar_layout_panel',
+		'panel'         => 'sidebar_layout_panel',
 		'priority' 		=> 41
 	) );
 
 	// archive page sidebar setting setup
 	$wp_customize->add_setting('archive_page_sidebar_position', array(
 		'default'			=> __('no-sidebar', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -298,7 +299,7 @@ function khaown_customize_register( $wp_customize ) {
 	// default_or_customfont setting setup
 	$wp_customize->add_setting('default_or_customfont', array(
 		'default'			=> __('default_font', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -308,7 +309,7 @@ function khaown_customize_register( $wp_customize ) {
 		'type'			=> 'radio',
 		'choices'   => array(
 			'default_font' => __( 'Default Font', 'khaown' ),
-			'custom_font' => __( 'Custom Font', 'khaown' )
+			'custom_font'  => __( 'Custom Font', 'khaown' )
 		),
 		'section' 		=> 'typography',
 		'priority' 		=>  20
@@ -316,8 +317,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// font_family setting setup
 	$wp_customize->add_setting('font_family', array(
-		'default'			=> __("Rajdhani", 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> "Rajdhani",
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 
@@ -332,8 +333,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_font_style setting setup
 	$wp_customize->add_setting('paragraph_font_style', array(
-		'default'			=> __('normal', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'normal',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -343,16 +344,16 @@ function khaown_customize_register( $wp_customize ) {
 		'section' 		=> 'typography',
 		'type'			=> 'select',
 		'choices'  => array(
-			'normal' => _x( 'Normal', 'normal', 'khaown' ),
-			'italic'  => _x( 'Italic', 'italic', 'khaown' )
+			'normal' 	=> _x( 'Normal', 'normal', 'khaown' ),
+			'italic'  	=> _x( 'Italic', 'italic', 'khaown' )
 		),
 		'priority' 		=>  20
 	) );
 
 	// paragraph_text_transform setting setup
 	$wp_customize->add_setting('paragraph_text_transform', array(
-		'default'			=> __('none', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'none',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -362,18 +363,18 @@ function khaown_customize_register( $wp_customize ) {
 		'section' 		=> 'typography',
 		'type'			=> 'select',
 		'choices'  => array(
-			'none' => _x( 'Default', 'default', 'khaown' ),
-			'uppercase' => _x( 'Uppercase', 'uppercase', 'khaown' ),
-			'lowercase'  => _x( 'Lowercase', 'lowercase', 'khaown' ),
-			'capitalize'  => _x( 'Capitalize', 'capitalize', 'khaown' ),
+			'none' 			=> _x( 'Default', 'default', 'khaown' ),
+			'uppercase' 	=> _x( 'Uppercase', 'uppercase', 'khaown' ),
+			'lowercase'  	=> _x( 'Lowercase', 'lowercase', 'khaown' ),
+			'capitalize'  	=> _x( 'Capitalize', 'capitalize', 'khaown' ),
 		),
 		'priority' 		=>  20
 	) );
 
 	// paragraph_font_size setting setup
 	$wp_customize->add_setting('paragraph_font_size', array(
-		'default'			=> __('14', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '14',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -387,8 +388,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_font_weight setting setup
 	$wp_customize->add_setting('paragraph_font_weight', array(
-		'default'			=> __('300', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '300'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -411,8 +412,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_line_height setting setup
 	$wp_customize->add_setting('paragraph_line_height', array(
-		'default'			=> __('24', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '24'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -426,7 +427,7 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_letter_spacing setting setup
 	$wp_customize->add_setting('paragraph_letter_spacing', array(
-		'default'			=> __('0', 'khaown'),
+		'default'			=> '0'
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -441,8 +442,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// paragraph_word_spacing setting setup
 	$wp_customize->add_setting('paragraph_word_spacing', array(
-		'default'			=> __('0', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '0'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -461,9 +462,9 @@ function khaown_customize_register( $wp_customize ) {
 
 	$wp_customize->add_panel('heading_customization_panel', array(
         'theme_supports' => '',
-		'title'			=> __('Headings', 'khaown'),
-		'description'	=> sprintf(__('Customize your theme headings', 'khaown') ),
-		'priority' 		=> 44
+		'title'			 => __('Headings', 'khaown'),
+		'description'	 => sprintf(__('Customize your theme headings', 'khaown') ),
+		'priority' 		 => 44
     ) );
 
 	$wp_customize->add_section('heading_general', array(
@@ -473,8 +474,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_text_case', array(
-		'default'			=> __('uppercase', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 'uppercase'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -494,8 +495,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// SETTINGS
 	$wp_customize->add_setting('heading_text_color', array(
-		'default'			=> __('#7a7a7a', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '#7a7a7a'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	// CONTROLS
@@ -512,7 +513,7 @@ function khaown_customize_register( $wp_customize ) {
 	);
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_letter_spacing', array(
-		'default'			=> __('1', 'khaown'),
+		'default'			=> '1'
 		'sanitize_callback'  => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
@@ -527,8 +528,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('heading_wordspecing_spacing', array(
-		'default'			=> __('0', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '0'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -543,8 +544,8 @@ function khaown_customize_register( $wp_customize ) {
 	
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_font_weight', array(
-		'default'			=> __('300', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '300',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -572,8 +573,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_font_size', array(
-		'default'			=> __('28', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '28',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -586,8 +587,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('heading_1_line_height', array(
-		'default'			=> __( '36', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '36',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -604,8 +605,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('heading_h2_font_size', array(
-		'default'			=> __('24', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '24',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -619,8 +620,8 @@ function khaown_customize_register( $wp_customize ) {
 	
 	// Heading setting setup
 	$wp_customize->add_setting('heading_h2_line_height', array(
-		'default'			=> __( '32', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '32',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -644,22 +645,22 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Top header Site Desc color
 	$nav_colors[] = array(
-		'slug'=>'nav_bar_bg_color', 
-		'default' => '#ffffff',
-		'label' => 'Background Color'
+		'slug'		=>'nav_bar_bg_color', 
+		'default' 	=> '#ffffff',
+		'label' 	=> 'Background Color'
 	);
 	$nav_colors[] = array(
-		'slug'=>'nav_bar_text_color', 
-		'default' => '#000000',
-		'label' => 'Text Color'
+		'slug'		=>'nav_bar_text_color', 
+		'default' 	=> '#000000',
+		'label' 	=> 'Text Color'
 	);
 	foreach( $nav_colors as $colors ) {	
 		// SETTINGS
 		$wp_customize->add_setting(
 			$colors['slug'], array(
-				'default' => $colors['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $colors['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
@@ -667,17 +668,17 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$colors['slug'], 
-				array('label' => $colors['label'], 
-				'section' => 'nav_bar',
-				'priority' 		=>  20,
-				'settings' => $colors['slug'])
+				array('label' 			=> $colors['label'], 
+				'section' 				=> 'nav_bar',
+				'priority' 				=>  20,
+				'settings' 				=> $colors['slug'])
 			)
 		);
 	}
 	// Heading setting setup
 	$wp_customize->add_setting('nav_bar_font_size', array(
-		'default'			=> __( '15', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '15'
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -690,8 +691,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('nav_bar_font_weight', array(
-		'default'			=> __( '500', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '500',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -714,15 +715,15 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('nav_bar_margin_right', array(
-		'default'			=> __( '15', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '15',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
 	// heading Control setup
 	$wp_customize->add_control('nav_bar_margin_right', array(
 		'type'		=>	'number',
-		'default' 	=> 	__( '25', 'khaown'),
+		'default' 	=> 	'25',
 		'label' 	=> 	'Margin Right',
 		'section'  	=> 	'nav_bar',
 		'priority' 	=>  20
@@ -762,9 +763,9 @@ function khaown_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$btn_colors['slug'], array(
-				'default' => $btn_colors['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $btn_colors['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
@@ -772,10 +773,10 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$btn_colors['slug'], 
-				array('label' => $btn_colors['label'], 
-				'priority' 	=>  20,
-				'section'  	=> 'khaown_theme_button',
-				'settings' 	=> $btn_colors['slug'])
+				array('label' 	=> $btn_colors['label'], 
+				'priority' 		=>  20,
+				'section'  		=> 'khaown_theme_button',
+				'settings' 		=> $btn_colors['slug'])
 			)
 		);
 	}
@@ -791,8 +792,8 @@ function khaown_customize_register( $wp_customize ) {
 
 	// Heading setting setup
 	$wp_customize->add_setting('display_header_or_not', array(
-		'default'			=> __( '0', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -805,21 +806,21 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Top header Background color
 	$header_topcolors[] = array(
-		'slug'=>'homepage_header_bg_color', 
-		'default' => '#be9ae2',
-		'label' => 'Top Header Background Color'
+		'slug'			=> 'homepage_header_bg_color', 
+		'default' 		=> '#be9ae2',
+		'label' 		=> 'Top Header Background Color'
 	);
 	// Top header Site Title color
 	$header_topcolors[] = array(
-		'slug'=>'top_header_site_tile_color', 
-		'default' => '#000000',
-		'label' => 'Top Header Site Title Color'
+		'slug'			=>'top_header_site_tile_color', 
+		'default' 		=> '#000000',
+		'label' 		=> 'Top Header Site Title Color'
 	);
 	// Top header Site Desc color
 	$header_topcolors[] = array(
-		'slug'=>'top_header_site_desc_color', 
-		'default' => '#5f5f5f',
-		'label' => 'Top Header Site Desc Color'
+		'slug'			=>'top_header_site_desc_color', 
+		'default' 		=> '#5f5f5f',
+		'label' 		=> 'Top Header Site Desc Color'
 	);
 	foreach( $header_topcolors as $colors ) {
 	
@@ -836,18 +837,19 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$colors['slug'], 
-				array('label' => $colors['label'], 
-				'section' => 'top_header',
-				'priority' 		=>  20,
-				'settings' => $colors['slug'])
+				array(
+					'label' 	=> $colors['label'], 
+					'section' 	=> 'top_header',
+					'priority' 	=>  20,
+					'settings' 	=> $colors['slug'])
 			)
 		);
 	}
 
 	// Heading setting setup
 	$wp_customize->add_setting('site_title_font_size', array(
-		'default'			=> __( '32', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '32',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -860,8 +862,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('site_title_font_weight', array(
-		'default'			=> __( '500', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '500',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -869,10 +871,10 @@ function khaown_customize_register( $wp_customize ) {
 	$wp_customize->add_control('site_title_font_weight', array(
 		'type'     => 'select',
 		'choices'  => array(
-			'100' => _x( '100', '100', 'khaown' ),
+			'100'  => _x( '100', '100', 'khaown' ),
 			'200'  => _x( '200', '200', 'khaown' ),
 			'300'  => _x( '300', '300', 'khaown' ),
-			'400' => _x( '400', '400', 'khaown' ),
+			'400'  => _x( '400', '400', 'khaown' ),
 			'500'  => _x( '500', '500', 'khaown' ),
 			'600'  => _x( '600', '600', 'khaown' ),
 			'700'  => _x( '700', '700', 'khaown' ),
@@ -883,8 +885,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('site_title_margin_bottom', array(
-		'default'			=> __( '5', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '5',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -897,8 +899,8 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Heading setting setup
 	$wp_customize->add_setting('site_desc_font_size', array(
-		'default'			=> __( '15', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> '15',
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -922,8 +924,8 @@ function khaown_customize_register( $wp_customize ) {
 	
 	// Heading setting setup
 	$wp_customize->add_setting('display_social_media_accounts', array(
-		'default'			=> __( 'false', 'khaown'),
-		'sanitize_callback'  => 'esc_attr',
+		'default'			=> 0,
+		'sanitize_callback' => 'esc_attr',
 		'type' 				=> 'theme_mod'
 	) );
 	
@@ -936,23 +938,23 @@ function khaown_customize_register( $wp_customize ) {
 	) );
 	// Social media colors
 	$social_media_colors[] = array(
-		'slug'=>'social_media_icon_color', 
-		'default' => '#a0a0a0',
-		'label' => 'Social Media Icon Color'
+		'slug'		=>'social_media_icon_color', 
+		'default' 	=> '#a0a0a0',
+		'label' 	=> 'Social Media Icon Color'
 	);
 	$social_media_colors[] = array(
-		'slug'=>'social_media_icon_hover_color', 
-		'default' => '#0073aa',
-		'label' => 'Social Media Icon Hover Color'
+		'slug'			=> 'social_media_icon_hover_color', 
+		'default' 		=> '#0073aa',
+		'label' 		=> 'Social Media Icon Hover Color'
 	);
 	foreach( $social_media_colors as $sm_color ) {
 	
 		// SETTINGS
 		$wp_customize->add_setting(
 			$sm_color['slug'], array(
-				'default' => $sm_color['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $sm_color['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
@@ -960,19 +962,19 @@ function khaown_customize_register( $wp_customize ) {
 			new WP_Customize_Color_Control(
 				$wp_customize,
 				$sm_color['slug'], 
-				array('label' => $sm_color['label'], 
-				'section' => 'social_media_section',
-				'priority' 		=>  20,
-				'settings' => $sm_color['slug'])
+				array('label' 		=> $sm_color['label'], 
+				'section' 			=> 'social_media_section',
+				'priority' 			=>  20,
+				'settings' 			=> $sm_color['slug'])
 			)
 		);
 	}
 	// Font Size of Icon
 	$social_accounts[] = array(
-		'slug'=>'social_icon_font_size', 
-		'default' => 14,
-		'label' => 'Social Icon Font Size',
-		'type' 	=> 'number'
+		'slug'			=>'social_icon_font_size', 
+		'default' 		=> 14,
+		'label' 		=> 'Social Icon Font Size',
+		'type' 			=> 'number'
 	);
 	// Social Accounts color
 	$social_accounts[] = array(
@@ -1046,19 +1048,19 @@ function khaown_customize_register( $wp_customize ) {
 		// SETTINGS
 		$wp_customize->add_setting(
 			$account['slug'], array(
-				'default' => $account['default'],
-				'sanitize_callback'  => 'esc_attr',
-				'type' => 'theme_mod'
+				'default' 				=> $account['default'],
+				'sanitize_callback'  	=> 'esc_attr',
+				'type' 					=> 'theme_mod'
 			)
 		);
 		// CONTROLS
 		$wp_customize->add_control(
 				$account['slug'], 
-				array('label' => $account['label'], 
-				'section' => 'social_media_section',
-				'type' 	=> $account['type'], 
+				array('label' 	=> $account['label'], 
+				'section' 		=> 'social_media_section',
+				'type' 			=> $account['type'], 
 				'priority' 		=>  20,
-				'settings' => $account['slug'])
+				'settings' 		=> $account['slug'])
 		);
 	}
 

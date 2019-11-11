@@ -23,7 +23,7 @@ get_header();
             <div class="row">
 				<div class="col-sm-7 text-left">	
 					<h2 class="mb0">
-						<strong>Page Not Found</strong>
+						<strong> <?php _e('Page Not Found', 'khaown'); ?> </strong>
 						<?php ?>
 					</h2>					
 				</div>
@@ -43,9 +43,9 @@ get_header();
                     <div class="col-xs-12">
 						<main id="khaown-main" class="khaown-site-main">
 							<div class="text-center">
-								<h4>Nothing found related to your query.</h4>
-								<p>There is no page or post related to this search term. Please search with another term.</p>
-								<h3><a href="<?php echo esc_url( home_url() ); ?>">Go to Homepage</a></h3>
+								<h4> <?php _e('Nothing found related to your query.', 'khaown'); ?> </h4>
+								<p><?php _e('There is no page or post related to this search term. Please search with another term. Nothing found related to your query.', 'khaown'); ?></p>
+								<h3><a href="<?php echo esc_url( home_url() ); ?>"> <?php _e('Go to Homepage', 'khaown'); ?></a></h3>
 							</div>
 						</main><!-- .site-main -->
 					</div>

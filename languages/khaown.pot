@@ -9,10 +9,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-11-10T16:42:01+01:00\n"
+"POT-Creation-Date: 2019-11-11T11:45:53+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.3.0\n"
-"X-Domain: Khaown\n"
+"X-Domain: khaown\n"
 
 #. Theme Name of the theme
 msgid "Khaown"
@@ -34,10 +34,1547 @@ msgstr ""
 msgid "http://e-motahar.com"
 msgstr ""
 
+#: 404.php:26
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:46
+msgid "Nothing found related to your query."
+msgstr ""
+
+#: 404.php:47
+msgid "There is no page or post related to this search term. Please search with another term. Nothing found related to your query."
+msgstr ""
+
+#: 404.php:48
+msgid "Go to Homepage"
+msgstr ""
+
+#: classes/class-khaown-walker-comment.php:66
+msgid "%s <span class=\"screen-reader-text says\">says:</span>"
+msgstr ""
+
+#. translators: 1: comment date, 2: comment time
+#: classes/class-khaown-walker-comment.php:86
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: classes/class-khaown-walker-comment.php:94
+msgid "Edit"
+msgstr ""
+
+#: classes/class-khaown-walker-comment.php:99
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: classes/class-tgm-plugin-activation.php:337
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: classes/class-tgm-plugin-activation.php:339
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:341
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:347
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:353
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:359
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:365
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: classes/class-tgm-plugin-activation.php:371
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:377
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:393
+#: classes/class-tgm-plugin-activation.php:920
+#: classes/class-tgm-plugin-activation.php:2626
+#: classes/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:394
+#: classes/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:395
+#: classes/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:397
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:399
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: classes/class-tgm-plugin-activation.php:401
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:403
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1027
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1027
+#: classes/class-tgm-plugin-activation.php:1030
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1030
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1214
+#: classes/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: classes/class-tgm-plugin-activation.php:2075
+msgid "TGMPA v%s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: classes/class-tgm-plugin-activation.php:2435
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: classes/class-tgm-plugin-activation.php:2481
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: classes/class-tgm-plugin-activation.php:2485
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: classes/class-tgm-plugin-activation.php:2489
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: classes/class-tgm-plugin-activation.php:2493
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: classes/class-tgm-plugin-activation.php:2696
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: classes/class-tgm-plugin-activation.php:2701
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: classes/class-tgm-plugin-activation.php:2707
+msgid "Activate %2$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: classes/class-tgm-plugin-activation.php:3591
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: classes/class-tgm-plugin-activation.php:3594
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:3596
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3600
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:3602
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:3602
+#: classes/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:3602
+#: classes/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: classes/class-tgm-plugin-activation.php:3605
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3608
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: classes/class-tgm-plugin-activation.php:3610
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: classes/class-tgm-plugin-activation.php:3613
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: comments.php:48
+#: comments.php:51
+#: comments.php:52
+msgid "Comments"
+msgstr ""
+
+#: comments.php:51
+msgid "Previous"
+msgstr ""
+
+#: comments.php:52
+msgid "Next"
+msgstr ""
+
+#: footer.php:66
+#: functions.php:63
+msgid "Footer Menu"
+msgstr ""
+
+#: footer.php:81
+msgid "Top"
+msgstr ""
+
+#: functions.php:62
+#: functions.php:148
+msgid "Primary"
+msgstr ""
+
+#: functions.php:117
+msgid "Small"
+msgstr ""
+
+#: functions.php:118
+msgid "S"
+msgstr ""
+
+#: functions.php:123
+msgid "Normal"
+msgstr ""
+
+#: functions.php:124
+msgid "M"
+msgstr ""
+
+#: functions.php:129
+msgid "Large"
+msgstr ""
+
+#: functions.php:130
+msgid "L"
+msgstr ""
+
+#: functions.php:135
+msgid "Huge"
+msgstr ""
+
+#: functions.php:136
+msgid "XL"
+msgstr ""
+
+#: functions.php:153
+msgid "Secondary"
+msgstr ""
+
+#: functions.php:158
+msgid "Dark Gray"
+msgstr ""
+
+#: functions.php:163
+msgid "Light Gray"
+msgstr ""
+
+#: functions.php:168
+msgid "White"
+msgstr ""
+
+#: functions.php:190
+#: inc/customizer.php:203
+#: inc/customizer.php:223
+#: inc/customizer.php:250
+#: inc/customizer.php:277
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:192
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: header.php:26
+msgid "Top Menu"
+msgstr ""
+
+#: inc/back-compat.php:39
+#: inc/back-compat.php:53
+#: inc/back-compat.php:73
+msgid "khaown requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Body Background Color"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Link Color (on hover)"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Customize your layout desing"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "flat_design"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "Choose Design Type"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Flat Design"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "Deep Design"
+msgstr ""
+
+#: inc/customizer.php:121
+msgid "border_none"
+msgstr ""
+
+#: inc/customizer.php:128
+msgid "Box Border"
+msgstr ""
+
+#: inc/customizer.php:131
+msgid "Has Border"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Border None"
+msgstr ""
+
+#: inc/customizer.php:140
+#: inc/customizer.php:429
+#: inc/customizer.php:444
+#: inc/customizer.php:530
+#: inc/customizer.php:794
+msgid "0"
+msgstr ""
+
+#: inc/customizer.php:147
+msgid "Border Radius"
+msgstr ""
+
+#: inc/customizer.php:204
+#: inc/customizer.php:788
+#: inc/front-page-customizer.php:15
+msgid "Setup your theme Top header"
+msgstr ""
+
+#: inc/customizer.php:209
+msgid "Blog Page Sidebar"
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "right-sidebar"
+msgstr ""
+
+#: inc/customizer.php:227
+#: inc/customizer.php:254
+#: inc/customizer.php:281
+msgctxt "no-sidebar"
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/customizer.php:228
+#: inc/customizer.php:255
+#: inc/customizer.php:282
+msgctxt "left-sidebar"
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer.php:229
+#: inc/customizer.php:256
+#: inc/customizer.php:283
+msgctxt "right-sidebar"
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer.php:236
+msgid "Search Page Sidebar"
+msgstr ""
+
+#: inc/customizer.php:243
+#: inc/customizer.php:270
+msgid "no-sidebar"
+msgstr ""
+
+#: inc/customizer.php:263
+msgid "Archive Page Sidebar"
+msgstr ""
+
+#: inc/customizer.php:293
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Setup your theme typography"
+msgstr ""
+
+#: inc/customizer.php:300
+msgid "default_font"
+msgstr ""
+
+#: inc/customizer.php:307
+msgid "Choose Font Family"
+msgstr ""
+
+#: inc/customizer.php:310
+msgid "Default Font"
+msgstr ""
+
+#: inc/customizer.php:311
+msgid "Custom Font"
+msgstr ""
+
+#: inc/customizer.php:319
+msgid "Rajdhani"
+msgstr ""
+
+#: inc/customizer.php:328
+msgid "Copy Font Family From fonts.google.com"
+msgstr ""
+
+#: inc/customizer.php:335
+msgid "normal"
+msgstr ""
+
+#: inc/customizer.php:342
+msgid "Font Style"
+msgstr ""
+
+#: inc/customizer.php:346
+msgctxt "normal"
+msgid "Normal"
+msgstr ""
+
+#: inc/customizer.php:347
+msgctxt "italic"
+msgid "Italic"
+msgstr ""
+
+#: inc/customizer.php:354
+msgid "none"
+msgstr ""
+
+#: inc/customizer.php:361
+msgid "Text Transform"
+msgstr ""
+
+#: inc/customizer.php:365
+#: inc/customizer.php:486
+msgctxt "default"
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:366
+#: inc/customizer.php:487
+msgctxt "uppercase"
+msgid "Uppercase"
+msgstr ""
+
+#: inc/customizer.php:367
+#: inc/customizer.php:488
+msgctxt "lowercase"
+msgid "Lowercase"
+msgstr ""
+
+#: inc/customizer.php:368
+#: inc/customizer.php:489
+msgctxt "capitalize"
+msgid "Capitalize"
+msgstr ""
+
+#: inc/customizer.php:375
+msgid "14"
+msgstr ""
+
+#: inc/customizer.php:382
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer.php:390
+#: inc/customizer.php:546
+msgid "300"
+msgstr ""
+
+#: inc/customizer.php:397
+msgid "Font Weight"
+msgstr ""
+
+#: inc/customizer.php:401
+#: inc/customizer.php:556
+#: inc/customizer.php:702
+#: inc/customizer.php:872
+msgctxt "100"
+msgid "100"
+msgstr ""
+
+#: inc/customizer.php:402
+#: inc/customizer.php:557
+#: inc/customizer.php:703
+#: inc/customizer.php:873
+msgctxt "200"
+msgid "200"
+msgstr ""
+
+#: inc/customizer.php:403
+#: inc/customizer.php:558
+#: inc/customizer.php:704
+#: inc/customizer.php:874
+msgctxt "300"
+msgid "300"
+msgstr ""
+
+#: inc/customizer.php:404
+#: inc/customizer.php:559
+#: inc/customizer.php:705
+#: inc/customizer.php:875
+msgctxt "400"
+msgid "400"
+msgstr ""
+
+#: inc/customizer.php:405
+#: inc/customizer.php:560
+#: inc/customizer.php:706
+#: inc/customizer.php:876
+msgctxt "500"
+msgid "500"
+msgstr ""
+
+#: inc/customizer.php:406
+#: inc/customizer.php:561
+#: inc/customizer.php:707
+#: inc/customizer.php:877
+msgctxt "600"
+msgid "600"
+msgstr ""
+
+#: inc/customizer.php:407
+#: inc/customizer.php:562
+#: inc/customizer.php:708
+#: inc/customizer.php:878
+msgctxt "700"
+msgid "700"
+msgstr ""
+
+#: inc/customizer.php:414
+#: inc/customizer.php:607
+msgid "24"
+msgstr ""
+
+#: inc/customizer.php:421
+msgid "Line Height"
+msgstr ""
+
+#: inc/customizer.php:436
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/customizer.php:451
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/customizer.php:464
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer.php:465
+msgid "Customize your theme headings"
+msgstr ""
+
+#: inc/customizer.php:470
+msgid "General"
+msgstr ""
+
+#: inc/customizer.php:476
+msgid "uppercase"
+msgstr ""
+
+#: inc/customizer.php:484
+msgid "Heading Text Case"
+msgstr ""
+
+#: inc/customizer.php:497
+msgid "#7a7a7a"
+msgstr ""
+
+#: inc/customizer.php:507
+msgid "Heading Text Color"
+msgstr ""
+
+#: inc/customizer.php:515
+msgid "1"
+msgstr ""
+
+#: inc/customizer.php:522
+msgid "Heading Letter Spacing"
+msgstr ""
+
+#: inc/customizer.php:537
+msgid "Heading Word Spacing"
+msgstr ""
+
+#: inc/customizer.php:554
+msgid "Heading Font Weight"
+msgstr ""
+
+#: inc/customizer.php:569
+msgid "H1 Heading"
+msgstr ""
+
+#: inc/customizer.php:575
+msgid "28"
+msgstr ""
+
+#: inc/customizer.php:582
+msgid "H1 Font Size"
+msgstr ""
+
+#: inc/customizer.php:589
+msgid "36"
+msgstr ""
+
+#: inc/customizer.php:597
+msgid "H1 Line Height"
+msgstr ""
+
+#: inc/customizer.php:602
+msgid "H2 Heading"
+msgstr ""
+
+#: inc/customizer.php:614
+msgid "H2 Font Size"
+msgstr ""
+
+#: inc/customizer.php:622
+#: inc/customizer.php:849
+msgid "32"
+msgstr ""
+
+#: inc/customizer.php:630
+msgid "H2 Line Height"
+msgstr ""
+
+#: inc/customizer.php:640
+msgid "Navigation Bar"
+msgstr ""
+
+#: inc/customizer.php:641
+msgid "Setup your theme Navigation"
+msgstr ""
+
+#: inc/customizer.php:679
+#: inc/customizer.php:717
+#: inc/customizer.php:900
+msgid "15"
+msgstr ""
+
+#: inc/customizer.php:687
+msgid "Nav Bar Font Size"
+msgstr ""
+
+#: inc/customizer.php:693
+#: inc/customizer.php:863
+msgid "500"
+msgstr ""
+
+#: inc/customizer.php:710
+msgid "Nav Bar Font Weight"
+msgstr ""
+
+#: inc/customizer.php:725
+msgid "25"
+msgstr ""
+
+#: inc/customizer.php:735
+msgid "Button"
+msgstr ""
+
+#: inc/customizer.php:736
+msgid "Your Button color, hover color, etc."
+msgstr ""
+
+#: inc/customizer.php:787
+msgid "Top Header"
+msgstr ""
+
+#: inc/customizer.php:802
+msgid "Hide Top Header"
+msgstr ""
+
+#: inc/customizer.php:857
+msgid "Site Title Font Size"
+msgstr ""
+
+#: inc/customizer.php:880
+msgid "Site Title Font Weight"
+msgstr ""
+
+#: inc/customizer.php:886
+msgid "5"
+msgstr ""
+
+#: inc/customizer.php:894
+msgid "Site Title Bottom Space"
+msgstr ""
+
+#: inc/customizer.php:908
+msgid "Site Desc Font Size"
+msgstr ""
+
+#: inc/customizer.php:919
+msgid "Social Accounts"
+msgstr ""
+
+#: inc/customizer.php:925
+#: inc/front-page-customizer.php:100
+#: inc/front-page-customizer.php:199
+#: inc/front-page-customizer.php:280
+#: inc/front-page-customizer.php:342
+#: inc/front-page-customizer.php:447
+#: inc/front-page-customizer.php:597
+#: inc/reservation-customizer.php:81
+#: inc/reservation-customizer.php:206
+#: inc/reservation-customizer.php:290
+msgid "false"
+msgstr ""
+
+#: inc/customizer.php:933
+msgid "Hide All Social Accounts"
+msgstr ""
+
+#: inc/front-page-customizer.php:14
+msgid "Static Front Page"
+msgstr ""
+
+#: inc/front-page-customizer.php:23
+msgid "Header Full Screen Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:24
+#: inc/front-page-customizer.php:93
+msgid "Set editable text for certain content."
+msgstr ""
+
+#: inc/front-page-customizer.php:43
+msgid "Front-Page Header Image"
+msgstr ""
+
+#: inc/front-page-customizer.php:52
+msgid "About Your Website"
+msgstr ""
+
+#: inc/front-page-customizer.php:61
+msgid "About Your Website ( Title )"
+msgstr ""
+
+#: inc/front-page-customizer.php:70
+#: inc/front-page-customizer.php:79
+msgid "Your business purpose. Small description will clear your visitor about your misson & they will be attracted with what your offer"
+msgstr ""
+
+#: inc/front-page-customizer.php:92
+msgid "Location Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:109
+msgid "Hide Location Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:127
+msgid "Google Map Location"
+msgstr ""
+
+#: inc/front-page-customizer.php:128
+msgid "Paste only the src link from Google embed option, not the full iframe."
+msgstr ""
+
+#: inc/front-page-customizer.php:137
+msgid ""
+"Khaown\n"
+"        DHANMONDI HOUSE 84, \n"
+"        ROAD 7/A  \n"
+"        SATMOSJID ROAD\n"
+"        DHANMONDI R/A\n"
+"        DHAKA 1205 \n"
+"        PHONE: XXXXXX, XXXXXX\n"
+"\t\tEMAIL: khaown@khaown.com"
+msgstr ""
+
+#: inc/front-page-customizer.php:154
+msgid "Address"
+msgstr ""
+
+#: inc/front-page-customizer.php:155
+msgid "Share Your Physical Address. Add br inside angle brackets <> to go on a new line."
+msgstr ""
+
+#: inc/front-page-customizer.php:166
+msgid "Products Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:172
+msgid "true"
+msgstr ""
+
+#: inc/front-page-customizer.php:181
+msgid "Hide Products Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:193
+msgid "About Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:208
+msgid "Hide About Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:217
+msgid "URBAN NEIGHBORHOOD RESTAURANT"
+msgstr ""
+
+#: inc/front-page-customizer.php:226
+msgid "About Section Title"
+msgstr ""
+
+#: inc/front-page-customizer.php:235
+msgid "DHANMONDI DHAKA"
+msgstr ""
+
+#: inc/front-page-customizer.php:244
+#: inc/front-page-customizer.php:262
+msgid "About Section Sub Title"
+msgstr ""
+
+#: inc/front-page-customizer.php:253
+msgid "Opening in 2014, Khaown Kitchen was the creation of Dhaka hometown favorite Chef Kerry Simon and restaurateur Cory Harwell. <br><br> The plan, to develop the first urban casual eatery, inside the re-purposed mid-century John E.   Khaown - a skeleton of Downtown Dhaka yesteryears, now home to its eclectic mix of tenants including a sushi bar, tattoo parlor, pilates studio, creative agencies, donut & coffee bar and Chef Simon's playful interpretations on American comfort food."
+msgstr ""
+
+#: inc/front-page-customizer.php:274
+msgid "Parallux Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:289
+msgid "Hide Parallux Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:299
+msgid "Parllux Image 1"
+msgstr ""
+
+#: inc/front-page-customizer.php:303
+msgid "Parllux Image 2"
+msgstr ""
+
+#: inc/front-page-customizer.php:307
+msgid "Parllux Image 3"
+msgstr ""
+
+#: inc/front-page-customizer.php:335
+msgid "Review Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:352
+msgid "Hide Review Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:360
+msgid "3"
+msgstr ""
+
+#: inc/front-page-customizer.php:370
+msgid "Shaw Max Number of Review"
+msgstr ""
+
+#: inc/front-page-customizer.php:378
+msgid "Review Background Image"
+msgstr ""
+
+#: inc/front-page-customizer.php:440
+msgid "Schedule Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:457
+msgid "Hide Schedule Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:590
+msgid "Portrait of Yourself"
+msgstr ""
+
+#: inc/front-page-customizer.php:607
+#: inc/front-page-customizer.php:655
+msgid "Hide Portrait Section"
+msgstr ""
+
+#: inc/front-page-customizer.php:618
+msgid "Portrait Photo"
+msgstr ""
+
+#: inc/front-page-customizer.php:646
+msgid "PLEASE KEEP CALM & CARRY ON"
+msgstr ""
+
+#: inc/menu-customizer.php:13
+msgid "Food Menu Page"
+msgstr ""
+
+#: inc/menu-customizer.php:14
+msgid "Setup your theme Food Menu page"
+msgstr ""
+
+#: inc/menu-customizer.php:22
+msgid "Food Menu Header"
+msgstr ""
+
+#: inc/menu-customizer.php:74
+msgid "Main Body"
+msgstr ""
+
+#: inc/reservation-customizer.php:13
+msgid "Reservation Page"
+msgstr ""
+
+#: inc/reservation-customizer.php:14
+msgid "Setup your theme reservation page"
+msgstr ""
+
+#: inc/reservation-customizer.php:22
+msgid "Reservation Header"
+msgstr ""
+
+#: inc/reservation-customizer.php:75
+msgid "Middle Body Section"
+msgstr ""
+
+#: inc/reservation-customizer.php:90
+msgid "Hide Middle Body Section"
+msgstr ""
+
+#: inc/reservation-customizer.php:133
+msgid "Select your type of reservation here"
+msgstr ""
+
+#: inc/reservation-customizer.php:142
+msgid "Middle Body Title"
+msgstr ""
+
+#: inc/reservation-customizer.php:150
+msgid "Here will be your description about the reservation."
+msgstr ""
+
+#: inc/reservation-customizer.php:159
+msgid "Reservation Description"
+msgstr ""
+
+#: inc/reservation-customizer.php:170
+msgid "Reservation Photo"
+msgstr ""
+
+#: inc/reservation-customizer.php:200
+msgid "Form Section"
+msgstr ""
+
+#: inc/reservation-customizer.php:214
+msgid "Hide Reservation Form Section"
+msgstr ""
+
+#: inc/reservation-customizer.php:223
+msgid "yourEmail@example.com"
+msgstr ""
+
+#: inc/reservation-customizer.php:232
+msgid "Email Address of Receiver"
+msgstr ""
+
+#: inc/reservation-customizer.php:273
+msgid "For general information please use our contact form here - this form is for table reservations."
+msgstr ""
+
+#: inc/reservation-customizer.php:282
+msgid "Left Part Heading"
+msgstr ""
+
+#: inc/reservation-customizer.php:299
+msgid "Hide Address"
+msgstr ""
+
+#: inc/template-functions.php:114
+msgid "Category Archives: "
+msgstr ""
+
+#: inc/template-functions.php:116
+msgid "Tag Archives: "
+msgstr ""
+
+#: inc/template-functions.php:118
+msgid "Author Archives: "
+msgstr ""
+
+#: inc/template-functions.php:120
+msgid "Yearly Archives: "
+msgstr ""
+
+#: inc/template-functions.php:120
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-functions.php:122
+msgid "Monthly Archives: "
+msgstr ""
+
+#: inc/template-functions.php:122
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-functions.php:124
+msgid "Daily Archives: "
+msgstr ""
+
+#: inc/template-functions.php:126
+msgid "Post Type Archives: "
+msgstr ""
+
+#. translators: %s: Taxonomy singular name
+#: inc/template-functions.php:130
+msgid "%s Archives:"
+msgstr ""
+
+#: inc/template-functions.php:132
+msgid "Archives:"
+msgstr ""
+
+#: inc/template-tags.php:47
+msgid "Posted by"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:64
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:87
+#: inc/template-tags.php:99
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:93
+msgid "Posted in"
+msgstr ""
+
+#: inc/template-tags.php:105
+msgid "Tags:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers.
+#: inc/template-tags.php:121
+#: template-parts/header/entry-header.php:32
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-tags.php:231
+msgid "Newer posts"
+msgstr ""
+
+#: inc/template-tags.php:235
+msgid "Older posts"
+msgstr ""
+
 #. Template Name of the theme
 msgid "Reservation"
 msgstr ""
 
+#: reservation.php:67
+msgid "We will be in touch shortly."
+msgstr ""
+
+#: reservation.php:67
+msgid "Please fill all fields correctly. "
+msgstr ""
+
+#: reservation.php:68
+msgid "Your Name *"
+msgstr ""
+
+#: reservation.php:69
+msgid "Mobile Phone No. *"
+msgstr ""
+
+#: reservation.php:70
+msgid "Email Address - optional"
+msgstr ""
+
+#: reservation.php:84
+msgid "Date"
+msgstr ""
+
+#: reservation.php:93
+msgid "Start Time - optional"
+msgstr ""
+
+#: reservation.php:101
+msgid "End Time - optional"
+msgstr ""
+
+#: reservation.php:105
+msgid "Message"
+msgstr ""
+
+#: reservation.php:108
+msgid "Submit"
+msgstr ""
+
+#: reservation.php:112
+msgid "Thank you. Message sent."
+msgstr ""
+
+#: reservation.php:113
+msgid "Sorry, message not sent! Please refresh & try again."
+msgstr ""
+
+#: searchform.php:4
+#: searchform.php:5
+msgid "Search"
+msgstr ""
+
+#. translators: %s: parent post link
+#: single.php:43
+msgid "<span class=\"meta-nav\">Published in</span><span class=\"khaown-post-title\">%s</span>"
+msgstr ""
+
+#: single.php:50
+msgid "Next Post"
+msgstr ""
+
+#: single.php:51
+msgid "Next post:"
+msgstr ""
+
+#: single.php:53
+msgid "Previous Post"
+msgstr ""
+
+#: single.php:54
+msgid "Previous post:"
+msgstr ""
+
 #. Template Name of the theme
 msgid "Menu Template"
+msgstr ""
+
+#: template-menu.php:69
+#: woocommerce/archive-product.php:139
+msgid "Load More"
+msgstr ""
+
+#: template-parts/content/content-none.php:15
+msgid "Nothing found related to your query. "
+msgstr ""
+
+#: template-parts/content/content-none.php:16
+msgid "There is no page or post related to this search term. Please search with another term."
+msgstr ""
+
+#: template-parts/content/content-none.php:17
+msgid "Go to Homepage "
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content-page.php:22
+#: template-parts/content/content-single.php:22
+#: template-parts/content/content-woo.php:44
+#: template-parts/content/content.php:33
+#: template-parts/content/content.php:64
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content/content-page.php:35
+#: template-parts/content/content-single.php:35
+#: template-parts/content/content-woo.php:57
+#: template-parts/content/content.php:46
+#: template-parts/content/content.php:77
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/header/sitenav-social.php:1
+msgid "Social Links Menu"
+msgstr ""
+
+#. translators: %1(X comments)$s
+#: template-parts/post/discussion-meta.php:16
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/post/discussion-meta.php:18
+msgid "No comments"
+msgstr ""
+
+#: woocommerce/cart/cart.php:53
+#: woocommerce/cart/cart.php:129
+msgid "Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:55
+#: woocommerce/cart/cart.php:161
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:57
+#: woocommerce/cart/cart.php:171
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:59
+#: woocommerce/cart/cart.php:203
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:97
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:153
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:235
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:235
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:235
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:247
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:24
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:28
+msgid "Billing details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:53
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:26
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/single-product/product-image.php:41
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/related.php:23
+msgid "You may like"
 msgstr ""
