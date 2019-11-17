@@ -12,6 +12,43 @@
 /**
  * khaown only works in WordPress 4.7 or later.
  */
+if ( ! function_exists( 'khaown_pro' ) ) {
+    // Create a helper function for easy SDK access.
+    function khaown_pro() {
+        global $khaown_pro;
+
+        if ( ! isset( $khaown_pro ) ) {
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+
+            $khaown_pro = fs_dynamic_init( array(
+                'id'                  => '5027',
+                'slug'                => 'Khaown',
+                'type'                => 'theme',
+                'public_key'          => 'pk_de53be00969d9a470d48246bbb8d6',
+                'is_premium'          => true,
+                'is_premium_only'     => true,
+                'has_addons'          => false,
+                'has_paid_plans'      => true,
+                'menu'                => array(
+                    'support'        => false,
+                ),
+                // Set the SDK to work in a sandbox mode (for development & testing).
+                // IMPORTANT: MAKE SURE TO REMOVE SECRET KEY BEFORE DEPLOYMENT.
+                'secret_key'          => 'sk_uOTQvGVCf9n97PPQyLXDub.E5jg.h',
+            ) );
+        }
+
+        return $khaown_pro;
+    }
+
+    // Init Freemius.
+    khaown_pro();
+    // Signal that SDK was initiated.
+    do_action( 'khaown_pro_loaded' );
+}
+
+
 define( 'KHAOWN_THEME_DIR', trailingslashit( get_template_directory() ) );
 
 
