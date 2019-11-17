@@ -1,9 +1,9 @@
 === Khaown - Restaurant WordPress Theme ===
 Contributors: Motahar Hossain
 Tags: restaurant, blog, custom-logo, custom-colors, custom-menu, featured-images, one-column, two-columns, theme-options, translation-ready
-Requires at least: 4.9.6
+Requires at least: 4.7
 Tested up to: WordPress 5.2.4
-Stable tag: 10.1.0
+Stable tag: 1.1.0
 
 Khaown theme is a fully customizable,  seo optimized and stunning designs for restaurant with WooCommerce support.
 
