@@ -5,6 +5,7 @@
 
 get_header(); ?>
 
+
 <?php 
     $hide_food_menu_header = get_theme_mod("khaown_hide_food_menu_header_section", false);
     $khaown_food_menu_header_title = get_theme_mod("khaown_food_menu_header_title", "Food Menu");
@@ -70,6 +71,7 @@ get_header(); ?>
         </div>
     <?php } ?>
         <!--end of row-->
+
     </div>
     <!--end of container-->
 </section>

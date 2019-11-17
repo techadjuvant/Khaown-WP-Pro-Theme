@@ -100,7 +100,6 @@
                             <h3 class="uppercase mb16"><?php  echo get_theme_mod( 'about_section_title', ''); ?></h3>
                             <h6 class="mb8 uppercase"><?php echo get_theme_mod( 'about_section_sub_title', ''); ?></h6><br>
                             <p class="lead">
-                                <?php //echo wp_kses_post(get_theme_mod( 'about_section_description', '')); ?>
                                 <?php echo wp_kses_post(get_theme_mod( 'about_section_description', '')); ?>
                             </p>
                         </div>
